@@ -16,14 +16,15 @@ alias h="history"
 alias v="vim"
 alias s="subl"
 alias o="open"
-alias oo="open ."
-alias pa="php artisan"
+
+# Laravel Artisan CLI
+alias art="php artisan"
 
 # List all files in long format
-alias ll="ls -l"
+alias ll="ls -Gl"
 
 # List all files in long format, including dot files
-alias la="ls -la"
+alias la="ls -Gla"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -60,7 +61,7 @@ alias netlisteners='lsof -i -P | grep LISTEN'
 alias rmsvn="find . -type d -name .svn -exec rm -rf {} \;"
 
 # Create a new directory and enter it
-function mkd() {mkdir -p "$@" && cd "$@"}
+function mkd() { mkdir -p "$@" && cd "$@"; }
 
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
