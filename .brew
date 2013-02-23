@@ -6,16 +6,11 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-# Install Bash 4
-brew install bash
-
-# Install wget with IRI support
-brew install wget --enable-iri
-
 # Install everything else
+brew install wget --enable-iri
+brew install bash
 brew install git
 brew install node
-
 brew tap josegonzalez/homebrew-php
 brew install php54
 
