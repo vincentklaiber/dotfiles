@@ -10,9 +10,14 @@ brew upgrade
 brew install wget --enable-iri
 brew install bash
 brew install git
+brew install svn
+brew install composer
 brew install node
+brew install vim
 brew tap josegonzalez/homebrew-php
 brew install php54
+brew install ffmpeg
+brew install ffmpeg2theora
 
 # Remove outdated versions from the cellar
 brew cleanup
