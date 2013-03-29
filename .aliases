@@ -21,11 +21,14 @@ alias o="open"
 # Laravel Artisan CLI
 alias art="php artisan"
 
+# List all files with color support
+alias ls="ls -G"
+
 # List all files in long format
 alias ll="ls -Gl"
 
 # List all files in long format, including dot files
-alias la="ls -Gla"
+alias l="ls -Gla"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
