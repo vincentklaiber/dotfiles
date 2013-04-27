@@ -1,5 +1,8 @@
-# Add `~/bin` to the `$PATH`
-#export PATH="$HOME/bin:$PATH"
+# Add-ons to the `$PATH`
+export PATH=$PATH:/usr/local/share/npm/bin
+
+# Temporary Add-ons
+export PATH=${PATH}:/Users/vincent/Desktop/android
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
