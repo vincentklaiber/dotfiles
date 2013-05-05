@@ -17,6 +17,7 @@ brew install vim
 brew install ffmpeg
 brew install ffmpeg2theora
 brew install findutils
+brew install tree
 
 # brew tap josegonzalez/homebrew-php
 # brew install php54

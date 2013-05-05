@@ -2,7 +2,7 @@
 export PATH=$PATH:/usr/local/share/npm/bin
 
 # Temporary Add-ons
-export PATH=${PATH}:/Users/vincent/Desktop/android
+export PATH=${PATH}:/Users/vincent/Documents/platform-tools
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
