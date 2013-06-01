@@ -18,6 +18,16 @@ alias s="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias s2="open -a Sublime\ Text\ 2"
 alias o="open"
 
+# Laravel Generators
+alias g:c="php artisan generate:controller"
+alias g:m="php artisan generate:model"
+alias g:v="php artisan generate:view"
+alias g:mig="php artisan generate:migration"
+alias g:t="php artisan generate:test"
+alias g:r="php artisan generate:resource"
+alias g:s="php artisan generate:scaffold"
+alias g:f="php artisan generate:form"
+
 # Laravel Artisan CLI
 alias art="php artisan"
 
@@ -37,7 +47,7 @@ alias sudo='sudo '
 alias mysql="/usr/local/bin/mysql -uroot -p"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo npm update npm -g; sudo npm update -g; sudo gem update; composer selfupdate'
 
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
