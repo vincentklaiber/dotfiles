@@ -18,6 +18,9 @@ brew install ffmpeg
 brew install ffmpeg2theora
 brew install findutils
 brew install tree
+brew install mcrypt
+brew install mysql
+brew install subversion
 
 # brew tap josegonzalez/homebrew-php
 # brew install php54
