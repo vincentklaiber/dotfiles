@@ -36,9 +36,6 @@ alias art="php artisan"
 # List all files with color support
 alias ls="ls -G"
 
-# List all files in long format
-alias ll="ls -Gl"
-
 # List all files in long format, including dot files
 alias l="ls -Gla"
 
@@ -46,7 +43,10 @@ alias l="ls -Gla"
 alias sudo='sudo '
 
 # Open MySQL
-alias mysql="/usr/local/bin/mysql -uroot -p"
+alias mysql="/usr/local/bin/mysql"
+
+# Load the iphone simulator
+alias iphone="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo npm update npm -g; sudo npm update -g; sudo gem update; sudo composer selfupdate'
