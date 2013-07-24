@@ -11,6 +11,8 @@
 	ci = commit -a -m
 	# Add all changes
 	a = add . --all
+	# Branches
+	b = branches
 	# Switch to a branch, creating it if necessary
 	go = checkout -B
 	# Checkout a branch
