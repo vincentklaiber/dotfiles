@@ -11,15 +11,13 @@
 	ci = commit -a -m
 	# Add all changes
 	a = add . --all
-	# Branches
-	b = branches
 	# Switch to a branch, creating it if necessary
 	go = checkout -B
 	# Checkout a branch
 	co = checkout
 	# Show verbose output about tags, branches or remotes
+	b = branch -a
 	tags = tag -l
-	branches = branch -a
 	remotes = remote -v
 	# Push origin
 	po = push origin
