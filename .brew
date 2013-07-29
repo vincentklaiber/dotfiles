@@ -6,9 +6,22 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-# Install everything else
-brew install wget --enable-iri
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+brew install findutils
+
+# Install Bash 4
 brew install bash
+
+# Install wget with IRI support
+brew install wget --enable-iri
+
+# Install more recent versions of some OS X tools
+brew tap homebrew/dupes
+brew install homebrew/dupes/grep
+brew tap josegonzalez/homebrew-php
+brew install php55
+
+# Install other useful binaries
 brew install git
 brew install svn
 brew install composer
@@ -16,16 +29,9 @@ brew install node
 brew install vim
 brew install ffmpeg
 brew install ffmpeg2theora
-brew install findutils
 brew install tree
 brew install mcrypt
 brew install mysql
-brew install subversion
-
-# brew tap josegonzalez/homebrew-php
-# brew install php54
-# brew install mysql
-# mcrypt
 
 # Remove outdated versions from the cellar
 brew cleanup

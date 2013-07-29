@@ -80,6 +80,9 @@ alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 
 # Show active network listeners
 alias netlisteners='lsof -i -P | grep LISTEN'
 
+# Get week number
+alias week='date +%V'
+
 # Remove ".svn" folders from workingcopy recursive
 alias rmsvn="find . -type d -name .svn -exec rm -rf {} \;"
 
