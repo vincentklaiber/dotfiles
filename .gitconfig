@@ -10,7 +10,7 @@
 	# Commit all changes
 	ci = commit -a -m
 	# Add all changes
-	a = !git add -A && git commit -av
+	a = add . --all
 	# Switch to a branch, creating it if necessary
 	go = checkout -B
 	# Checkout a branch
