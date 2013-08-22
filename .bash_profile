@@ -1,5 +1,6 @@
 # Add-ons to the `$PATH`
 export PATH=$PATH:/usr/local/share/npm/bin
+export PATH=$PATH:$HOME/.rvm/bin
 
 # Temporary Add-ons
 export PATH=${PATH}:/Users/vincent/Documents/platform-tools

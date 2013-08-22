@@ -9,9 +9,6 @@ brew upgrade
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
 
-# Install Bash 4
-# brew install bash
-
 # Install wget with IRI support
 brew install wget --enable-iri
 
@@ -28,11 +25,13 @@ brew install composer
 brew install node
 brew install vim
 brew install ffmpeg
-brew install ffmpeg2theora
 brew install tree
 brew install mcrypt
 brew install mysql
+brew install rename
+brew install pngquant
 brew install imagemagick
+brew install fontforge
 
 # Remove outdated versions from the cellar
 brew cleanup
