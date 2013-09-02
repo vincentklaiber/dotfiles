@@ -15,7 +15,6 @@ alias g="git"
 alias h="history"
 alias v="vim"
 alias s="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias s2="open -a Sublime\ Text\ 2"
 alias o="open"
 
 # Laravel Generators
@@ -73,9 +72,6 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
-# Frequently used commands
-alias freq="cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30"
 
 # Show active network listeners
 alias netlisteners="lsof -i -P | grep LISTEN"
