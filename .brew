@@ -33,6 +33,7 @@ brew install pngquant
 brew install imagemagick
 brew install fontforge
 brew install rbenv
+brew install webp
 
 # Remove outdated versions from the cellar
 brew cleanup
