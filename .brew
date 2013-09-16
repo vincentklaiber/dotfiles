@@ -17,6 +17,11 @@ brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 brew tap josegonzalez/homebrew-php
 brew install php55
+brew install php55-mcrypt
+
+# Install homebrew-cask for nativ Mac applications
+brew tap phinze/homebrew-cask
+brew install brew-cask
 
 # Install other useful binaries
 brew install git
@@ -26,7 +31,6 @@ brew install node
 brew install vim
 brew install ffmpeg
 brew install tree
-brew install mcrypt
 brew install mysql
 brew install rename
 brew install pngquant

@@ -1,10 +1,3 @@
-# Add-ons to the `$PATH`
-export PATH=$PATH:/usr/local/share/npm/bin
-
-# Temporary Add-ons
-export PATH=${PATH}:/Users/vincent/Documents/platform-tools
-export RBENV_ROOT=/usr/local/var/rbenv
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.

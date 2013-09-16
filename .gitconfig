@@ -19,8 +19,6 @@
 	b = branch -a
 	tags = tag -l
 	remotes = remote -v
-	# Push origin
-	po = push origin
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
