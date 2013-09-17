@@ -19,10 +19,6 @@ brew tap josegonzalez/homebrew-php
 brew install php55
 brew install php55-mcrypt
 
-# Install homebrew-cask for nativ Mac applications
-brew tap phinze/homebrew-cask
-brew install brew-cask
-
 # Install other useful binaries
 brew install git
 brew install svn
@@ -38,6 +34,27 @@ brew install imagemagick
 brew install fontforge
 brew install rbenv
 brew install webp
+
+# Install homebrew-cask for nativ Mac applications
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+# Install nativ Mac applications
+brew cask install spotify
+brew cask install imageoptim
+brew cask install imagealpha
+brew cask install google-chrome
+brew cask install firefox
+brew cask install google-chrome-canary
+brew cask install u-torrent
+brew cask install the-unarchiver
+brew cask install open-office
+brew cask install skype
+brew cask install xtra-finder
+brew cask install app-cleaner
+brew cask install one-password
+brew cask install evernote
+brew cask install transmit
 
 # Remove outdated versions from the cellar
 brew cleanup
