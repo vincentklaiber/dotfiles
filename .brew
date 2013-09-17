@@ -55,6 +55,7 @@ brew cask install app-cleaner
 brew cask install one-password
 brew cask install evernote
 brew cask install transmit
+brew cask install vlc
 
 # Remove outdated versions from the cellar
 brew cleanup
