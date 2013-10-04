@@ -8,7 +8,7 @@
 	# Clone a repository including all submodules
 	c = clone --recursive
 	# Commit all changes
-	ci = commit -a -m
+	ca = !git add -A && git commit -av
 	# Add all changes
 	a = add . --all
 	# Switch to a branch, creating it if necessary
@@ -65,4 +65,4 @@
 	insteadOf = "gist:"
 
 [push]
-	default = simple
+	default = matching
