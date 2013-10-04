@@ -50,7 +50,6 @@ brew cask install u-torrent
 brew cask install the-unarchiver
 brew cask install open-office
 brew cask install skype
-brew cask install xtra-finder
 brew cask install app-cleaner
 brew cask install one-password
 brew cask install evernote
