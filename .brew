@@ -6,54 +6,50 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-
-# Install wget with IRI support
-brew install wget --enable-iri
-
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 brew tap josegonzalez/homebrew-php
+
 brew install php55
 brew install php55-mcrypt
 
 # Install other useful binaries
-brew install git
-brew install svn
 brew install composer
-brew install node
-brew install vim
 brew install ffmpeg
-brew install tree
-brew install mysql
-brew install rename
-brew install pngquant
-brew install imagemagick
+brew install findutils
 brew install fontforge
+brew install git
+brew install imagemagick
+brew install mysql
+brew install node
+brew install pngquant
 brew install rbenv
+brew install rename
+brew install svn
+brew install vim
 brew install webp
+brew install wget --enable-iri
 
 # Install homebrew-cask for nativ Mac applications
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
 # Install nativ Mac applications
-brew cask install spotify
-brew cask install imageoptim
-brew cask install imagealpha
-brew cask install google-chrome
+brew cask install app-cleaner
+brew cask install evernote
 brew cask install firefox
+brew cask install google-chrome
 brew cask install google-chrome-canary
-brew cask install u-torrent
-brew cask install the-unarchiver
+brew cask install imagealpha
+brew cask install imageoptim
+brew cask install one-password
 brew cask install open-office
 brew cask install skype
-brew cask install app-cleaner
-brew cask install one-password
-brew cask install evernote
+brew cask install spotify
+brew cask install the-unarchiver
 brew cask install transmit
+brew cask install u-torrent
 brew cask install vlc
 
 # Remove outdated versions from the cellar
