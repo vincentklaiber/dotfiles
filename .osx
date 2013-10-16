@@ -169,10 +169,23 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
-# Remove Dropbox’s green checkmark icons in Finder
-file=/Applications/Dropbox.app/Contents/Resources/check.icns
-[ -e "$file" ] && mv -f "$file" "$file.bak"
-unset file
+# Hide unused apps in the applications folder
+chflags hidden /Applications/Automator.app
+chflags hidden /Applications/Chess.app
+chflags hidden /Applications/DVD\ Player.app
+chflags hidden /Applications/Dashboard.app
+chflags hidden /Applications/Dictionary.app
+chflags hidden /Applications/FaceTime.app
+chflags hidden /Applications/Game\ Center.app
+chflags hidden /Applications/Image\ Capture.app
+chflags hidden /Applications/Launchpad.app
+chflags hidden /Applications/Mission\ Control.app
+chflags hidden /Applications/Notes.app
+chflags hidden /Applications/Photo\ Booth.app
+chflags hidden /Applications/Photo\ Booth.app
+chflags hidden /Applications/Reminders.app
+chflags hidden /Applications/Stickies.app
+chflags hidden /Applications/Stickies.app
 
 ###############################################################################
 # Dock & hot corners                                                          #
