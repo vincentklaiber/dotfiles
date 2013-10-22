@@ -22,7 +22,8 @@ brew install findutils
 brew install fontforge
 brew install git
 brew install imagemagick
-brew install mysql
+# brew install mysql
+brew install mariadb
 brew install node
 brew install phpmyadmin
 brew install pngquant
