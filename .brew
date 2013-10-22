@@ -22,17 +22,13 @@ brew install findutils
 brew install fontforge
 brew install git
 brew install imagemagick
-# brew install mysql
 brew install mariadb
 brew install node
-brew install phpmyadmin
-brew install pngquant
 brew install rbenv
 brew install rename
-brew install svn
 brew install vim
 brew install webp
-brew install wget --enable-iri
+brew install wget
 
 # Install homebrew-cask for nativ Mac applications
 brew tap phinze/homebrew-cask
@@ -41,9 +37,9 @@ brew install brew-cask
 # Install nativ Mac applications
 brew cask install app-cleaner
 brew cask install evernote
+brew cask install dropbox
 brew cask install firefox
 brew cask install google-chrome
-brew cask install google-chrome-canary
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install one-password
