@@ -14,7 +14,7 @@
 	# Checkout a branch
 	co = checkout
 	# Show verbose output about tags, branches or remotes
-	b = branch -a
+	branches = branch -a
 	tags = tag -l
 	remotes = remote -v
 [apply]
