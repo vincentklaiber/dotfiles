@@ -29,11 +29,8 @@ alias g:f="php artisan generate:form"
 # Laravel Artisan CLI
 alias art="php artisan"
 
-# List all files with color support
-alias ls="ls -G"
-
 # List all files in long format, including dot files
-alias l="ls -Gla"
+alias l="ls -laF"
 
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
