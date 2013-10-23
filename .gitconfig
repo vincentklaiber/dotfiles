@@ -4,6 +4,8 @@
 	# View the current working tree status using the short format
 	s = status -s
 	# Pull in remote changes for the current repository and all its submodules
+	# Show the diff between the latest commit and the current state
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 	p = !"git pull; git submodule foreach git pull origin master"
 	# Clone a repository including all submodules
 	c = clone --recursive
