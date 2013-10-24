@@ -29,25 +29,5 @@ brew install rename
 brew install vim
 brew install wget
 
-# Install homebrew-cask for nativ Mac applications
-brew tap phinze/homebrew-cask
-brew install brew-cask
-
-# Install nativ Mac applications
-brew cask install app-cleaner
-brew cask install evernote
-brew cask install dropbox
-brew cask install firefox
-brew cask install google-chrome
-brew cask install imagealpha
-brew cask install imageoptim
-brew cask install one-password
-brew cask install open-office
-brew cask install skype
-brew cask install spotify
-brew cask install the-unarchiver
-brew cask install transmit
-brew cask install vlc
-
 # Remove outdated versions from the cellar
 brew cleanup
