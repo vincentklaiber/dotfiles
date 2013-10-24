@@ -115,7 +115,7 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "$HOME/Desktop"
+defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 
 # Hide desktop icons by default
 defaults write com.apple.finder CreateDesktop -bool false && killall Finder
@@ -279,6 +279,6 @@ defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://
 for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" "Finder" \
 	"Mail" "Safari" "SizeUp" "SystemUIServer" "Terminal" "Transmission" \
 	"Twitter" "iCal" "iTunes"; do
-	killall "$app" > /dev/null 2>&1
+	killall "${app}" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
