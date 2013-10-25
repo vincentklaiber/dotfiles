@@ -73,4 +73,4 @@ alias week="date +%V"
 alias rmsvn="find . -type d -name .svn -exec rm -rf {} \;"
 
 # Create a new directory and enter it
-function mkd() { mkdir -p "$@" && cd "$@"; }
+function mkd() { mkdir -p "${@}" && cd "${@}"; }

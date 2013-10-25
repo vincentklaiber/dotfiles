@@ -4,12 +4,12 @@
 function doIt() {
 	rsync --exclude "init" --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude "arthur.itermcolors" --exclude "arthur.terminal" -av . ~
 }
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
+if [ "${1}" == "--force" -o "${1}" == "-f" ]; then
 	doIt
 else
 	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
 	echo
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
+	if [[ ${REPLY} =~ ^[Yy]$ ]]; then
 		doIt
 	fi
 fi
