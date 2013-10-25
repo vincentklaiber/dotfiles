@@ -180,6 +180,9 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilte-stack -bool true
 
+# Disable the Docks bounce to alert behavior
+defaults write com.apple.dock no-bouncing -bool true
+
 # Set the icon size of Dock items to 42 pixels
 defaults write com.apple.dock tilesize -int 42
 
