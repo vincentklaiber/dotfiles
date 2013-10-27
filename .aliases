@@ -35,9 +35,6 @@ alias l="ls -laF"
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
 
-# Open MySQL
-alias mysql="/usr/local/bin/mysql"
-
 # Load the iphone simulator
 alias simulator="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 
