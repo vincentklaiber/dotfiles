@@ -1,5 +1,4 @@
 # Add-ons to the `${PATH}`
-export PATH="~/bin:${PATH}"
 export PATH=${PATH}:/usr/local/share/npm/bin
 export RBENV_ROOT=/usr/local/var/rbenv
 
