@@ -17,7 +17,7 @@ brew install php55-mcrypt
 # Install other useful binaries
 brew install aria2
 brew install composer
-brew install ffmpeg
+brew install ffmpeg --with-theora --with-libogg --with-libvorbis --with-libvpx
 brew install findutils
 brew install fontforge
 brew install git
