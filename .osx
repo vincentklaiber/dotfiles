@@ -190,7 +190,7 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilte-stack -bool true
 
-# Minimize applications windows to the appliction icon
+# Minimize windows into application icon.
 defaults write com.apple.dock minimize-to-application -bool true
 
 # Disable the Docks bounce to alert behavior
