@@ -6,12 +6,6 @@
 	"fold_buttons": false,
 	"font_size": 12.0,
 	"highlight_line": true,
-	"ignored_packages":
-	[
-		"Vintage",
-		"Autoprefixer",
-		"Prefixr"
-	],
 	"overlay_scroll_bars": "enabled",
 	"rulers":
 	[
