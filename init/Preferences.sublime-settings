@@ -1,0 +1,26 @@
+{
+	"color_scheme": "Packages/User/Railscasts.tmTheme",
+	"drag_text": false,
+	"ensure_newline_at_eof_on_save": true,
+	"default_line_ending": "unix",
+	"fold_buttons": false,
+	"font_size": 12.0,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage",
+		"Autoprefixer",
+		"Prefixr"
+	],
+	"overlay_scroll_bars": "enabled",
+	"rulers":
+	[
+		80
+	],
+	"remember_open_files": false,
+	"theme": "Soda Light 3.sublime-theme",
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true,
+	"use_simple_full_screen": true,
+	"word_wrap": true
+}
