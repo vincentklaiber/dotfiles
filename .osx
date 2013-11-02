@@ -130,9 +130,6 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Save screenshots to the desktop
 defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 
-# Hide desktop icons by default
-defaults write com.apple.finder CreateDesktop -bool false
-
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
 
@@ -180,12 +177,6 @@ defaults write com.apple.finder SidebarTagsSctionDisclosedState -bool true
 # New Finder windows shows Home directory
 defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/vincent/"
 
-# Hide icons for hard drives and servers on the desktop
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
-
 # Hide tags, tab view and status bar from Finder window
 defaults write com.apple.finder ShowRecentTags -bool false
 defaults write com.apple.finder ShowStatusBar -bool false
@@ -193,6 +184,15 @@ defaults write com.apple.finder ShowTabView -bool false
 
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+
+# Hide desktop icons by default
+defaults write com.apple.finder CreateDesktop -bool false
+
+# Hide icons for hard drives and servers on the desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
 ###############################################################################
 # Dashboard & Dock                                                            #
