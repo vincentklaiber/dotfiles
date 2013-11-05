@@ -27,6 +27,7 @@ brew install node
 brew install rbenv
 brew install rename
 brew install vim
+brew install webp
 brew install wget
 
 # Remove outdated versions from the cellar
