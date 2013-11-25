@@ -30,7 +30,7 @@ alias g:f="php artisan generate:form"
 alias art="php artisan"
 
 # List all files in long format, including dot files
-alias l="ls -laF"
+alias l="ls -Gla"
 
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
