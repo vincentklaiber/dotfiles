@@ -42,7 +42,7 @@ alias simulator="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhon
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo npm update npm -g; sudo npm update -g;"
+alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo npm update npm -g; sudo npm update -gf;"
 # Optional: sudo gem update --system; sudo gem update;
 
 # Enhanced WHOIS lookups

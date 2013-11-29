@@ -1,5 +1,6 @@
 # Don't commit to a public repository.
 .extra
+init/Terminal Saved Output
 
 # Compiled Python files
 *.pyc
