@@ -22,7 +22,6 @@ brew install findutils
 brew install fontforge
 brew install git
 brew install imagemagick
-brew install mariadb
 brew install node
 brew install rbenv
 brew install rename
