@@ -1,1 +1,1 @@
-This repository is a tweak from [Mathias Bynens Dotfiles](https://github.com/mathiasbynens/dotfiles), big thanks to him.
+This repository is a tweak from [@mathiasbynens](https://github.com/mathiasbynens/dotfiles), big thanks to him.
