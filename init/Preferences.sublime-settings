@@ -1,15 +1,13 @@
 {
 	"color_scheme": "Packages/User/Vincent.tmTheme",
 	"default_line_ending": "unix",
+	"detect_indentation": false,
 	"drag_text": false,
 	"ensure_newline_at_eof_on_save": true,
 	"fold_buttons": false,
 	"font_size": 12.0,
 	"highlight_line": true,
-	"ignored_packages":
-	[
-		"Vintage"
-	],
+	"match_brackets_angle": true,
 	"overlay_scroll_bars": "enabled",
 	"remember_open_files": false,
 	"rulers":
