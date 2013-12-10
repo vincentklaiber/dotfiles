@@ -1,0 +1,7 @@
+[
+	{ "keys": ["super+shift+c"], "command": "toggle_comment", "args": { "block": false } },
+	{ "keys": ["super+v"], "command": "paste_and_indent" },
+	{ "keys": ["super+shift+v"], "command": "paste" },
+	{ "keys": ["super+shift+o"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} },
+	{ "keys": ["super+alt+r"], "command": "reindent"},
+]
