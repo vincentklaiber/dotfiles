@@ -5,8 +5,12 @@
 	"drag_text": false,
 	"ensure_newline_at_eof_on_save": true,
 	"fold_buttons": false,
-	"font_size": 12.0,
+	"font_size": 12,
 	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"match_brackets_angle": true,
 	"overlay_scroll_bars": "enabled",
 	"remember_open_files": false,
