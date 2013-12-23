@@ -10,6 +10,9 @@ brew upgrade
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
+# Tap alternate versions of Casks
+brew tap caskroom/versions
+
 # Install nativ Mac applications
 brew cask install app-cleaner
 brew cask install evernote
