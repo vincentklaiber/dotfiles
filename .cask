@@ -32,7 +32,6 @@ brew cask install sublime-text3
 brew cask install the-unarchiver
 brew cask install transmit
 brew cask install vlc
-brew cask install webp-quicklook
 brew cask install xbox360-controller-driver
 
 # Remove outdated versions from the cellar
