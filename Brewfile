@@ -17,7 +17,7 @@ install php55-mcrypt
 # Install other useful binaries
 install aria2
 install composer
-install ffmpeg --with-theora --with-libogg --with-libvorbis --with-libvpx
+install ffmpeg --devel --with-libogg --with-libvorbis --with-libvpx --with-theora
 install findutils
 install fontforge
 install git
