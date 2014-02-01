@@ -14,6 +14,9 @@ tap josegonzalez/homebrew-php
 install php55
 install php55-mcrypt
 
+# Tap alternate versions of binaries
+tap homebrew/versions
+
 # Install other useful binaries
 install aria2
 install composer
@@ -30,8 +33,35 @@ install rename
 install webp
 install wget
 
-# Tap alternate versions of binaries
-tap homebrew/versions
+# Install homebrew-cask for nativ Mac applications
+tap phinze/homebrew-cask
+install brew-cask
+
+# Tap alternate versions of Casks
+tap caskroom/versions
+
+# Install nativ Mac applications
+cask install appcleaner
+cask install dropbox
+cask install evernote
+cask install firefox
+cask install google-chrome
+cask install google-chrome-canary
+cask install imagealpha
+cask install imageoptim
+cask install miro-video-converter
+cask install onepassword
+cask install openoffice
+cask install openemu
+cask install skype
+cask install spotify
+cask install sublime-text3
+cask install the-unarchiver
+cask install transmit
+cask install vagrant
+cask install virtualbox
+cask install vlc
+cask install xbox360-controller-driver
 
 # Remove outdated versions from the cellar
 cleanup
