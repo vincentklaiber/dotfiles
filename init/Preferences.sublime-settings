@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/User/Vincent.tmTheme",
+	"color_scheme": "Packages/User/vincent.tmTheme",
 	"default_line_ending": "unix",
 	"detect_indentation": false,
 	"drag_text": false,
@@ -18,6 +18,7 @@
 	[
 		80
 	],
+	"show_full_path": true,
 	"theme": "Soda Light 3.sublime-theme",
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
