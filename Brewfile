@@ -48,7 +48,6 @@ cask install google-chrome
 cask install google-chrome-canary
 cask install imagealpha
 cask install imageoptim
-cask install miro-video-converter
 cask install onepassword
 cask install openoffice
 cask install openemu
