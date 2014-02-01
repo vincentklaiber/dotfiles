@@ -28,7 +28,6 @@ install imagemagick
 install mysql
 install node
 install phpmyadmin
-install rbenv
 install rename
 install webp
 install wget
