@@ -25,6 +25,7 @@ brew cask install imageoptim
 brew cask install miro-video-converter
 brew cask install onepassword
 brew cask install openoffice
+brew cask install openemu
 brew cask install skype
 brew cask install spotify
 brew cask install sublime-text3
