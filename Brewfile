@@ -7,25 +7,25 @@ update
 upgrade
 
 # Install more recent versions of some OS X tools
-tap homebrew/dupes
-install homebrew/dupes/grep
-tap josegonzalez/homebrew-php
+# tap homebrew/dupes
+# install homebrew/dupes/grep
+# tap josegonzalez/homebrew-php
 
-install php55
-install php55-mcrypt
+# install php55
+# install php55-mcrypt
 
 # Tap alternate versions of binaries
 tap homebrew/versions
 
 # Install other useful binaries
 install aria2
-install composer
+# install composer
 install ffmpeg --devel --with-libogg --with-libvorbis --with-libvpx --with-theora
 install findutils
 install fontforge
 install git
 install imagemagick
-install mysql
+# install mysql
 install node
 install rename
 install webp
