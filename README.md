@@ -19,6 +19,8 @@ Install git.
 brew install git
 ```
 
+Generate ssh keys. https://help.github.com/articles/generating-ssh-keys
+
 Clone dotfiles repository.
 ```
 git clone git@github.com:vinkla/dotfiles.git
