@@ -82,6 +82,9 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # Disable Notification Center and remove the menu bar icon
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
+# Remove beep feedback when changing volume
+defaults write NSGlobalDomain com.apple.sound.beep.feedback -int 0
+
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
@@ -94,9 +97,9 @@ sudo pmset -a hibernatemode 0
 
 # Remove the sleep image file to save disk space
 sudo rm /Private/var/vm/sleepimage
-# Create a zero-byte file instead…
+# Create a zero-byte file instead
 sudo touch /Private/var/vm/sleepimage
-# …and make sure it can’t be rewritten
+# and make sure it can’t be rewritten
 sudo chflags uchg /Private/var/vm/sleepimage
 
 # Disable the sudden motion sensor as it’s not useful for SSDs
