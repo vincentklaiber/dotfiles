@@ -19,7 +19,7 @@ tap homebrew/versions
 
 # Install other useful binaries
 install aria2
-# install composer
+install composer
 install ffmpeg --devel --with-libogg --with-libvorbis --with-libvpx --with-theora
 install findutils
 install fontforge
