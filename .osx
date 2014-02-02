@@ -82,9 +82,6 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # Disable Notification Center and remove the menu bar icon
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
-# Remove beep feedback when changing volume
-defaults write NSGlobalDomain com.apple.sound.beep.feedback -int 0
-
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
@@ -162,6 +159,9 @@ systemsetup -settimezone "Europe/Stockholm" > /dev/null
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Remove beep feedback when changing volume
+defaults write NSGlobalDomain com.apple.sound.beep.feedback -bool false
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
@@ -178,6 +178,9 @@ defaults write com.apple.screencapture type -string "png"
 
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
+# Displays have separate Spaces
+defaults write com.apple.spaces spans-displays -bool true
 
 ###############################################################################
 # Finder                                                                      #
