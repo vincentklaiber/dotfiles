@@ -34,6 +34,10 @@ defaults write com.apple.systemuiserver menuExtras -array \
 	"/System/Library/CoreServices/Menu Extras/Battery.menu" \
 	"/System/Library/CoreServices/Menu Extras/Clock.menu"
 
+
+# Menu bar: Always show percentage next to the Battery icon
+defaults write com.apple.menuextra.battery ShowPercent -bool true
+
 # Only show scrollbars When Scrolling
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
