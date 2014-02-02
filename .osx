@@ -238,6 +238,25 @@ defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
+# Hide unuseful applications
+sudo chflags hidden /Applications/Automator.app
+sudo chflags hidden /Applications/Chess.app
+sudo chflags hidden /Applications/DVD\ Player.app
+sudo chflags hidden /Applications/Dashboard.app
+sudo chflags hidden /Applications/Dictionary.app
+sudo chflags hidden /Applications/FaceTime.app
+sudo chflags hidden /Applications/Game\ Center.app
+sudo chflags hidden /Applications/Image\ Capture.app
+sudo chflags hidden /Applications/Launchpad.app
+sudo chflags hidden /Applications/Maps.app
+sudo chflags hidden /Applications/Mission\ Control.app
+sudo chflags hidden /Applications/Notes.app
+sudo chflags hidden /Applications/Photo\ Booth.app
+sudo chflags hidden /Applications/Reminders.app
+sudo chflags hidden /Applications/Stickies.app
+sudo chflags hidden /Applications/Time\ Machine.app
+sudo chflags hidden /Applications/iBooks.app
+
 ###############################################################################
 # Dashboard & Dock                                                            #
 ###############################################################################
