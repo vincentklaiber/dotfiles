@@ -7,12 +7,11 @@ update
 upgrade
 
 # Install more recent versions of some OS X tools
-# tap homebrew/dupes
-# install homebrew/dupes/grep
-# tap josegonzalez/homebrew-php
+tap homebrew/dupes
+tap josegonzalez/homebrew-php
 
-# install php55
-# install php55-mcrypt
+install php55
+install php55-mcrypt
 
 # Tap alternate versions of binaries
 tap homebrew/versions
@@ -25,7 +24,7 @@ install findutils
 install fontforge
 install git
 install imagemagick
-# install mysql
+install mysql
 install node
 install rename
 install webp
@@ -55,7 +54,6 @@ cask install spotify
 cask install sublime-text3
 cask install the-unarchiver
 cask install transmit
-cask install vagrant
 cask install virtualbox
 cask install vlc
 cask install xbox360-controller-driver
