@@ -36,6 +36,16 @@ Install binaries and native Mac applications.
 brew bundle ./Brewfile
 ```
 
+Update ```/etc/paths``` file.
+```
+/usr/local/bin
+/usr/local/sbin
+/usr/bin
+/bin
+/usr/sbin
+/sbin
+```
+
 Replace Sublime Text user directory and sync with DropBox.
 ```
 rm -r /Users/vincent/Library/Application\ Support/Sublime\ Text\ 3/Packages
