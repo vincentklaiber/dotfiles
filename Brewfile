@@ -26,6 +26,7 @@ install git
 install imagemagick
 install mysql
 install node
+install phpmyadmin
 install rename
 install webp
 install wget
