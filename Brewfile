@@ -23,12 +23,11 @@ install ffmpeg --devel --with-libogg --with-libvorbis --with-libvpx --with-theor
 install findutils
 install fontforge
 install git
-install imagemagick
+install imagemagick --with-webp
 install mysql
 install node
 install phpmyadmin
 install rename
-install webp
 install wget
 
 # Install homebrew-cask for nativ Mac applications
