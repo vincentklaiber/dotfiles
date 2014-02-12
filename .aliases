@@ -11,9 +11,6 @@ alias ss="cd ~/Sites"
 alias p="cd ~/Dropbox/Projects"
 alias g="git"
 alias h="history"
-alias v="vim"
-alias s="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias o="open"
 
 # Laravel Generators
 alias g:c="php artisan generate:controller"
@@ -67,4 +64,26 @@ alias week="date +%V"
 alias rmsvn="find . -type d -name .svn -exec rm -rf {} \;"
 
 # Create a new directory and enter it
-function mkd() { mkdir -p "${@}" && cd "${@}"; }
+function mkd() {
+	mkdir -p "${@}" && cd "${@}";
+}
+
+# `s` with no arguments opens the current directory in Sublime Text, otherwise
+# opens the given location
+function s() {
+	if [ $# -eq 0 ]; then
+		subl .
+	else
+		subl "$@"
+	fi
+}
+
+# `o` with no arguments opens current directory, otherwise opens the given
+# location
+function o() {
+	if [ $# -eq 0 ]; then
+		open .
+	else
+		open "$@"
+	fi
+}
