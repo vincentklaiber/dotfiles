@@ -3,8 +3,8 @@
 	c = clone --recursive
 	# Commit all changes
 	ca = !git add -A && git commit -av
-	# Switch to a branch, creating it if necessary
-	co = checkout -B
+	# Switch to a branch
+	co = checkout
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 	# View the SHA, description, and history graph of the latest 20 commits
