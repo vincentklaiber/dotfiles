@@ -1,8 +1,10 @@
-This repository is a tweak from [@mathiasbynens](https://github.com/mathiasbynens/dotfiles), big thanks to him.
+dotfiles
+========
+If you're curious how to setup your own dotfiles, please visit [https://github.com/mathiasbynens/dotfiles](Mathias Bynens dotfiles) to learn more.
 
 
-Installation
-------------
+Setup OS X enviroment
+---------------------
 
 Install Command Line Tools.
 ```
@@ -36,7 +38,7 @@ Install binaries and native Mac applications.
 brew bundle ./Brewfile
 ```
 
-Update ```/etc/paths``` file.
+Update ```/etc/paths``` file, use brew instead of pre-installed binaries.
 ```
 /usr/local/bin
 /usr/local/sbin
