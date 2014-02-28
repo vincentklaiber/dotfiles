@@ -1,6 +1,6 @@
 dotfiles
 ========
-If you're curious how to setup your own dotfiles, please visit [https://github.com/mathiasbynens/dotfiles](Mathias Bynens dotfiles) to learn more.
+If you're curious how to setup your own dotfiles, please visit [Mathias Bynens dotfiles](https://github.com/mathiasbynens/dotfiles) to learn more.
 
 
 Setting up a new OS X environment
