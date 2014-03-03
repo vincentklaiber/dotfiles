@@ -7,20 +7,13 @@ update
 upgrade
 
 # Install more recent versions of some OS X tools
-tap homebrew/dupes
-tap josegonzalez/homebrew-php
-
-install php55
-install php55-mcrypt
-
-# Tap alternate versions of binaries
-tap homebrew/versions
+install josegonzalez/homebrew-php/php55
+install josegonzalez/homebrew-php/php55-mcrypt
 
 # Install other useful binaries
 install aria2
 install composer
 install ffmpeg --devel --with-libogg --with-libvorbis --with-libvpx --with-theora
-install findutils
 install fontforge
 install git
 install imagemagick --with-webp
@@ -31,11 +24,7 @@ install rename
 install wget
 
 # Install homebrew-cask for nativ Mac applications
-tap phinze/homebrew-cask
-install brew-cask
-
-# Tap alternate versions of Casks
-tap caskroom/versions
+install phinze/homebrew-cask/brew-cask
 
 # Install nativ Mac applications
 cask install appcleaner
@@ -51,7 +40,7 @@ cask install openoffice
 cask install openemu
 cask install skype
 cask install spotify
-cask install sublime-text3
+cask install caskroom/versions/sublime-text3
 cask install the-unarchiver
 cask install transmit
 cask install virtualbox
