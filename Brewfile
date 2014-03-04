@@ -24,7 +24,7 @@ install rename
 install wget
 
 # Install homebrew-cask for nativ Mac applications
-install phinze/homebrew-cask/brew-cask
+install phinze/cask/brew-cask
 
 # Install nativ Mac applications
 cask install appcleaner
