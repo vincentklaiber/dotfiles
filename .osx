@@ -209,12 +209,6 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # Hide desktop icons by default
 defaults write com.apple.finder CreateDesktop -bool false
 
-# Hide icons for hard drives and servers on the desktop
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
-
 # Hide unuseful applications
 sudo chflags hidden /Applications/Automator.app
 sudo chflags hidden /Applications/Chess.app
@@ -332,7 +326,6 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 
 # Enable Debug Menu in the Mac App Store
 defaults write com.apple.appstore ShowDebugMenu -bool true
-
 
 ###############################################################################
 # Google Chrome & Google Chrome Canary                                        #
