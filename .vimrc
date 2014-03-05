@@ -1,7 +1,7 @@
 set nocompatible   " Disable vi-compatibility
 set t_Co=256
 
-set guifont=monaco\ for\ powerline:h12
+set guifont=menlo\ for\ powerline:h12
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
