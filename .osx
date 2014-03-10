@@ -310,9 +310,8 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
-#
-for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" \
-	"SystemUIServer" "Terminal" "iTunes"; do
+
+for app in "Dock" "Finder" "Mail" "SystemUIServer" "Terminal" "iTunes"; do
 	killall "${app}" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
