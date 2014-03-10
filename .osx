@@ -294,7 +294,7 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 ###############################################################################
-# Address Book, Dashboard, iCal, TextEdit, iTunes and Disk Utility            #
+# TextEdit, iTunes                                                            #
 ###############################################################################
 
 # Use plain text mode for new TextEdit documents
