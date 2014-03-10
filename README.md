@@ -3,8 +3,7 @@ dotfiles
 If you're curious how to setup your own dotfiles, please visit [Mathias Bynens dotfiles](https://github.com/mathiasbynens/dotfiles) to learn more.
 
 
-New OS X Environment
----------------------------------
+#### Setup New OS X Environment
 
 **1.** Install Command Line Tools.
 ```
