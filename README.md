@@ -1,43 +1,40 @@
 dotfiles
 ========
-If you're curious how to setup your own dotfiles, please visit [Mathias Bynens dotfiles](https://github.com/mathiasbynens/dotfiles) to learn more.
+If you're curious how to setup your own dotfiles, please visit [Mathias Bynens's dotfiles](https://github.com/mathiasbynens/dotfiles) to learn more.
 
 
 #### Setup New OS X Environment
 
-**1.** Install Command Line Tools.
+**1**. Install XCode Command Line Tools.
 ```
 xcode-select --install
 ```
 
-**2.** Install Homebrew http://brew.sh/
+**2**. Install Homebrew http://brew.sh/
 ```
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ```
 
-**3.** Install git http://git-scm.com/
+**3**. Install GIT http://git-scm.com/
 ```
 brew install git
 ```
 
-**4.** Generate ssh keys https://help.github.com/articles/generating-ssh-keys
+**4**. Generate SSH keys https://help.github.com/articles/generating-ssh-keys
 
-**5.** Clone dotfiles repository.
+**5**. Clone this respoitory and install dotfiles.
 ```
 git clone git@github.com:vinkla/dotfiles.git
-```
 
-**6.** Install dotfiles.
-```
 source bootstrap.sh
 ```
 
-**7.** Install binaries and native Mac applications.
+**6**. Install binaries and native Mac applications.
 ```
 brew bundle ./Brewfile
 ```
 
-**8.** Update ```/etc/paths``` file, use brew instead of pre-installed binaries.
+**7**. Update ```/etc/paths``` file. Rather use Homebrew's then pre-installed binaries.
 ```
 /usr/local/bin
 /usr/local/sbin
@@ -47,13 +44,13 @@ brew bundle ./Brewfile
 /sbin
 ```
 
-**9.** Replace Sublime Text user directory and sync with DropBox.
+**8**. Replace Sublime Text user directory and sync with DropBox.
 ```
 rm -r /Users/vincent/Library/Application\ Support/Sublime\ Text\ 3/Packages
 ln -s /Users/vincent/Dropbox/Apps/Sublime\ Text\ 3/Packages /Users/vincent/Library/Application\ Support/Sublime\ Text\ 3/Packages
 ```
 
-**10.** Create Sites directory in Home root.
+**9**. Create Sites directory in home root folder.
 ```
 mkdir ~/Sites
 ```
