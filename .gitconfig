@@ -1,18 +1,15 @@
 [alias]
-	# Add all unstaged (including untracked) files
-	a = add --all
-
 	# Shorthand for branch
 	b = branch
 
 	# Show verbose output about branches
-	branches = branch -a
+	branches = branch --all
 
 	# Clone a repository including all submodules
 	c = clone --recursive
 
 	# Commit all changes
-	ca = !git add -A && git commit -av
+	ca = !git add --all && git commit --all --verbose
 
 	# Switch to a branch
 	co = checkout
@@ -33,16 +30,16 @@
 	r = remote
 
 	# Show verbose output about remotes
-	remotes = remote -v
+	remotes = remote --verbose
 
 	# View the current working tree status using the short format
-	s = status -s
+	s = status --short --branch
 
 	# List contributors with number of commits
-	sl = shortlog -sn
+	sl = shortlog --summary --numbered
 
 	# Show verbose output about tags
-	tags = tag -l
+	tags = tag --list
 
 [apply]
 	# Detect whitespace errors when applying a patch
