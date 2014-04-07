@@ -24,7 +24,10 @@ install rename
 install wget
 
 # Install homebrew-cask for nativ Mac applications
-install phinze/cask/brew-cask
+tap phinze/cask
+tap caskroom/versions
+
+install brew-cask
 
 # Install nativ Mac applications
 cask install appcleaner
@@ -40,7 +43,7 @@ cask install openoffice
 cask install openemu
 cask install skype
 cask install spotify
-cask install caskroom/versions/sublime-text3
+cask install sublime-text3
 cask install the-unarchiver
 cask install transmit
 cask install virtualbox
