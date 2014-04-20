@@ -2,7 +2,7 @@
 cd "$(dirname "${BASH_SOURCE}")"
 git pull origin master
 function doIt() {
-	rsync --exclude "init" --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "Brewfile" --exclude ".osx" --exclude "README.md" -av . ~
+	rsync --exclude "init" --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "Brewfile" --exclude "Caskfile" --exclude ".osx" --exclude "README.md" -av . ~
 	source ~/.bash_profile
 }
 if [ "${1}" == "--force" -o "${1}" == "-f" ]; then
