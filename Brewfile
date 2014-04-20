@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Make sure we’re using the latest Homebrew
 update
 
@@ -22,33 +20,6 @@ install node
 install phpmyadmin
 install rename
 install wget
-
-# Install homebrew-cask for nativ Mac applications
-tap phinze/cask
-tap caskroom/versions
-
-install brew-cask
-
-# Install nativ Mac applications
-cask install appcleaner
-cask install dropbox
-cask install evernote
-cask install firefox
-cask install google-chrome
-cask install google-chrome-canary
-cask install imagealpha
-cask install imageoptim
-cask install onepassword
-cask install openoffice
-cask install openemu
-cask install skype
-cask install spotify
-cask install sublime-text3
-cask install the-unarchiver
-cask install transmit
-cask install virtualbox
-cask install vlc
-cask install xbox360-controller-driver
 
 # Remove outdated versions from the cellar
 cleanup
