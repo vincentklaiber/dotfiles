@@ -5,7 +5,7 @@ update
 upgrade
 
 # Install homebrew-cask for nativ Mac applications
-tap phinze/cask/brew-cask
+tap phinze/cask
 tap caskroom/versions
 
 install brew-cask
@@ -20,8 +20,9 @@ cask install google-chrome-canary
 cask install imagealpha
 cask install imageoptim
 cask install onepassword
-cask install openoffice
 cask install openemu-experimental
+cask install openoffice
+cask install sketch
 cask install skype
 cask install spotify
 cask install sublime-text3
