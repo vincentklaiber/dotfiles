@@ -60,15 +60,13 @@ function mkd() {
 # Install Grunt plugins and add them as `devDependencies` to `package.json`
 # Usage: `gi contrib-watch contrib-uglify zopfli`
 function gi() {
-        local IFS=,
-        eval npm install --save-dev grunt-{"$*"}
+	npm install --save-dev ${*/#/grunt-}
 }
 
 # Install Gulp plugins and add them as `devDependencies` to `package.json`
 # Usage: `gp uglify clean cache csso`
 function gp() {
-        local IFS=,
-        eval npm install --save-dev gulp-{"$*"}
+	npm install --save-dev ${*/#/gulp-}
 }
 
 # `s` with no arguments opens the current directory in Sublime Text, otherwise
