@@ -14,6 +14,7 @@ install composer
 install ffmpeg --devel --with-libogg --with-libvorbis --with-libvpx --with-theora
 install fontforge
 install git
+install heroku-toolbelt
 install imagemagick --with-webp
 install mysql
 install node
