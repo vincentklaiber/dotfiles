@@ -11,7 +11,9 @@ tap caskroom/versions
 install brew-cask
 
 # Install nativ Mac applications
+cask install adobe-creative-cloud
 cask install appcleaner
+cask install colorpicker-skalacolor
 cask install dropbox
 cask install evernote
 cask install firefox
