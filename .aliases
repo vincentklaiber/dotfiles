@@ -32,7 +32,7 @@ alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 alias whois="whois -h whois-servers.net"
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com +nostats +nocomments +nocmd"
 alias localip="ipconfig getifaddr en1"
 
 # Recursively delete `.DS_Store` files
