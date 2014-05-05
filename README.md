@@ -10,17 +10,17 @@ If you're curious how to setup your own dotfiles, please visit [Mathias Bynens's
 xcode-select --install
 ```
 
-**2**. Install Homebrew http://brew.sh/
+**2**. Install Homebrew [http://brew.sh](http://brew.sh)
 ```bash
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ```
 
-**3**. Install GIT http://git-scm.com/
+**3**. Install GIT [http://git-scm.com](http://git-scm.com)
 ```bash
 brew install git
 ```
 
-**4**. Generate SSH keys https://help.github.com/articles/generating-ssh-keys
+**4**. Generate SSH keys [https://help.github.com/articles/generating-ssh-keys](https://help.github.com/articles/generating-ssh-keys)
 
 **5**. Clone this respoitory and install dotfiles.
 ```bash
