@@ -5,7 +5,7 @@ update
 upgrade
 
 # Install homebrew-cask for nativ Mac applications
-tap phinze/cask
+tap caskroom/cask
 tap caskroom/versions
 
 install brew-cask
