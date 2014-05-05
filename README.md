@@ -31,7 +31,7 @@ source bootstrap.sh
 
 **6**. Install binaries and native Mac applications.
 ```
-brew bundle ./Brewfile
+brew bundle ./Brewfile && brew bundle ./Caskfile
 ```
 
 **7**. Update ```/etc/paths``` file. Rather use Homebrew's then pre-installed binaries.
