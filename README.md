@@ -44,21 +44,22 @@ brew bundle ./Brewfile && brew bundle ./Caskfile
 /sbin
 ```
 
-**8**. Replace Sublime Text user directory and sync with DropBox.
+**8**. Create Sites directory in home root folder.
+```bash
+mkdir ~/Sites
+```
+
+**9**. Run the OSX setup script.
+```bash
+./.osx
+```
+
+**10**. Restart the computer and live happily ever after.
+
+**11**. Replace Sublime Text user directory and sync with [Dropbox](http://dropbox.com).
 ```bash
 rm -r /Users/vincent/Library/Application\ Support/Sublime\ Text\ 3/Packages
 ln -s /Users/vincent/Dropbox/Apps/Sublime\ Text\ 3/Packages /Users/vincent/Library/Application\ Support/Sublime\ Text\ 3/Packages
 ```
 
-**9**. Create Sites directory in home root folder.
-```bash
-mkdir ~/Sites
-```
-
-**10**. Run the OSX setup script.
-```bash
-./.osx
-```
-
-**11**. Restart the computer and live happily ever after.
 
