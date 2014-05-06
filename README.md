@@ -54,3 +54,11 @@ ln -s /Users/vincent/Dropbox/Apps/Sublime\ Text\ 3/Packages /Users/vincent/Libra
 ```bash
 mkdir ~/Sites
 ```
+
+**10**. Run the OSX setup script.
+```bash
+./.osx
+```
+
+**11**. Restart the computer and live happily ever after.
+
