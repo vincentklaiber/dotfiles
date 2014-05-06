@@ -25,7 +25,6 @@ $ brew install git
 **5**. Clone this respoitory and install dotfiles.
 ```bash
 $ git clone git@github.com:vinkla/dotfiles.git
-
 $ source bootstrap.sh
 ```
 
