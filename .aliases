@@ -25,8 +25,8 @@ alias sudo="sudo "
 alias simulator="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; brew doctor;"
-# Optional: sudo npm update -g; sudo npm update npm -g; sudo gem update --system; sudo gem update;
+alias update="sudo softwareupdate -i -a; npm update -g npm; brew update; brew upgrade; brew cleanup; brew doctor;"
+# Optional: sudo npm update -g; sudo gem update --system; sudo gem update;
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
