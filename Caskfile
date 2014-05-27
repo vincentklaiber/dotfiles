@@ -27,7 +27,7 @@ cask install openoffice
 cask install sketch
 cask install skype
 cask install spotify
-cask install sublime-text3
+cask install sublime-text-dev
 cask install the-unarchiver
 cask install transmit
 cask install virtualbox
