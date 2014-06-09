@@ -1,27 +1,27 @@
 # Add-ons to the `${PATH}`
-export PATH="$HOME/bin:$PATH"
-export PATH=${PATH}:/usr/local/share/npm/bin
-export RBENV_ROOT=/usr/local/var/rbenv
+export PATH="$HOME/bin:$PATH";
+export PATH=${PATH}:/usr/local/share/npm/bin;
+export RBENV_ROOT=/usr/local/var/rbenv;
 
 # Make vim the default editor
-export EDITOR="vim"
+export EDITOR="vim";
 
 # Larger bash history (allow 32³ entries; default is 500)
-export HISTSIZE=32768
-export HISTFILESIZE=${HISTSIZE}
-export HISTCONTROL=ignoredups
+export HISTSIZE=32768;
+export HISTFILESIZE=${HISTSIZE};
+export HISTCONTROL=ignoredups;
 # Make some commands not show up in history
-export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
 
 # Prefer US English and use UTF-8
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8";
+export LC_ALL="en_US.UTF-8";
 
 # Highlight section titles in manual pages
-export LESS_TERMCAP_md="${ORANGE}"
+export LESS_TERMCAP_md="${ORANGE}";
 
 # Always enable colored `grep` output
-export GREP_OPTIONS="--color=auto"
+export GREP_OPTIONS="--color=auto";
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications";
