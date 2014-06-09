@@ -61,9 +61,9 @@ function mkd() {
 # opens the given location
 function s() {
 	if [ $# -eq 0 ]; then
-		subl .
+		subl .;
 	else
-		subl "$@"
+		subl "$@";
 	fi
 }
 
@@ -71,9 +71,9 @@ function s() {
 # opens the given location
 function a() {
 	if [ $# -eq 0 ]; then
-		atom .
+		atom .;
 	else
-		atom "$@"
+		atom "$@";
 	fi
 }
 
@@ -81,8 +81,8 @@ function a() {
 # location
 function o() {
 	if [ $# -eq 0 ]; then
-		open .
+		open .;
 	else
-		open "$@"
+		open "$@";
 	fi
 }
