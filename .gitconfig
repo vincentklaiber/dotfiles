@@ -99,10 +99,6 @@
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
-[push]
-	# Git 2.0 from 'matching' to 'simple'
-	default = simple
-
 [url "git@github.com:"]
 	# gh: is a shorthand for git@github.com
 	insteadOf = "gh:"
