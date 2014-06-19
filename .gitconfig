@@ -99,6 +99,10 @@
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
+[push]
+	# Git simple branching method only your current branch will be pushed.
+	default = simple
+
 [url "git@github.com:"]
 	# gh: is a shorthand for git@github.com
 	insteadOf = "gh:"
