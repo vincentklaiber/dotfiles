@@ -52,6 +52,9 @@ alias week="date +%V"
 # Remove ".svn" folders from workingcopy recursive
 alias rmsvn="find . -type d -name .svn -exec rm -rf {} \;"
 
+# Kill all the tabs in Chrome to free up memory
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "${@}" && cd "${@}";
