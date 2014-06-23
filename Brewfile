@@ -7,6 +7,7 @@ upgrade
 # Install more recent versions of some OS X tools
 install homebrew/php/php55
 install homebrew/php/php55-mcrypt
+install homebrew/php/php55-xdebug
 
 # Install other useful binaries
 install aria2
@@ -18,7 +19,6 @@ install heroku-toolbelt
 install imagemagick --with-webp
 install mysql
 install node
-install phpmyadmin
 install rename
 install wget
 
