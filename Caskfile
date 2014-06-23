@@ -24,6 +24,7 @@ cask install imageoptim
 cask install onepassword
 cask install openemu-experimental
 cask install openoffice
+cask install sequel-pro
 cask install sketch
 cask install skype
 cask install spotify
