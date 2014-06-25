@@ -1,6 +1,8 @@
 set nocompatible   " Disable vi-compatibility
 set t_Co=256
 
+colorscheme xoria256
+syntax enable " Enable syntax highighting
 set guifont=menlo\ for\ powerline:h12
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
@@ -28,6 +30,11 @@ set noerrorbells         		" don't beep
 set autowrite  					"Save on buffer switch
 set mouse=a
 
+" With a map leader it's possible to do extra key combinations
+" like <leader>w save the current file
+let mapleader = ","
+let g:mapleader = ","
+
 " Down is really the next line
 nnoremap j gj
 nnoremap k gk
@@ -44,8 +51,13 @@ nmap 25 :vertical resize 40<cr>
 nmap 50 <c-w>=
 nmap 75 :vertical resize 120<cr>
 
+nmap <C-b> :NERDTreeToggle<cr>
+
 "Show (partial) command in the status line
 set showcmd
+
+" Create split below
+nmap :sp :rightbelow sp
 
 highlight Search cterm=underline
 
@@ -60,3 +72,7 @@ set encoding=utf-8 " Necessary to show Unicode glyphs
 
 " Remove search results
 command! H let @/=""
+
+" Set relevant filetypes
+au BufRead,BufNewFile *.scss set filetype=css
+au BufRead,BufNewFile *.md set filetype=markdown
