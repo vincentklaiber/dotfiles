@@ -15,7 +15,6 @@ cask install adobe-creative-cloud
 cask install appcleaner
 cask install colorpicker-skalacolor
 cask install dropbox
-cask install evernote
 cask install firefox
 cask install google-chrome
 cask install google-chrome-canary
