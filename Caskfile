@@ -26,6 +26,7 @@ cask install openoffice
 cask install sequel-pro
 cask install sketch
 cask install skype
+cask install spectacle
 cask install spotify
 cask install sublime-text-dev
 cask install the-unarchiver
