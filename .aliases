@@ -19,7 +19,7 @@ alias art="php artisan"
 alias vm="ssh vagrant@127.0.0.1 -p 2222"
 
 # List all files in long format, including dot files
-alias l="ls -Gla"
+alias l="ls -Glah"
 
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
