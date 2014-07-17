@@ -14,6 +14,7 @@ alias h="history"
 
 # Laravel Artisan CLI
 alias art="php artisan"
+alias refresh="php artisan migrate:reset && php artisan migrate --seed"
 
 # SSH into Vagrant box
 alias vm="ssh vagrant@127.0.0.1 -p 2222"
