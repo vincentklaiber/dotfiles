@@ -152,10 +152,9 @@ defaults write com.apple.spaces spans-displays -bool false
 # Finder                                                                      #
 ###############################################################################
 
-# Set Desktop as the default location for new Finder windows
-# For other path use "PfLo" and "file:///foo/bar/"
-defaults write com.apple.finder NewWindowTarget -string "PfLo"
-defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+# New Finder windows shows Home directory
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/vincent/"
 
 # Finder: allow text selection in Quick Look
 defaults write com.apple.finder QLEnableTextSelection -bool true
@@ -187,9 +186,6 @@ defaults write com.apple.finder EmptyTrashSecurely -bool true
 # Hide tags in Finder sidebar (OSX Mavericks 10.9+)
 defaults write com.apple.finder ShowRecentTags -bool false
 defaults write com.apple.finder SidebarTagsSctionDisclosedState -bool true
-
-# New Finder windows shows Home directory
-defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/vincent/"
 
 # Hide tags, tab view and status bar from Finder window
 defaults write com.apple.finder ShowRecentTags -bool false
