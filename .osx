@@ -198,6 +198,7 @@ defaults write com.apple.finder CreateDesktop -bool false
 # Hide unuseful applications
 sudo chflags hidden /Applications/Automator.app
 sudo chflags hidden /Applications/Chess.app
+sudo chflags hidden /Applications/Calendar.app
 sudo chflags hidden /Applications/DVD\ Player.app
 sudo chflags hidden /Applications/Dashboard.app
 sudo chflags hidden /Applications/Dictionary.app
