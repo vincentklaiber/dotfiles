@@ -49,7 +49,7 @@ push_changes() {
   fi
 
   # push and delete branch
-  git push origin "${branch_name}"
+  git push vinkla "${branch_name}"
   git checkout master
   git branch -D "${branch_name}"
 }
