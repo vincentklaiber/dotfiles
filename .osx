@@ -55,7 +55,7 @@ systemsetup -setrestartfreeze on
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -92,12 +92,6 @@ defaults write NSGlobalDomain AppleLocale -string "en_SV@currency=SEK"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
-# Set the timezone; see `systemsetup -listtimezones` for other values
-systemsetup -settimezone "Europe/Stockholm" > /dev/null
-
-# Disable auto-correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
@@ -106,7 +100,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Displays have separate Spaces
+# Disable displays have separate Spaces
 defaults write com.apple.spaces spans-displays -bool false
 
 ###############################################################################
