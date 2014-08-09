@@ -15,25 +15,7 @@ $ xcode-select --install
 $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ```
 
-**3**. Install GIT [http://git-scm.com](http://git-scm.com)
-```bash
-$ brew install git
-```
-
-**4**. Generate SSH keys [https://help.github.com/articles/generating-ssh-keys](https://help.github.com/articles/generating-ssh-keys)
-
-**5**. Clone this respoitory and install dotfiles.
-```bash
-$ git clone git@github.com:vinkla/dotfiles.git
-$ source bootstrap.sh
-```
-
-**6**. Install binaries and native Mac applications.
-```bash
-$ brew bundle ./Brewfile && brew bundle ./Caskfile
-```
-
-**7**. Update ```/etc/paths``` file.
+**3**. Update ```/etc/paths``` file.
 ```bash
 $ sudo vi /etc/paths
 ```
@@ -46,6 +28,24 @@ Rather use Homebrew's then pre-installed binaries.
 /bin
 /usr/sbin
 /sbin
+```
+
+**4**. Install GIT [http://git-scm.com](http://git-scm.com)
+```bash
+$ brew install git
+```
+
+**5**. Generate SSH keys [https://help.github.com/articles/generating-ssh-keys](https://help.github.com/articles/generating-ssh-keys)
+
+**6**. Clone this respoitory and install dotfiles.
+```bash
+$ git clone git@github.com:vinkla/dotfiles.git
+$ source bootstrap.sh
+```
+
+**7**. Install binaries and native Mac applications.
+```bash
+$ brew bundle ./Brewfile && brew bundle ./Caskfile
 ```
 
 **8**. Create Sites directory in home root folder.
