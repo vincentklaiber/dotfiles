@@ -10,7 +10,6 @@ install homebrew/php/php56-mcrypt
 
 # Install other useful binaries
 install aria2
-install codeception
 install composer
 install ffmpeg --devel --with-libogg --with-libvorbis --with-libvpx --with-theora
 install fontforge
