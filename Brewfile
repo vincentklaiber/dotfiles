@@ -5,9 +5,8 @@ update
 upgrade
 
 # Install more recent versions of some OS X tools
-install homebrew/php/php55
-install homebrew/php/php55-mcrypt
-install homebrew/php/php55-xdebug
+install homebrew/php/php56
+install homebrew/php/php56-mcrypt
 
 # Install other useful binaries
 install aria2
