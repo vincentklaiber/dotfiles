@@ -245,6 +245,14 @@ defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
 ###############################################################################
+# Google Chrome & Google Chrome Canary                                        #
+###############################################################################
+
+# Disable the all too sensitive backswipe
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
