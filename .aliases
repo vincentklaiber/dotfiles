@@ -68,7 +68,7 @@ function mkd() {
 # (Requires PHP 5.4.0+.)
 function serve() {
 	local port="${1:-4000}";
-	sleep 1 && open "http://localhost:${port}/" & php -S "localhost${ip}:${port}";
+	sleep 1 && open "http://localhost:${port}/" & php -S "localhost:${port}";
 }
 
 # `s` with no arguments opens the current directory in Sublime Text, otherwise
