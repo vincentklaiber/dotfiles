@@ -236,7 +236,7 @@
 	<key>VisualBellOnlyWhenMuted</key>
 	<false/>
 	<key>columnCount</key>
-	<integer>200</integer>
+	<integer>101</integer>
 	<key>name</key>
 	<string>Vincent</string>
 	<key>rowCount</key>
