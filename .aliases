@@ -8,7 +8,6 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias doc="cd ~/Documents"
 alias ss="cd ~/Sites"
-alias p="cd ~/Dropbox/Projects"
 alias g="git"
 alias h="history"
 
@@ -85,6 +84,16 @@ function a() {
 		atom .;
 	else
 		atom "$@";
+	fi
+}
+
+# `p` with no arguments opens the current directory in PhpStorm, otherwise
+# opens the given location
+function p() {
+	if [ $# -eq 0 ]; then
+		open -a PhpStorm\ EAP .;
+	else
+		open -a PhpStorm\ EAP "$@";
 	fi
 }
 
