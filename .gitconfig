@@ -1,4 +1,7 @@
-[alias]
+	[alias]
+	# Amend the currently staged files to the latest commit
+	amend = commit --amend --reuse-message=HEAD
+
 	# Shorthand for branch
 	b = branch
 
