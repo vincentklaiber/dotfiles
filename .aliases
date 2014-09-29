@@ -18,6 +18,9 @@ alias refresh="php artisan migrate:reset && php artisan migrate --seed"
 # SSH into Vagrant box
 alias vm="ssh vagrant@127.0.0.1 -p 2222"
 
+# Start Homestead Vagrant box
+alias up="cd ~/Sites/homestead && vagrant up"
+
 # List all files in long format, including dot files
 alias l="ls -Glah"
 
