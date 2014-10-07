@@ -4,6 +4,7 @@ alias ...="cd ../.."
 
 # Shortcuts
 alias d="cd ~/Dropbox"
+alias dot="cd ~/Dropbox/Projects/dotfiles"
 alias doc="cd ~/Documents"
 alias ss="cd ~/Sites"
 alias g="git"
