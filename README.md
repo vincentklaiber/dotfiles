@@ -38,7 +38,7 @@ $ brew install git
 Generate SSH keys [https://help.github.com/articles/generating-ssh-keys](https://help.github.com/articles/generating-ssh-keys)
 
 ```bash
-ssh-keygen -t rsa -C "your_email@example.com"
+$ ssh-keygen -t rsa -C "your_email@example.com"
 ```
 
 Clone this respoitory and install dotfiles.
