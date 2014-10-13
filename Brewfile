@@ -18,6 +18,7 @@ install imagemagick --with-webp
 install mysql
 install node
 install rename
+install sshrc
 install wget
 
 # Remove outdated versions from the cellar
