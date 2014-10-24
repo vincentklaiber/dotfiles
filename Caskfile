@@ -19,7 +19,7 @@ cask install google-chrome
 cask install google-chrome-canary
 cask install imagealpha
 cask install imageoptim
-cask install java7
+cask install java
 cask install onepassword
 cask install phpstorm-eap
 cask install sequel-pro
