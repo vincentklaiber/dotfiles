@@ -58,7 +58,7 @@ alias rmsvn="find . -type d -name .svn -exec rm -rf {} \;"
 
 # Create a new directory and enter it
 function mkd() {
-	mkdir -p "${@}" && cd "${@}";
+	mkdir -p "${@}" && cd "${_}";
 }
 
 # Start a PHP server from a directory, optionally specifying the port
