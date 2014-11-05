@@ -12,7 +12,7 @@ $ xcode-select --install
 
 Install Homebrew [http://brew.sh](http://brew.sh)
 ```bash
-$ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 Update ```/etc/paths``` file.
@@ -49,7 +49,7 @@ $ source bootstrap.sh
 
 Install binaries and native Mac applications.
 ```bash
-$ brew bundle ./Brewfile && brew bundle ./Caskfile
+$ source brew.sh && source cask.sh
 ```
 
 Create Sites directory in home root folder.

@@ -30,7 +30,7 @@ alias simulator="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhon
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update="sudo softwareupdate -i -a; npm install -g npm@latest; brew update; brew upgrade; brew cleanup; brew cask cleanup; brew doctor;"
-# Optional: sudo npm update -g; sudo gem update --system; sudo gem update;
+# Optional: sudo gem update --system; sudo gem update;
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
