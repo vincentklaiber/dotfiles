@@ -26,7 +26,7 @@ alias l="ls -Glah"
 alias sudo="sudo "
 
 # Load the iphone simulator
-alias simulator="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+alias simulator="open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update="sudo softwareupdate -i -a; npm install -g npm@latest; brew update; brew upgrade; brew cleanup; brew cask cleanup; brew doctor;"
