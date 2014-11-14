@@ -2,6 +2,9 @@
 alias ..="cd .."
 alias ...="cd ../.."
 
+# Better GitHub integration
+alias git="hub"
+
 # Shortcuts
 alias d="cd ~/Dropbox"
 alias dot="cd ~/Dropbox/Projects/dotfiles"
