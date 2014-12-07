@@ -12,15 +12,15 @@ brew install homebrew/php/php56-mcrypt
 
 # Install other useful binaries
 brew install aria2
-brew install composer
 brew install bash-completion
+brew install composer
 brew install git
 brew install hub
 brew install node
 brew install rename
 brew install sshrc
-brew install vitorgalvao/tinyscripts/prfix
 brew install wget
+brew install z
 
 # Remove outdated versions from the cellar
 brew cleanup
