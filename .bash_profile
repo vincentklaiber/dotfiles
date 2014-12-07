@@ -6,6 +6,9 @@ for file in ~/.{exports,aliases,extra}; do
 done;
 unset file;
 
+# Load the z binary
+. `brew --prefix`/etc/profile.d/z.sh
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 
