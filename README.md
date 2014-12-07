@@ -10,27 +10,12 @@ Install XCode Command Line Tools.
 $ xcode-select --install
 ```
 
-Install Homebrew [http://brew.sh](http://brew.sh)
+Install Homebrew [http://brew.sh](http://brew.sh).
 ```bash
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-Update ```/etc/paths``` file.
-```bash
-$ sudo vi /etc/paths
-```
-
-Rather use Homebrew's then pre-installed binaries.
-```bash
-/usr/local/bin
-/usr/local/sbin
-/usr/bin
-/bin
-/usr/sbin
-/sbin
-```
-
-Install GIT [http://git-scm.com](http://git-scm.com)
+Install GIT [http://git-scm.com](http://git-scm.com).
 ```bash
 $ brew install git
 ```
