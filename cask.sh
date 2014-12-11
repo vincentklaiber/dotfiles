@@ -13,6 +13,7 @@ brew tap caskroom/versions
 brew install brew-cask
 
 # Install nativ Mac applications
+brew cask install 1password
 brew cask install adobe-creative-cloud
 brew cask install appcleaner
 brew cask install dropbox
@@ -22,7 +23,6 @@ brew cask install google-chrome-canary
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install java
-brew cask install onepassword
 brew cask install phpstorm-eap
 brew cask install sequel-pro
 brew cask install skype
