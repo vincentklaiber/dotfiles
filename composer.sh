@@ -4,5 +4,6 @@
 brew upgrade composer
 
 # Install Laravel Homestead and installer
-composer global require "laravel/homestead=~2.0"
-composer global require "laravel/installer=~1.1"
+composer global require "laravel/homestead"
+composer global require "laravel/installer"
+composer global require "phpspec/phpspec"
