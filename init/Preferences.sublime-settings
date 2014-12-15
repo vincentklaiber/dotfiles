@@ -1,7 +1,7 @@
 {
 	"afn_insert_dimensions": true,
 	"afn_use_project_root": true,
-	"color_scheme": "Packages/Broadcast Color Scheme/Broadcast.tmTheme",
+	"color_scheme": "Packages/User/Broadcast (SL).tmTheme",
 	"default_line_ending": "unix",
 	"detect_indentation": false,
 	"drag_text": false,
@@ -39,8 +39,8 @@
 		80
 	],
 	"show_full_path": true,
-	"soda_folder_icons": true,
-	"theme": "Soda Dark 3.sublime-theme",
+	"soda_folder_icons": false,
+	"theme": "Soda Dark.sublime-theme",
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_simple_full_screen": true,
