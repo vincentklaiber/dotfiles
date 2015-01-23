@@ -8,6 +8,9 @@ This is a checklist of things to do before reseting the disk.
 1. Export `Transmit.app` favorites to Dropbox.
 2. Check all GIT repositories for uncommitted changes.
 3. Add latest homestead settings to `dotfiles` repository.
+4. Reconsider all binaries in `brew.sh`.
+5. Reconsider all applications in `cask.sh`.
+6. You don't have to reconsider anything in `composer.sh`. Its fine.
 
 ## New OS X Environment
 
