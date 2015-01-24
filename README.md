@@ -11,6 +11,8 @@ This is a checklist of things to do before reseting the disk.
 4. Reconsider all binaries in `brew.sh`.
 5. Reconsider all applications in `cask.sh`.
 6. You don't have to reconsider anything in `composer.sh`. Its fine.
+7. Save latest `Sublime Text.app` settings.
+8. Save latest `PhpStorm.app` settings.
 
 ## New OS X Environment
 
