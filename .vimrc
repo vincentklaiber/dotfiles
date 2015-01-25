@@ -49,8 +49,6 @@ nmap 25 :vertical resize 40<cr>
 nmap 50 <c-w>=
 nmap 75 :vertical resize 120<cr>
 
-nmap <C-b> :NERDTreeToggle<cr>
-
 "Show (partial) command in the status line
 set showcmd
 
