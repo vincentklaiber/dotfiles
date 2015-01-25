@@ -242,7 +242,7 @@
 	<key>name</key>
 	<string>Vincent</string>
 	<key>rowCount</key>
-	<integer>50</integer>
+	<integer>51</integer>
 	<key>type</key>
 	<string>Window Settings</string>
 </dict>
