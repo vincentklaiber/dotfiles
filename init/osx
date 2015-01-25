@@ -167,9 +167,6 @@ sudo chflags hidden /Applications/Stickies.app
 sudo chflags hidden /Applications/Time\ Machine.app
 sudo chflags hidden /Applications/iBooks.app
 
-# Hide ~/bin directory
-sudo chflags hidden ~/bin
-
 ###############################################################################
 # Dashboard & Dock                                                            #
 ###############################################################################
