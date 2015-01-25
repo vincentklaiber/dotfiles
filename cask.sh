@@ -30,7 +30,7 @@ brew cask install skype
 brew cask install spectacle
 brew cask install spotify
 brew cask install sublime-text-dev
-brew cask install the-unarchiver
+brew cask install steam
 brew cask install transmit
 brew cask install vagrant
 brew cask install virtualbox
