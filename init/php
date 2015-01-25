@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Make sure we’re using the latest Homebrew
+brew update
+
+# Upgrade any already-installed formulae
+brew upgrade
+
+# Install more recent versions of PHP
+brew install homebrew/php/php56
+brew install homebrew/php/php56-mcrypt
+
+# Install PHP package management binary
+brew install composer
+
+# Remove outdated versions from the cellar
+brew cleanup
