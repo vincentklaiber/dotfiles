@@ -45,7 +45,7 @@ $ source bootstrap.sh
 
 Install binaries and native Mac applications.
 ```bash
-$ source brew.sh && source cask.sh
+$ source ./init/brew && source ./init/cask
 ```
 
 Create Sites directory in home root folder.
