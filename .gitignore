@@ -1,6 +1,13 @@
 # Don't commit to a public repository.
 .extra
 
+# Third-party directories
+node_modules
+bower_components
+
+# Composer
+composer.phar
+
 # Compiled Python files
 *.pyc
 
