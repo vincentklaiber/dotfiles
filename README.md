@@ -2,18 +2,6 @@ dotfiles
 ========
 If you're curious how to setup your own dotfiles, please visit [Mathias Bynens's dotfiles](https://github.com/mathiasbynens/dotfiles) to learn more.
 
-## Before Reset
-This is a checklist of things to do before reseting the disk.
-
-1. Export `Transmit.app` favorites to Dropbox.
-2. Check all GIT repositories for uncommitted changes.
-3. Add latest homestead settings to `dotfiles` repository.
-4. Reconsider all binaries in `brew.sh`.
-5. Reconsider all applications in `cask.sh`.
-6. You don't have to reconsider anything in `composer.sh`. Its fine.
-7. Save latest `Sublime Text.app` settings.
-8. Save latest `PhpStorm.app` settings.
-
 ## New OS X Environment
 
 Install XCode Command Line Tools.
@@ -66,3 +54,19 @@ $ ./.osx
 ```
 
 Restart the computer and live happily ever after.
+
+## Before Reset
+This is a checklist of things to do before reseting the disk.
+
+1. Export `Transmit.app` favorites to Dropbox.
+2. Check all GIT repositories for uncommitted changes.
+3. Add latest homestead settings to `dotfiles` repository.
+4. Reconsider all binaries in `brew.sh`.
+5. Reconsider all applications in `cask.sh`.
+6. You don't have to reconsider anything in `composer.sh`. Its fine.
+7. Save latest `Sublime Text.app` settings.
+8. Save latest `PhpStorm.app` settings.
+9. Save `Sequel Pro.app` favorites and dump databases (if necessary).
+
+## License
+The dotfiles repository is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
