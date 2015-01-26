@@ -6,3 +6,4 @@ npm install -g npm@latest;
 # Install useful npm packages
 npm install -g gulp
 npm install -g bower
+npm install -g npm-check-updates
