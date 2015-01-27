@@ -24,7 +24,7 @@
 	f = fetch --all
 
 	# View the SHA, description, and history graph of the latest 20 commits
-	l = log --format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --no-merges -n 20
+	l = log --format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --no-merges -n 40
 
 	# Shorthand for merge
 	m = merge
