@@ -5,6 +5,9 @@
 node_modules
 bower_components
 
+# SASS Cache
+.sass-cache
+
 # Composer
 composer.phar
 composer.lock
