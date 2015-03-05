@@ -1,5 +1,6 @@
 # Add-ons to the `${PATH}`
 export PATH="${HOME}/bin:${PATH}";
+export PATH="/usr/local/sbin:${PATH}";
 export PATH=${PATH}:/usr/local/share/npm/bin;
 export PATH=${PATH}:${HOME}/.composer/vendor/bin;
 
