@@ -12,6 +12,9 @@ bower_components
 composer.phar
 composer.lock
 
+# PHP CS Fixer
+.php_cs.cache
+
 # Compiled Python files
 *.pyc
 
