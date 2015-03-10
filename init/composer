@@ -9,3 +9,4 @@ composer global require fabpot/php-cs-fixer
 composer global require laravel/homestead
 composer global require laravel/installer
 composer global require phpspec/phpspec
+composer global require squizlabs/php_codesniffer
