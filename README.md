@@ -41,7 +41,6 @@ Create Sites directory in home root folder.
 $ mkdir ~/Sites
 ```
 
-
 [Install Sublime Text Package Control](https://packagecontrol.io/installation). Replace Sublime Text user directory and sync with [Dropbox](http://dropbox.com).
 ```bash
 $ rm -r /Users/vincent/Library/Application\ Support/Sublime\ Text\ 3/Packages
@@ -50,7 +49,7 @@ $ ln -s /Users/vincent/Dropbox/Apps/Sublime\ Text\ 3/Packages /Users/vincent/Lib
 
 Run the OSX setup script.
 ```bash
-$ ./.osx
+$ source ./init/osx
 ```
 
 Restart the computer and live happily ever after.
