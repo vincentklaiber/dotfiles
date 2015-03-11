@@ -38,3 +38,6 @@ brew cask install vlc
 
 # Remove outdated versions from the cellar
 brew cleanup
+
+# Check if the system is ready to brew
+brew doctor
