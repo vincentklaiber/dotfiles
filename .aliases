@@ -12,8 +12,9 @@ alias h="history"
 # Laravel Artisan CLI
 alias art="php artisan"
 
-# Behat PHP Testing Framework
+# PHP Testing Framework Aliases
 alias behat="./vendor/bin/behat"
+alias phpunit="./vendor/phpunit/phpunit/phpunit"
 
 # List all files in long format, including dot files
 alias l="ls -Glah"
