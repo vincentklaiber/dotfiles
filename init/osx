@@ -162,6 +162,7 @@ sudo chflags hidden /Applications/Maps.app
 sudo chflags hidden /Applications/Mission\ Control.app
 sudo chflags hidden /Applications/Notes.app
 sudo chflags hidden /Applications/Photo\ Booth.app
+sudo chflags hidden /Applications/Photos.app
 sudo chflags hidden /Applications/Reminders.app
 sudo chflags hidden /Applications/Stickies.app
 sudo chflags hidden /Applications/Time\ Machine.app
