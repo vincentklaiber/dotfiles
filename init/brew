@@ -6,9 +6,17 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
+# Add more version of binaries
+brew tap homebrew/versions
+
+# Install Bash 4.
+# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
+# running `chsh`.
+brew install bash
+brew install bash-completion2
+
 # Install other useful binaries
 brew install aria2
-brew install bash-completion
 brew install git
 brew install hub
 brew install node
