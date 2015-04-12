@@ -7,4 +7,3 @@ npm install -g npm@latest;
 npm install -g gulp
 npm install -g bower
 npm install -g npm-check-updates
-npm install -g grunt-cli
