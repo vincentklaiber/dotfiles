@@ -68,4 +68,6 @@ This is a checklist of things to do before reseting the disk.
 9. Save `Sequel Pro.app` favorites and dump databases (if necessary).
 
 ## License
-The dotfiles repository is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+The dotfiles repository is licensed under [The MIT License (MIT)](LICENSE).
+
