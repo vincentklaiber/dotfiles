@@ -6,50 +6,50 @@ If you're curious how to setup your own dotfiles, please visit [Mathias Bynens's
 
 Install XCode Command Line Tools.
 ```bash
-$ xcode-select --install
+xcode-select --install
 ```
 
 Install Homebrew [http://brew.sh](http://brew.sh).
 ```bash
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 Install GIT [http://git-scm.com](http://git-scm.com).
 ```bash
-$ brew install git
+brew install git
 ```
 
 Generate SSH keys [https://help.github.com/articles/generating-ssh-keys](https://help.github.com/articles/generating-ssh-keys)
 
 ```bash
-$ ssh-keygen -t rsa -C "your_email@example.com"
+ssh-keygen -t rsa -C "your_email@example.com"
 ```
 
 Clone this respoitory and install dotfiles.
 ```bash
-$ git clone git@github.com:vinkla/dotfiles.git
-$ source bootstrap.sh
+git clone git@github.com:vinkla/dotfiles.git
+source bootstrap.sh
 ```
 
 Install binaries and native Mac applications.
 ```bash
-$ source ./init/brew && source ./init/cask
+source ./scripts/brew && source ./scripts/cask
 ```
 
 Create Sites directory in home root folder.
 ```bash
-$ mkdir ~/Sites
+mkdir ~/Sites
 ```
 
 [Install Sublime Text Package Control](https://packagecontrol.io/installation). Replace Sublime Text user directory and sync with [Dropbox](http://dropbox.com).
 ```bash
-$ rm -r /Users/vincent/Library/Application\ Support/Sublime\ Text\ 3/Packages
-$ ln -s /Users/vincent/Dropbox/Apps/Sublime\ Text\ 3/Packages /Users/vincent/Library/Application\ Support/Sublime\ Text\ 3/Packages
+rm -r /Users/vincent/Library/Application\ Support/Sublime\ Text\ 3/Packages
+ln -s /Users/vincent/Dropbox/Apps/Sublime\ Text\ 3/Packages /Users/vincent/Library/Application\ Support/Sublime\ Text\ 3/Packages
 ```
 
 Run the OSX setup script.
 ```bash
-$ source ./init/osx
+source ./scripts/osx
 ```
 
 Restart the computer and live happily ever after.
