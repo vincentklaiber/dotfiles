@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+echo -e '\e[0;34mEmpty the Trash on all mounted volumes and the main HDD...'
+sudo rm -rfv /Volumes/*/.Trashes
+sudo rm -rfv ~/.Trash
+
+echo 'Clear Apple’s System Logs to improve shell startup speed...'
+sudo rm -rfv /private/var/log/asl/*.asl
+
+echo 'Cleanup iOS Applications...'
+rm -rf ~/Music/iTunes/iTunes\ Media/Mobile\ Applications/*
+
+echo 'Remove iOS Device Backups...'
+rm -rf ~/Library/Application\ Support/MobileSync/Backup/*
+
+echo 'Cleanup XCode Derived Data...'
+rm -rf ~/Library/Developer/Xcode/DerivedData/*
+
+echo -e 'Cleanup Homebrew Cache...\e[0m'
+brew cleanup --force -s
+rm -rf /Library/Caches/Homebrew/*

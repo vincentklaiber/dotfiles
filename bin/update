@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+echo -e '\e[0;33mInstall OS X Software Updates...\e[0m'
+sudo softwareupdate -i -a
+
+echo -e '\e[0;33mUpdate NPM to the latest version...\e[0m'
+npm install -g npm@latest
+
+echo -e '\e[0;33mUpdate Composer...\e[0m'
+composer self-update
+
+echo -e '\e[0;33mUpdate global Composer libraries...\e[0m'
+composer global update --no-dev --prefer-dist
+
+echo -e '\e[0;33mUpdate Homebrew...\e[0m'
+brew update
+brew upgrade
+
+echo -e '\e[0;33mCleanup Homebrew Cache...\e[0m'
+brew cleanup --force -s
+rm -rf /Library/Caches/Homebrew/*
+brew doctor
