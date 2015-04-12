@@ -103,6 +103,9 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Disable displays have separate Spaces
 defaults write com.apple.spaces spans-displays -bool true
 
+# Save screenshots to the downloads directory
+defaults write com.apple.screencapture location -string "${HOME}/Downloads"
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
