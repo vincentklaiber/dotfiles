@@ -12,6 +12,11 @@ brew tap caskroom/versions
 
 brew install brew-cask
 
+# Set caskroom permissions
+mkdir -p /opt/homebrew-cask/Caskroom
+sudo chown -R ${USER}:staff /opt/homebrew-cask
+sudo chflags hidden /opt
+
 # Install nativ Mac applications
 brew cask install 1password
 brew cask install adobe-creative-cloud
