@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Make sure we’re using the latest Homebrew
 brew update
@@ -11,11 +11,6 @@ brew tap caskroom/cask
 brew tap caskroom/versions
 
 brew install brew-cask
-
-# Set caskroom permissions
-mkdir -p /opt/homebrew-cask/Caskroom
-sudo chown -R ${USER}:staff /opt/homebrew-cask
-sudo chflags hidden /opt
 
 # Install nativ Mac applications
 brew cask install 1password
