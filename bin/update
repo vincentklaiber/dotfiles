@@ -26,5 +26,5 @@ brew cleanup --force -s
 rm -rf /Library/Caches/Homebrew/*
 brew tap --repair
 
-print 'Check if my system ready to brew...'
+print 'Check if my system is ready to brew...'
 brew doctor
