@@ -8,13 +8,12 @@ sudo -v
 print 'Install OS X Software Updates...'
 sudo softwareupdate -i -a
 
-print 'Update NPM to the latest version...'
-npm install -g npm@latest
+print 'Update NPM with dependencies...'
+npm install --global npm@latest
+npm update --global --silent
 
-print 'Update Composer...'
+print 'Update Composer with dependencies...'
 composer self-update
-
-print 'Update global Composer libraries...'
 composer global update --no-dev --prefer-dist
 
 print 'Update Homebrew...'
