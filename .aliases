@@ -21,6 +21,10 @@ alias sudo="sudo "
 # Load the iphone simulator
 alias simulator="open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app"
 
+# Speedup Yosemite Wi-Fi by disabling AWDL
+alias fast="sudo ifconfig awdl0 down"
+alias slow="sudo ifconfig awdl0 up"
+
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
