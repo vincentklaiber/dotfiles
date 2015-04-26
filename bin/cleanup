@@ -22,8 +22,9 @@ rm -rfv ~/Music/iTunes/iTunes\ Media/Mobile\ Applications/*
 print 'Remove iOS Device Backups...'
 rm -rfv ~/Library/Application\ Support/MobileSync/Backup/*
 
-print 'Cleanup XCode Derived Data...'
+print 'Cleanup XCode Derived Data and Archives...'
 rm -rfv ~/Library/Developer/Xcode/DerivedData/*
+rm -rfv ~/Library/Developer/Xcode/Archives/*
 
 print 'Cleanup Homebrew Cache...'
 brew cleanup --force -s
