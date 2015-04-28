@@ -4,7 +4,7 @@
 brew update
 
 # Upgrade any already-installed formulae
-brew upgrade
+brew upgrade --all
 
 # Install more recent versions of PHP
 brew install homebrew/php/php56
