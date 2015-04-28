@@ -36,6 +36,12 @@ Install binaries and native Mac applications.
 source ./scripts/brew && source ./scripts/cask
 ```
 
+Set bash to use the latest version of bash installed with brew.
+```bash
+sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+chsh -s /usr/local/bin/bash
+```
+
 Create Sites directory in home root folder.
 ```bash
 mkdir ~/Sites
