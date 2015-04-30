@@ -12,6 +12,9 @@ alias h="history"
 # Laravel Artisan CLI
 alias art="php artisan"
 
+# Shorthand for PHP CS Fixer
+alias fix="php-cs-fixer fix"
+
 # List all files in long format, including dot files
 alias l="ls -Glah"
 
