@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+url=https://gist.githubusercontent.com/vinkla/033c01f665980dd53d9b/raw/73bc3bc722ca56eeed11da31694308ff122792d4/PHP%20CS%20Fixer
+fixers=$(curl -s ${url})
+
+php-cs-fixer ${fixers} "$@"
