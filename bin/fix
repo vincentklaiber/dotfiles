@@ -1,17 +1,19 @@
 #!/usr/bin/env bash
 
-url=https://gist.githubusercontent.com/vinkla/033c01f665980dd53d9b/raw/73bc3bc722ca56eeed11da31694308ff122792d4/PHP%20CS%20Fixer
-fixers=$(curl -s ${url})
-
-echo ${fixers}
+url=https://gist.githubusercontent.com/vinkla/033c01f665980dd53d9b/raw/fixers
 
 run() {
-	php-cs-fixer ${fixers} "$@"
+	if [[ -f .php_cs ]]; then
+		eval "php-cs-fixer fix"
+	else		
+		fixers=$(curl -s ${url})
+		eval "php-cs-fixer ${fixers} fix $@"
+	fi
 }
 
 if [[ -z "$1" ]]; then
-    run
-	kill -INT $$
+	run .
+	exit 1
 fi
 
 for arg; do
