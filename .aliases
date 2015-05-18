@@ -12,6 +12,9 @@ alias h="history"
 # Laravel Artisan CLI
 alias art="php artisan"
 
+# PHP Unit Testing
+alias phpunit="vendor/bin/phpunit"
+
 # List all files in long format, including dot files
 alias l="ls -Glah"
 
