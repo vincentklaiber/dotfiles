@@ -6,7 +6,7 @@
 	b = branch
 
 	# Show verbose output about branches
-	branches = branch --all
+	branches = branch -va
 
 	# Clone a repository including all submodules
 	c = clone --recursive
