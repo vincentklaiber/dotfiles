@@ -184,7 +184,7 @@
 	<key>FontAntialias</key>
 	<true/>
 	<key>FontHeightSpacing</key>
-	<real>1.2</real>
+	<real>1.3200000000000001</real>
 	<key>ProfileCurrentVersion</key>
 	<real>2.04</real>
 	<key>RunCommandAsShell</key>
@@ -242,7 +242,7 @@
 	<key>name</key>
 	<string>Vincent</string>
 	<key>rowCount</key>
-	<integer>52</integer>
+	<integer>50</integer>
 	<key>type</key>
 	<string>Window Settings</string>
 </dict>
