@@ -12,6 +12,10 @@ alias h="history"
 # Laravel Artisan CLI
 alias art="php artisan"
 
+# Composer CLI
+alias dump="composer dump-autoload"
+alias fresh="rm -rf vendor composer.lock; composer install"
+
 # PHP Unit Testing
 alias phpunit="vendor/bin/phpunit"
 
