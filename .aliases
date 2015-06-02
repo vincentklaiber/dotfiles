@@ -19,6 +19,9 @@ alias fresh="rm -rf vendor composer.lock; composer install"
 # PHP Unit Testing
 alias phpunit="vendor/bin/phpunit"
 
+# Gulp Shorthand
+alias gulp="node_modules/.bin/gulp"
+
 # List all files in long format, including dot files
 alias l="ls -Glah"
 
