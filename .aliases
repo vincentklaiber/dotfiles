@@ -17,11 +17,11 @@ alias dump="composer dump-autoload"
 alias fresh="rm -rf vendor composer.lock; composer install"
 
 # PHP Unit Testing
-alias phpunit="vendor/bin/phpunit"
+alias phpunit="./vendor/bin/phpunit"
 
 # NPM Aliases
-alias bower="node_modules/.bin/bower"
-alias gulp="node_modules/.bin/gulp"
+alias bower="./node_modules/.bin/bower"
+alias gulp="./node_modules/.bin/gulp"
 
 # List all files in long format, including dot files
 alias l="ls -Glah"
