@@ -8,7 +8,6 @@ brew upgrade --all
 
 # Install more recent versions of PHP
 brew install homebrew/php/php56
-brew install homebrew/php/php56-mcrypt
 
 # Install PHP package management binary
 brew install homebrew/php/composer
