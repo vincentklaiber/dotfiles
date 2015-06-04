@@ -6,6 +6,9 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade --all
 
+# Install GNU `sed`, overwriting the built-in `sed`.
+brew install gnu-sed --with-default-names
+
 # Add more version of binaries
 brew tap homebrew/versions
 
