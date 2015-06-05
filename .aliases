@@ -23,7 +23,7 @@ alias phpunit="./vendor/bin/phpunit"
 alias bower="./node_modules/.bin/bower 2> /dev/null"
 alias gulp="./node_modules/.bin/gulp 2> /dev/null"
 
-# List all files in long format, including dot files
+# List all files in long format, including dotfiles
 alias l="ls -Glah"
 
 # Enable aliases to be sudo’ed
