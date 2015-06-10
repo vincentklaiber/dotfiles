@@ -18,6 +18,9 @@ brew tap homebrew/versions
 brew install bash
 brew install bash-completion2
 
+# Install never version of sqlite3 with math functions
+brew install sqlite --with-functions
+
 # Install other useful binaries
 brew install aria2
 brew install git
