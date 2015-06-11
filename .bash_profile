@@ -18,9 +18,6 @@ shopt -s histappend;
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
-# Enable tab completion for Gulp
-eval "$(gulp --completion=bash)"
-
 # Enable tab completion for many Bash commands
 if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
 	source "$(brew --prefix)/share/bash-completion/bash_completion";
