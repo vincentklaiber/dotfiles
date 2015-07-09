@@ -8,6 +8,9 @@ bower_components
 # SASS Cache
 .sass-cache
 
+# NPM Debug Log
+npm-debug.log
+
 # Composer
 composer.phar
 composer.lock
