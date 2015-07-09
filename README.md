@@ -24,12 +24,6 @@ Then execute the bootstrap shell script to get the latest changes.
 source bootstrap.sh
 ```
 
-Reload bash to make new updates available in the current prompt.
-
-```bash
-source ~/.bashrc
-``
-
 ## Installation
 
 This is the installation guide to setup these dotfiles on a new OS X system.
