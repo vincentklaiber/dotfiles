@@ -4,7 +4,7 @@ If you're curious how to setup your own dotfiles, please visit [Mathias Bynens's
 
 ## Sync
 
-The guide how to sync the dotfiles.
+The guide on how to keep your dotfiles in sync.
 
 If've haven't yet clones this repository, fire up your terminal and clone this repository to your environment.
 
@@ -28,7 +28,7 @@ Reload bash to make new updates available in the current prompt.
 
 ```bash
 source ~/.bashrc
-```
+``
 
 ## Installation
 
