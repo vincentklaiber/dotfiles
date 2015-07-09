@@ -2,19 +2,52 @@ dotfiles
 ========
 If you're curious how to setup your own dotfiles, please visit [Mathias Bynens's dotfiles](https://github.com/mathiasbynens/dotfiles) to learn more.
 
-## New OS X Environment
+## Sync
+
+The guide how to sync the dotfiles.
+
+If've haven't yet clones this repository, fire up your terminal and clone this repository to your environment.
+
+```bash
+git clone git@github.com:vinkla/dotfiles.git
+```
+
+Whenever there are new updates, try to stay in sync and pull them down.
+
+```bash
+git pull
+```
+
+Then execute the bootstrap shell script to get the latest changes.
+
+```bash
+source bootstrap.sh
+```
+
+Reload bash to make new updates available in the current prompt.
+
+```bash
+source ~/.bashrc
+```
+
+## Installation
+
+This is the installation guide to setup these dotfiles on a new OS X system.
 
 Install XCode Command Line Tools.
+
 ```bash
 xcode-select --install
 ```
 
 Install Homebrew [http://brew.sh](http://brew.sh).
+
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 Install GIT [http://git-scm.com](http://git-scm.com).
+
 ```bash
 brew install git
 ```
@@ -26,23 +59,27 @@ ssh-keygen -t rsa -C "your_email@example.com"
 ```
 
 Clone this respoitory and install dotfiles.
+
 ```bash
 git clone git@github.com:vinkla/dotfiles.git
 source bootstrap.sh
 ```
 
 Install binaries and native Mac applications.
+
 ```bash
 source ./scripts/brew && source ./scripts/cask
 ```
 
 Set bash to use the latest version of bash installed with brew.
+
 ```bash
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 chsh -s /usr/local/bin/bash
 ```
 
 Create Sites directory in home root folder.
+
 ```bash
 mkdir ~/Sites
 ```
@@ -54,6 +91,7 @@ ln -s /Users/vincent/Dropbox/Apps/Sublime\ Text\ 3/Packages /Users/vincent/Libra
 ```
 
 Run the OSX setup script.
+
 ```bash
 source ./scripts/osx
 ```
