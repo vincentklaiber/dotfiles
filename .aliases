@@ -78,9 +78,9 @@ function s() {
 # opens the given location
 function p() {
 	if [ $# -eq 0 ]; then
-		open -a PhpStorm\ EAP.app .;
+		open -a PhpStorm.app .;
 	else
-		open -a PhpStorm\ EAP.app "$@";
+		open -a PhpStorm.app "$@";
 	fi
 }
 
