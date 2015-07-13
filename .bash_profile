@@ -18,6 +18,9 @@ shopt -s histappend;
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
+# Add rbenv to bash so that it loads every time you open a terminal
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 # Enable tab completion for many Bash commands
 if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
 	source "$(brew --prefix)/share/bash-completion/bash_completion";
