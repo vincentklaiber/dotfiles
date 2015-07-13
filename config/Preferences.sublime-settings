@@ -1,7 +1,7 @@
 {
 	"afn_insert_dimensions": true,
 	"afn_use_project_root": true,
-	"color_scheme": "Packages/User/Broadcast (SL).tmTheme",
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (light).tmTheme",
 	"default_line_ending": "unix",
 	"detect_indentation": false,
 	"drag_text": false,
@@ -15,13 +15,10 @@
 		".svn",
 		".vagrant",
 		".idea",
+		".php_cs.cache",
 		"CVS"
 	],
 	"font_face": "Menlo",
-	"font_options":
-	[
-		"gray_antialias"
-	],
 	"font_size": 13,
 	"highlight_line": true,
 	"hot_exit": false,
@@ -29,8 +26,8 @@
 	[
 		"Vintage"
 	],
-	"line_padding_bottom": 2,
-	"line_padding_top": 2,
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
 	"match_brackets_angle": true,
 	"overlay_scroll_bars": "enabled",
 	"remember_open_files": false,
@@ -40,7 +37,7 @@
 	],
 	"show_full_path": true,
 	"soda_folder_icons": false,
-	"theme": "Soda Dark.sublime-theme",
+	"theme": "Reverse Gravity.sublime-theme",
 	"trim_automatic_white_space": false,
 	"trim_trailing_white_space_on_save": false,
 	"use_simple_full_screen": true,
