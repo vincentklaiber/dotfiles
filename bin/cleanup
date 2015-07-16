@@ -22,6 +22,9 @@ rm -rfv ~/Music/iTunes/iTunes\ Media/Mobile\ Applications/*
 print 'Remove iOS Device Backups...'
 rm -rfv ~/Library/Application\ Support/MobileSync/Backup/*
 
+print 'Remove iOS Software Updates...'
+rm -rfv ~/Library/iTunes/iPhone\ Software\ Updates/*
+
 print 'Cleanup XCode Derived Data and Archives...'
 rm -rfv ~/Library/Developer/Xcode/DerivedData/*
 rm -rfv ~/Library/Developer/Xcode/Archives/*
