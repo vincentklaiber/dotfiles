@@ -73,10 +73,16 @@ function s() {
 # `p` with no arguments opens the current directory in PhpStorm, otherwise
 # opens the given location
 function p() {
+	STORM_PATH="$@"
+	
 	if [ $# -eq 0 ]; then
-		open -a PhpStorm.app .;
+		STORM_PATH = .
+	fi
+	
+	if [ ! -f /Applications/PhpStorm.app ]; then
+	    open -a PhpStorm\ EAP.app ${STORM_PATH}
 	else
-		open -a PhpStorm.app "$@";
+		open -a PhpStorm.app ${STORM_PATH}
 	fi
 }
 
