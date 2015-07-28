@@ -16,8 +16,9 @@ alias art="php artisan"
 alias dump="composer dump-autoload"
 alias fresh="rm -rf vendor composer.lock; composer install"
 
-# PHP Unit Testing
+# PHP Testing
 alias phpunit="./vendor/bin/phpunit"
+alias phpspec="./vendor/bin/phpspec"
 
 # List all files in long format, including dotfiles
 alias l="ls -Glah"
