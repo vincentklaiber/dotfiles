@@ -97,15 +97,11 @@ Restart the computer and live happily ever after.
 ## Reset
 This is a checklist of things to do before resetting the disk.
 
-1. Export `Transmit.app` favorites to Dropbox.
+1. Export `Transmit.app`, `Sequel Pro.app` favorites to Dropbox.
 2. Check all GIT repositories for uncommitted changes.
 3. Add latest homestead settings to `dotfiles` repository.
-4. Reconsider all binaries in `brew.sh`.
-5. Reconsider all applications in `cask.sh`.
-6. You don't have to reconsider anything in `composer.sh`. Its fine.
-7. Save latest `Sublime Text.app` settings.
-8. Save latest `PhpStorm.app` settings.
-9. Save `Sequel Pro.app` favorites and dump databases (if necessary).
+4. Save latest `Sublime Text.app` and `PhpStorm.app` settings.
+5. Reconsider all applications, binaries and tools in `scripts`.
 
 ## License
 
