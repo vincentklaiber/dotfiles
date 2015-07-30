@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-# Make sure we’re using the latest NPM version
-npm install -g npm@latest;
-
-# Install useful npm packages
-npm install -g npm-check-updates
