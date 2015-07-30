@@ -95,7 +95,7 @@ source ./scripts/osx
 Restart the computer and live happily ever after.
 
 ## Reset
-This is a checklist of things to do before reseting the disk.
+This is a checklist of things to do before resetting the disk.
 
 1. Export `Transmit.app` favorites to Dropbox.
 2. Check all GIT repositories for uncommitted changes.
