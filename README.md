@@ -94,7 +94,7 @@ source ./scripts/osx
 
 Restart the computer and live happily ever after.
 
-## Before Reset
+## Reset
 This is a checklist of things to do before reseting the disk.
 
 1. Export `Transmit.app` favorites to Dropbox.
