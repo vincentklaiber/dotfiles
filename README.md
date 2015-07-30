@@ -6,21 +6,21 @@
 
 ## Sync
 
-The guide on how to keep your dotfiles in sync.
+The guide on how to keep your dotfiles in sync and up to date with the latest changes.
 
-If've haven't yet clones this repository, fire up your terminal and clone this repository to your environment.
+If you haven't yet clones this repository, fire up your terminal and clone this repository.
 
 ```bash
 git clone git@github.com:vinkla/dotfiles.git
 ```
 
-Whenever there are new updates, try to stay in sync and pull them down.
+Whenever there are new updates, try to stay in sync and pull down the latest changes.
 
 ```bash
 git pull
 ```
 
-Then execute the bootstrap shell script to get the latest changes.
+Then execute the bootstrap shell script to get the latest changes working on your system.
 
 ```bash
 source bootstrap.sh
