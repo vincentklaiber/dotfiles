@@ -14,6 +14,7 @@ brew install brew-cask
 
 # Install nativ Mac applications
 brew cask install 1password
+brew cask install atom
 brew cask install adobe-creative-cloud
 brew cask install appcleaner
 brew cask install dropbox
