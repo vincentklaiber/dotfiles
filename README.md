@@ -86,6 +86,12 @@ rm -r /Users/vincent/Library/Application\ Support/Sublime\ Text\ 3/Packages
 ln -s /Users/vincent/Dropbox/Apps/Sublime\ Text\ 3/Packages /Users/vincent/Library/Application\ Support/Sublime\ Text\ 3/Packages
 ```
 
+Replace Atom user directory and sync with DropBox.
+```bash
+$ rm -r ~/.atom
+$ ln -s ~/Dropbox/Apps/Atom/.atom ~/.atom
+```
+
 Run the OSX setup script.
 
 ```bash
