@@ -22,7 +22,6 @@
     "font_size": 13,
     "highlight_line": true,
     "hot_exit": false,
-    "translate_tabs_to_spaces": true,
     "ignored_packages":
     [
         "Vintage"
@@ -39,6 +38,7 @@
     "show_full_path": true,
     "soda_folder_icons": false,
     "theme": "Reverse Gravity.sublime-theme",
+    "translate_tabs_to_spaces": true,
     "trim_automatic_white_space": false,
     "trim_trailing_white_space_on_save": false,
     "use_simple_full_screen": true,
