@@ -9,11 +9,14 @@ brew upgrade --all
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
 
+# Install PHP binaries
+brew tap homebrew/php
+brew install php56
+brew install composer
+brew install php-cs-fixer
+
 # Add more version of binaries
 brew tap homebrew/versions
-
-# Add PHP binaries
-brew tap homebrew/php
 
 # Install Bash 4.
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
@@ -26,11 +29,9 @@ brew install sqlite --with-functions
 
 # Install other useful binaries
 brew install aria2
-brew install composer
 brew install git
 brew install hub
 brew install node
-brew install php56
 brew install rename
 brew install ssh-copy-id
 brew install sshrc
