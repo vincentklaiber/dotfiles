@@ -3,7 +3,10 @@
 url=https://gist.githubusercontent.com/vinkla/033c01f665980dd53d9b/raw/fixers
 
 run() {
-	if [[ -f .php_cs ]]; then
+    if [[ -f $1 ]]; then
+        fixers=$(curl -s ${url})
+        eval "php-cs-fixer ${fixers} fix $@"
+	elif [[ -f .php_cs ]]; then
 		eval "php-cs-fixer fix"
 	else		
 		fixers=$(curl -s ${url})
