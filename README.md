@@ -80,12 +80,6 @@ Create Sites directory in home root folder.
 mkdir ~/Sites
 ```
 
-[Install Sublime Text Package Control](https://packagecontrol.io/installation). Replace Sublime Text user directory and sync with [Dropbox](http://dropbox.com).
-```bash
-rm -r /Users/vincent/Library/Application\ Support/Sublime\ Text\ 3/Packages
-ln -s /Users/vincent/Dropbox/Apps/Sublime\ Text\ 3/Packages /Users/vincent/Library/Application\ Support/Sublime\ Text\ 3/Packages
-```
-
 Replace Atom user directory and sync with DropBox.
 ```bash
 $ rm -r ~/.atom
@@ -112,4 +106,3 @@ This is a checklist of things to do before resetting the disk.
 ## License
 
 The dotfiles repository is licensed under [The MIT License (MIT)](LICENSE).
-
