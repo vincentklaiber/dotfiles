@@ -1,21 +1,23 @@
 #!/bin/bash
-cd "$(dirname "${BASH_SOURCE}")";
+
+cd "$(dirname "${BASH_SOURCE}")"; cd ..; cd files;
 
 git pull origin master;
 
-function doIt() {
-	rsync --exclude "config" --exclude "scripts" --exclude ".idea" --exclude ".git/" --exclude ".DS_Store" --exclude "*.sh" --exclude ".osx" --exclude "README.md" --exclude "LICENSE" -avh . ~;
+function setup() {
+	rsync --exclude ".DS_Store" -avh . ~;
 	source ~/.bash_profile;
 	chflags hidden ~/bin;
+	cd ..;
 }
 
 if [ "${1}" == "--force" -o "${1}" == "-f" ]; then
-	doIt;
+	setup;
 else
 	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
 	echo "";
 	if [[ ${REPLY} =~ ^[Yy]$ ]]; then
-		doIt;
+		setup;
 	fi;
 fi;
-unset doIt;
+unset setup;
