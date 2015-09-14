@@ -24,7 +24,7 @@ brew cask install google-chrome-canary
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install java
-brew cask install phpstorm-eap
+brew cask install phpstorm
 brew cask install sequel-pro
 brew cask install skype
 brew cask install spectacle

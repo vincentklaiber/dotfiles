@@ -5,3 +5,4 @@ npm install -g npm@latest;
 
 # Install useful npm packages
 npm install -g npm-check-updates
+npm install -g speed-test
