@@ -23,7 +23,7 @@ git pull
 Then execute the bootstrap shell script to get the latest changes working on your system.
 
 ```bash
-source bootstrap.sh
+source bin/bootstrap.sh
 ```
 
 ## Installation
@@ -58,7 +58,7 @@ Clone this respoitory and install dotfiles.
 
 ```bash
 git clone git@github.com:vinkla/dotfiles.git
-source bootstrap.sh
+source bin/bootstrap.sh
 ```
 
 Install binaries and native Mac applications.
