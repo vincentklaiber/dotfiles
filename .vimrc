@@ -28,46 +28,14 @@ set noerrorbells         		" don't beep
 set autowrite  					"Save on buffer switch
 set mouse=a
 
-" With a map leader it's possible to do extra key combinations
-" like <leader>w save the current file
-let mapleader = ","
-let g:mapleader = ","
-
-" Down is really the next line
-nnoremap j gj
-nnoremap k gk
-
-"easier window navigation
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
-
-"Resize vsplit
-nmap <C-v> :vertical resize +5<cr>
-nmap 25 :vertical resize 40<cr>
-nmap 50 <c-w>=
-nmap 75 :vertical resize 120<cr>
-
 "Show (partial) command in the status line
 set showcmd
 
 " Create split below
 nmap :sp :rightbelow sp
 
+" Highlight Search
 highlight Search cterm=underline
-
-" Swap files out of the project root
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swap//
-
-" Powerline (Fancy thingy at bottom stuff)
-" let g:Powerline_symbols = 'fancy'
-set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show Unicode glyphs
-
-" Remove search results
-command! H let @/=""
 
 " Set relevant filetypes
 au BufRead,BufNewFile *.scss set filetype=css
