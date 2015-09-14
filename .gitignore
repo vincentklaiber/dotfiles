@@ -13,7 +13,6 @@ npm-debug.log
 
 # Composer
 composer.phar
-composer.lock
 
 # PHP CS Fixer
 .php_cs.cache
