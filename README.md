@@ -30,18 +30,6 @@ source bin/bootstrap.sh
 
 This is the installation guide to setup these dotfiles on a new OS X system.
 
-Install XCode Command Line Tools.
-
-```bash
-xcode-select --install
-```
-
-Install Homebrew [http://brew.sh](http://brew.sh).
-
-```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
 Install GIT [http://git-scm.com](http://git-scm.com).
 
 ```bash
