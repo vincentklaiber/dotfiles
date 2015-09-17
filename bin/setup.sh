@@ -64,9 +64,10 @@ HOMEBREW_PREFIX="/usr/local"
 HOMEBREW_CACHE="/Library/Caches/Homebrew"
 for dir in "$HOMEBREW_PREFIX" "$HOMEBREW_CACHE"; do
   [ -d "$dir" ] || sudo mkdir -p "$dir"
-  sudo chmod g+rwx "$dir"
+  sudo chmod -R g+rwx "$dir"
 done
-sudo chown root:admin "$HOMEBREW_PREFIX"
+sudo chgrp -R admin "$HOMEBREW_PREFIX" "$HOMEBREW_CACHE"
+sudo chown root "$HOMEBREW_PREFIX"
 
 # Download Homebrew.
 export GIT_DIR="$HOMEBREW_PREFIX/.git" GIT_WORK_TREE="$HOMEBREW_PREFIX"
@@ -86,6 +87,7 @@ export PATH="$HOMEBREW_PREFIX/bin:$PATH"
 brew update
 brew tap | grep -i $Q Homebrew/bundle || brew tap Homebrew/bundle
 cat > /tmp/Brewfile.strap <<EOF
+tap 'caskroom/fonts'
 tap 'caskroom/cask'
 tap 'homebrew/versions'
 brew 'caskroom/cask/brew-cask'
