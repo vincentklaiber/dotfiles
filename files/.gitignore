@@ -2,19 +2,15 @@
 node_modules
 bower_components
 
-# SASS Cache
+# Cache & Logs
 .sass-cache
-
-# NPM Debug Log
+.php_cs.cache
 npm-debug.log
 
 # Composer
 composer.phar
 
-# PHP CS Fixer
-.php_cs.cache
-
-# Compiled Python files
+# Compiled python files
 *.pyc
 
 # Folder view configuration files
