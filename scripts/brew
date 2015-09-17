@@ -34,7 +34,6 @@ brew install hub
 brew install node
 brew install rename
 brew install ssh-copy-id
-brew install sshrc
 brew install wget
 brew install z
 
