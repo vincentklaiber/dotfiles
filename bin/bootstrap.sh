@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd "$(dirname "${BASH_SOURCE}")"; cd ..; cd files;
+cd "$(dirname "${BASH_SOURCE}")"/../files;
 
 git pull origin master;
 
