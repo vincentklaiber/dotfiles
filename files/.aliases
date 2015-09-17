@@ -37,9 +37,6 @@ alias dig="dig +nostats +nocomments +nocmd"
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
-# Remove ".svn" folders from workingcopy recursive
-alias rmsvn="find . -type d -name .svn -exec rm -rf {} \;"
-
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "${@}" && cd "${_}";
