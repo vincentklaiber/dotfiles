@@ -26,9 +26,6 @@ alias l="ls -Glah"
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
 
-# Copy public SSH key to clipboard
-alias copyssh="pbcopy < ~/.ssh/id_rsa.pub"
-
 # Load the iphone simulator
 alias simulator="open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app"
 
