@@ -1,9 +1,15 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# ~/.osx — http://mths.be/osx
+abort() { echo "!!! $@" >&2; exit 1; }
+log()   { echo "--> $@"; }
+logn()  { printf -- "--> $@ "; }
+logk()  { echo "OK"; }
 
-# Ask for the administrator password upfront
-sudo -v
+# Initialise sudo now to save prompting later.
+log "Enter your password (for sudo access):"
+sudo -k
+sudo /usr/bin/true
+logk
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
