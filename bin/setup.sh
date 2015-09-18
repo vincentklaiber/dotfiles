@@ -1,4 +1,6 @@
 #!/bin/bash
+#/ Usage: bin/strap.sh [--debug]
+#/ Install development dependencies on Mac OS X.
 set -e
 
 [ "$1" = "--debug" ] && STRAP_DEBUG="1"
@@ -23,7 +25,10 @@ log()   { echo "--> $@"; }
 logn()  { printf -- "--> $@ "; }
 logk()  { echo "OK"; }
 
-# Run Strap as yourself, not root.
+sw_vers -productVersion | grep $Q -E "^10.(9|10|11)" || {
+  abort "Run Strap on Mac OS X 10.9/10/11."
+}
+
 [ "$USER" = "root" ] && abort "Run Strap as yourself, not root."
 groups | grep $Q admin || abort "Add $USER to the admin group."
 
