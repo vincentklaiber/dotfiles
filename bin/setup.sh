@@ -33,6 +33,14 @@ sudo -k
 sudo /usr/bin/true
 logk
 
+# Set computer name (as done via System Preferences → Sharing)
+logn "Set computer name to Valhall:"
+sudo scutil --set ComputerName "Valhall"
+sudo scutil --set HostName "Valhall"
+sudo scutil --set LocalHostName "Valhall"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Valhall"
+logk
+
 # Install the Xcode Command Line Tools if Xcode isn't installed.
 DEVELOPER_DIR=$("xcode-select" -print-path 2>/dev/null || true)
 [ -z "$DEVELOPER_DIR" ] || ! [ -f "$DEVELOPER_DIR/usr/bin/git" ] && {

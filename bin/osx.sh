@@ -1,70 +1,8 @@
-#!/bin/bash
-
-abort() { echo "!!! $@" >&2; exit 1; }
-log()   { echo "--> $@"; }
-logn()  { printf -- "--> $@ "; }
-logk()  { echo "OK"; }
-
-# Initialise sudo now to save prompting later.
-log "Enter your password (for sudo access):"
-sudo -k
-sudo /usr/bin/true
-logk
-
-# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-###############################################################################
-# General UI/UX                                                               #
-###############################################################################
-
-# Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "Valhall"
-sudo scutil --set HostName "Valhall"
-sudo scutil --set LocalHostName "Valhall"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Valhall"
-
 # Menu bar: Always show percentage next to the Battery icon
 defaults write com.apple.menuextra.battery ShowPercent -bool true
 
-# Only show scrollbars When Scrolling
-defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
-# Possible values: `WhenScrolling`, `Automatic` and `Always`
-
-# Expand save and print panel by default
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-
-# Save to disk (not to iCloud) by default
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-
-# Automatically quit printer app once the print jobs complete
-defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
-
-# Disable the “Are you sure you want to open this application?” dialog
-# Yosemite
-defaults write com.apple.LaunchServices LSQuarantine -bool false
-
-# Disable Resume system-wide
-defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
-
-# Disable automatic termination of inactive apps
-defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
-
-# Restart automatically if the computer freezes
-sudo systemsetup -setrestartfreeze on
-
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-
-###############################################################################
-# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
-###############################################################################
-
-# Trackpad: enable tap to click for this user and for the login screen
-defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Set a blazingly fast mouse and scrolling speed
 defaults write -g com.apple.mouse.scaling -int 1
@@ -73,48 +11,12 @@ defaults write -g com.apple.scrollwheel.scaling -float 0.6875
 # Turn off mouse acceleration
 defaults write -g com.apple.mouse.scaling -1
 
-# Increase sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
-
-# Enable full keyboard access for all controls
-# (e.g. enable Tab in modal dialogs)
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
-
-# Disable press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
-# Set language and text formats
-# Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
-# `Inches`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en" "sv"
-defaults write NSGlobalDomain AppleLocale -string "sv_SE@currency=SEK"
-defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
-defaults write NSGlobalDomain AppleMetricUnits -bool true
-
-###############################################################################
-# Screen                                                                      #
-###############################################################################
-
-# Require password immediately after sleep or screen saver begins
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-# Disable displays have separate Spaces
-defaults write com.apple.spaces spans-displays -bool true
-
-# Save screenshots to the downloads directory
-defaults write com.apple.screencapture location -string "${HOME}/Downloads"
-
-###############################################################################
-# Finder                                                                      #
-###############################################################################
 
 # New Finder windows shows Home directory
 defaults write com.apple.finder NewWindowTarget -string "PfHm"
@@ -123,66 +25,14 @@ defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/vince
 # Finder: allow text selection in Quick Look
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
-# When performing a search, search the current folder by default
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-
-# Avoid creating .DS_Store files on network volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
-# Disable disk image verification
-defaults write com.apple.frameworks.diskimages skip-verify -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
-
-# Use Column view in all Finder windows by default
-# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
-
-# Disable the warning before emptying the Trash
-defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Empty Trash securely by default
 defaults write com.apple.finder EmptyTrashSecurely -bool true
 
-# Hide tags, tab view and status bar from Finder window
-defaults write com.apple.finder ShowStatusBar -bool false
-defaults write com.apple.finder ShowTabView -bool false
-defaults write com.apple.finder ShowRecentTags -bool false
-defaults write com.apple.finder SidebarTagsSctionDisclosedState -bool true
-
 # Hide desktop icons by default
 defaults write com.apple.finder CreateDesktop -bool false
-
-# Hide unuseful applications
-sudo chflags hidden /Applications/Automator.app
-sudo chflags hidden /Applications/Chess.app
-sudo chflags hidden /Applications/Calendar.app
-sudo chflags hidden /Applications/DVD\ Player.app
-sudo chflags hidden /Applications/Dashboard.app
-sudo chflags hidden /Applications/Dictionary.app
-sudo chflags hidden /Applications/FaceTime.app
-sudo chflags hidden /Applications/Game\ Center.app
-sudo chflags hidden /Applications/Image\ Capture.app
-sudo chflags hidden /Applications/Launchpad.app
-sudo chflags hidden /Applications/Maps.app
-sudo chflags hidden /Applications/Mission\ Control.app
-sudo chflags hidden /Applications/Notes.app
-sudo chflags hidden /Applications/Photo\ Booth.app
-sudo chflags hidden /Applications/Photos.app
-sudo chflags hidden /Applications/Reminders.app
-sudo chflags hidden /Applications/Stickies.app
-sudo chflags hidden /Applications/Time\ Machine.app
-sudo chflags hidden /Applications/iBooks.app
-
-###############################################################################
-# Dashboard & Dock                                                            #
-###############################################################################
-
-# Enable highlight hover effect for the grid view of a stack (Dock)
-defaults write com.apple.dock mouse-over-hilte-stack -bool true
 
 # Minimize windows into application icon.
 defaults write com.apple.dock minimize-to-application -bool true
@@ -202,63 +52,9 @@ defaults write com.apple.dock launchanim -bool false
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
-# Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
-
-# Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
-
-# Reset Launchpad, but keep the desktop wallpaper intact
-find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
-
-###############################################################################
-# Terminal                                                                    #
-###############################################################################
-
-# Only use UTF-8 in Terminal.app
-defaults write com.apple.terminal StringEncodings -array 4
-
-###############################################################################
-# Time Machine                                                                #
-###############################################################################
-
-# Prevent Time Machine from prompting to use new hard drives as backup volume
-defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
-
-# Disable local Time Machine backups
-hash tmutil &> /dev/null && sudo tmutil disablelocal
-
-###############################################################################
-# TextEdit                                                                    #
-###############################################################################
-
-# Use plain text mode for new TextEdit documents
-defaults write com.apple.TextEdit RichText -int 0
-
-# Open and save files as UTF-8 in TextEdit
-defaults write com.apple.TextEdit PlainTextEncoding -int 4
-defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
-
-###############################################################################
-# iTunes                                                                      #
-###############################################################################
-
 # Stop iTunes from responding to the keyboard media keys
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
-
-###############################################################################
-# Google Chrome & Google Chrome Canary                                        #
-###############################################################################
 
 # Disable the all too sensitive backswipe
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
-
-###############################################################################
-# Kill affected applications                                                  #
-###############################################################################
-
-for app in "Dock" "Finder" "Mail" "SystemUIServer" "Terminal" "iTunes"; do
-	killall "${app}" > /dev/null 2>&1
-done
-echo "Done. Note that some of these changes require a logout/restart to take effect."
