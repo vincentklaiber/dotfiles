@@ -99,6 +99,7 @@ cat > /tmp/Brewfile.strap <<EOF
 tap 'caskroom/fonts'
 tap 'caskroom/cask'
 tap 'homebrew/versions'
+tap 'homebrew/php'
 brew 'caskroom/cask/brew-cask'
 EOF
 brew bundle --file=/tmp/Brewfile.strap
