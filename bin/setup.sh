@@ -66,17 +66,42 @@ DEVELOPER_DIR=$("xcode-select" -print-path 2>/dev/null || true)
   fi
 }
 
+# Setup Git
+logn "Configuring Git:"
+if [ -n "$STRAP_GIT_NAME" ] && ! git config user.name >/dev/null; then
+  git config --global user.name "$STRAP_GIT_NAME"
+fi
+
+if [ -n "$STRAP_GIT_EMAIL" ] && ! git config user.email >/dev/null; then
+  git config --global user.email "$STRAP_GIT_EMAIL"
+fi
+
+if [ -n "$STRAP_GITHUB_USER" ] && [ -n "$STRAP_GITHUB_TOKEN" ] \
+  && git credential-osxkeychain 2>&1 | grep $Q "git.credential-osxkeychain"
+then
+  if [ "$(git config credential.helper)" != "osxkeychain" ]
+  then
+    git config --global credential.helper osxkeychain
+  fi
+
+  if [ -z "$(printf "protocol=https\nhost=github.com\n" | git credential-osxkeychain get)" ]
+  then
+    printf "protocol=https\nhost=github.com\nusername=$STRAP_GITHUB_USER\npassword=$STRAP_GITHUB_TOKEN\n" \
+      | git credential-osxkeychain store
+  fi
+fi
+logk
+
 # Setup Homebrew directories and permissions.
 logn "Installing Homebrew:"
 HOMEBREW_PREFIX="/usr/local"
 HOMEBREW_CACHE="/Library/Caches/Homebrew"
 for dir in "$HOMEBREW_PREFIX" "$HOMEBREW_CACHE"; do
   [ -d "$dir" ] || sudo mkdir -p "$dir"
-  sudo chmod g+rwx "$dir"
+  sudo chmod -R g+rwx "$dir"
 done
-sudo chgrp admin "$HOMEBREW_PREFIX" "$HOMEBREW_CACHE"
+sudo chgrp -R admin "$HOMEBREW_PREFIX" "$HOMEBREW_CACHE"
 sudo chown root "$HOMEBREW_PREFIX"
-sudo chown -R $USER "$HOMEBREW_PREFIX"/* "$HOMEBREW_PREFIX"/.??* "$HOMEBREW_CACHE"
 
 # Download Homebrew.
 export GIT_DIR="$HOMEBREW_PREFIX/.git" GIT_WORK_TREE="$HOMEBREW_PREFIX"
