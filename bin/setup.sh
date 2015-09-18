@@ -173,6 +173,11 @@ else
   abort 'Run `sudo fdesetup enable -user "$USER"` to enable full-disk encryption.'
 fi
 
+# Create Sites directory in user folder.
+logn "Create Sites directory in user folder:"
+mkdir ~/Sites
+logk
+
 # Setup prefered OS X settings.
 logn "Setup prefered OS X settings:"
 

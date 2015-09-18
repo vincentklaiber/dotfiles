@@ -4,83 +4,27 @@
 
 .files, sensible hacker defaults for OS X. If you're curious how to setup your own dotfiles, please visit [Mathias Bynens's dotfiles](https://github.com/mathiasbynens/dotfiles) to learn more.
 
-## Sync
-
-The guide on how to keep your dotfiles in sync and up to date with the latest changes.
-
-If you haven't yet clones this repository, fire up your terminal and clone this repository.
-
-```bash
-git clone git@github.com:vinkla/dotfiles.git
-```
-
-Whenever there are new updates, try to stay in sync and pull down the latest changes.
-
-```bash
-git pull
-```
-
-Then execute the bootstrap shell script to get the latest changes working on your system.
-
-```bash
-source bin/bootstrap.sh
-```
-
 ## Installation
 
 This is the installation guide to setup these dotfiles on a new OS X system.
 
-Install GIT [http://git-scm.com](http://git-scm.com).
-
-```bash
-brew install git
-```
-
-Generate SSH keys [https://help.github.com/articles/generating-ssh-keys](https://help.github.com/articles/generating-ssh-keys)
-
-```bash
-ssh-keygen -t rsa -C "your_email@example.com"
-```
-
-Clone this respoitory and install dotfiles.
-
 ```bash
 git clone git@github.com:vinkla/dotfiles.git
-source bin/bootstrap.sh
-```
-
-Install binaries and native Mac applications.
-
-```bash
-source ./scripts/brew && source ./scripts/cask
-```
-
-Set bash to use the latest version of bash installed with brew.
-
-```bash
-sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-chsh -s /usr/local/bin/bash
-```
-
-Create Sites directory in home root folder.
-
-```bash
-mkdir ~/Sites
-```
-
-Replace Atom user directory and sync with DropBox.
-```bash
-$ rm -r ~/.atom
-$ ln -s ~/Dropbox/Apps/Atom/.atom ~/.atom
-```
-
-Run the OSX setup script.
-
-```bash
-source ./scripts/osx
+cd dotfiles
+./bin/setup.sh # or ./bin/setup.sh --debug for more debugging output
 ```
 
 Restart the computer and live happily ever after.
+
+## Sync
+
+The guide on how to keep your dotfiles in sync and up to date with the latest changes.
+
+```bash
+git clone git@github.com:vinkla/dotfiles.git
+git pull
+source bin/bootstrap.sh
+```
 
 ## Tools
 
