@@ -82,6 +82,10 @@ source ./scripts/osx
 
 Restart the computer and live happily ever after.
 
+## Tools
+
+List of applications, binaries and tools.
+
 ## Reset
 This is a checklist of things to do before resetting the disk.
 
