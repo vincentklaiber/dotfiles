@@ -126,7 +126,6 @@ export PATH="$HOMEBREW_PREFIX/bin:$PATH"
 brew update
 brew tap | grep -i $Q Homebrew/bundle || brew tap Homebrew/bundle
 cat > /tmp/Brewfile.strap <<EOF
-tap 'caskroom/fonts'
 tap 'caskroom/cask'
 tap 'homebrew/versions'
 tap 'homebrew/php'
@@ -171,6 +170,21 @@ elif [ -n "$STRAP_INTERACTIVE" ]; then
 else
   echo
   abort 'Run `sudo fdesetup enable -user "$USER"` to enable full-disk encryption.'
+fi
+
+# Check and install any remaining software updates.
+logn "Checking for software updates:"
+if softwareupdate -l 2>&1 | grep $Q "No new software available."; then
+  logk
+else
+  echo
+  log "Installing software updates:"
+  if [ -z "$STRAP_CI" ]; then
+    sudo softwareupdate --install --all
+  else
+    echo "Skipping software updates for CI"
+  fi
+  logk
 fi
 
 # Create Sites directory in user folder.
@@ -242,3 +256,8 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 logk
+
+# Revoke sudo access again.
+sudo -k
+
+log 'Finished! Install additional software with `brew install` and `brew cask install`.'
