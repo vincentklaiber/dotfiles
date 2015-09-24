@@ -103,7 +103,7 @@ HOMEBREW_PREFIX="/usr/local"
 HOMEBREW_CACHE="/Library/Caches/Homebrew"
 for dir in "$HOMEBREW_PREFIX" "$HOMEBREW_CACHE"; do
   [ -d "$dir" ] || sudo mkdir -p "$dir"
-  sudo chmod g+rwx "$dir"
+  sudo chown -R $USER:admin "$dir"
 done
 sudo chgrp admin "$HOMEBREW_PREFIX" "$HOMEBREW_CACHE"
 sudo chown root "$HOMEBREW_PREFIX"
@@ -117,6 +117,7 @@ git rev-parse --verify --quiet origin/master >/dev/null || {
   git fetch $Q origin master:refs/remotes/origin/master --no-tags --depth=1
   git reset $Q --hard origin/master
 }
+sudo chmod g+rwx "$HOMEBREW_PREFIX"/* "$HOMEBREW_PREFIX"/.??*
 unset GIT_DIR GIT_WORK_TREE
 logk
 
