@@ -24,7 +24,7 @@ Restart the computer and live happily ever after.
 The guide on how to keep your dotfiles in sync and up to date with the latest changes.
 
 ```bash
-git clone git@github.com:vinkla/dotfiles.git
+cd dotfiles
 git pull
 source bin/bootstrap.sh
 ```
