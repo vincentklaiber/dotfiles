@@ -128,6 +128,7 @@ brew update
 brew tap | grep -i $Q Homebrew/bundle || brew tap Homebrew/bundle
 cat > /tmp/Brewfile.strap <<EOF
 tap 'caskroom/cask'
+tap 'caskroom/versions'
 tap 'homebrew/versions'
 tap 'homebrew/php'
 brew 'caskroom/cask/brew-cask'
