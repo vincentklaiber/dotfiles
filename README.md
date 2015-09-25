@@ -29,36 +29,6 @@ git pull
 source bin/update.sh
 ```
 
-## Applications
-
-List of useful applications and tools.
-
-```bash
-1password
-atom
-adobe-creative-cloud
-appcleaner
-dropbox
-firefox
-fontprep
-google-chrome
-google-chrome-canary
-imagealpha
-imageoptim
-java
-phpstorm
-sequel-pro
-skype
-spectacle
-spotify
-steam
-the-unarchiver
-transmit
-vagrant
-virtualbox
-vlc
-```
-
 ## Reset
 This is a checklist of things to do before resetting the disk.
 

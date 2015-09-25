@@ -199,7 +199,7 @@ else
 fi
 logk
 
-logn "Install useful binaries:"
+logn "Install binaries:"
 cat > /tmp/Brewfile.strap <<EOF
 brew 'aria2'
 brew 'git'
@@ -217,6 +217,38 @@ brew 'z'
 EOF
 brew bundle --file=/tmp/Brewfile.strap
 rm -f /tmp/Brewfile.strap
+logk
+
+logn "Install applications:"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications";
+cat > /tmp/Caskfile.strap <<EOF
+cask '1password'
+cask 'adobe-creative-cloud'
+cask 'appcleaner'
+cask 'atom'
+cask 'couleurs'
+cask 'dropbox'
+cask 'firefox'
+cask 'flux'
+cask 'github'
+cask 'google-chrome'
+cask 'imagealpha'
+cask 'imageoptim'
+cask 'java'
+cask 'phpstorm'
+cask 'sequel-pro-nightly'
+cask 'sketch-beta'
+cask 'skype'
+cask 'spectacle'
+cask 'spotify'
+cask 'steam'
+cask 'transmit'
+cask 'vagrant'
+cask 'virtualbox'
+cask 'vlc'
+EOF
+brew bundle --file=/tmp/Caskfile.strap
+rm -f /tmp/Caskfile.strap
 logk
 
 # Create Sites directory in user folder.
