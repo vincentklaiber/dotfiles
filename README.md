@@ -29,10 +29,59 @@ git pull
 source bin/update.sh
 ```
 
-## Tools
+## Applications
 
-List of applications, binaries and tools.
+List of useful applications and tools.
 
+```
+1password
+atom
+adobe-creative-cloud
+appcleaner
+dropbox
+firefox
+fontprep
+google-chrome
+google-chrome-canary
+imagealpha
+imageoptim
+java
+phpstorm
+sequel-pro
+skype
+spectacle
+spotify
+steam
+the-unarchiver
+transmit
+vagrant
+virtualbox
+vlc
+```
+
+## Binaries
+
+List of useful applications and tools.
+
+```
+# Install GNU `sed`, overwriting the built-in `sed`.
+brew install gnu-sed --with-default-names
+
+# Install PHP binaries
+brew install php70
+brew install composer
+brew install php-cs-fixer
+
+# Install other useful binaries
+brew install aria2
+brew install git
+brew install hub
+brew install node
+brew install rename
+brew install ssh-copy-id
+brew install wget
+brew install z
+```
 ## Reset
 This is a checklist of things to do before resetting the disk.
 

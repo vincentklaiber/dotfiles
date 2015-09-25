@@ -199,6 +199,10 @@ else
 fi
 logk
 
+logn "Install better Bash complection:"
+brew install bash-completion2
+logk
+
 # Create Sites directory in user folder.
 logn "Create Sites directory in user folder:"
 mkdir ~/Sites
