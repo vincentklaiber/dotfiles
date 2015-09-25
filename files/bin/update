@@ -8,14 +8,6 @@ sudo -v
 log 'Install OS X Software Updates...'
 sudo softwareupdate -i -a
 
-log 'Update NPM with dependencies...'
-npm install --global npm@latest
-npm update --global --silent
-
-log 'Update Composer with dependencies...'
-composer self-update
-composer global update --no-dev --prefer-dist
-
 log 'Update Homebrew...'
 brew update
 brew upgrade --all
@@ -27,3 +19,11 @@ brew tap --repair
 
 log 'Check if my system is ready to brew...'
 brew doctor
+
+log 'Update Composer with dependencies...'
+composer self-update
+composer global update --no-dev --prefer-dist
+
+log 'Update NPM with dependencies...'
+npm install --global npm@latest
+npm update --global --silent
