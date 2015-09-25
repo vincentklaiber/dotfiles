@@ -26,7 +26,7 @@ The guide on how to keep your dotfiles in sync and up to date with the latest ch
 ```bash
 cd dotfiles
 git pull
-source bin/bootstrap.sh
+source bin/update.sh
 ```
 
 ## Tools
