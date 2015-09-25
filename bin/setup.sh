@@ -199,7 +199,7 @@ else
 fi
 logk
 
-logn "Install binaries:"
+logn "Installing binaries:"
 cat > /tmp/Brewfile.strap <<EOF
 brew 'aria2'
 brew 'git'
@@ -219,14 +219,14 @@ brew bundle --file=/tmp/Brewfile.strap
 rm -f /tmp/Brewfile.strap
 logk
 
-logn "Install PHP:"
+logn "Installing PHP:"
 brew install homebrew/php/php70
 sed -i 's/phar.readonly = .*/phar.readonly = Off/' /usr/local/etc/php/7.0/php.ini
 brew install homebrew/php/composer
 brew install homebrew/php/php-cs-fixer
 logk
 
-logn "Install applications:"
+logn "Installing Mac applications:"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 cat > /tmp/Caskfile.strap <<EOF
 cask '1password'
