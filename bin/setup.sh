@@ -188,6 +188,13 @@ else
   logk
 fi
 
+# Install latest version of Bash.
+logn "Install latest version of Bash:"
+brew install bash
+sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+chsh -s /usr/local/bin/bash
+logk
+
 # Create Sites directory in user folder.
 logn "Create Sites directory in user folder:"
 mkdir ~/Sites
