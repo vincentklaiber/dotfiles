@@ -61,7 +61,7 @@ vlc
 
 ## Binaries
 
-List of useful applications and tools.
+List of useful binaries and tools.
 
 ```bash
 # Install GNU `sed`, overwriting the built-in `sed`.
