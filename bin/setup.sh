@@ -199,8 +199,24 @@ else
 fi
 logk
 
-logn "Install better Bash complection:"
-brew install bash-completion2
+logn "Install useful binaries:"
+cat > /tmp/Brewfile.strap <<EOF
+brew 'aria2'
+brew 'git'
+brew 'gnu-sed', args: ['with-default-names']
+brew 'homebrew/php/composer'
+brew 'homebrew/php/php-cs-fixer'
+brew 'homebrew/php/php70'
+brew 'homebrew/versions/bash-completion2'
+brew 'hub'
+brew 'node'
+brew 'rename'
+brew 'ssh-copy-id'
+brew 'wget'
+brew 'z'
+EOF
+brew bundle --file=/tmp/Brewfile.strap
+rm -f /tmp/Brewfile.strap
 logk
 
 # Create Sites directory in user folder.
@@ -276,4 +292,4 @@ logk
 # Revoke sudo access again.
 sudo -k
 
-log 'Finished! Install additional software with `brew install` and `brew cask install`.'
+log 'Finished! Please reboot! Install additional software with `brew install` and `brew cask install`.'
