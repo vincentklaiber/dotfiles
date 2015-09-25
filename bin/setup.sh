@@ -204,9 +204,9 @@ cat > /tmp/Brewfile.strap <<EOF
 brew 'aria2'
 brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
+brew 'homebrew/php/php70'
 brew 'homebrew/php/composer'
 brew 'homebrew/php/php-cs-fixer'
-brew 'homebrew/php/php70'
 brew 'homebrew/versions/bash-completion2'
 brew 'hub'
 brew 'node'
