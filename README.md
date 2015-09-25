@@ -33,7 +33,7 @@ source bin/update.sh
 
 List of useful applications and tools.
 
-```
+```bash
 1password
 atom
 adobe-creative-cloud
@@ -63,7 +63,7 @@ vlc
 
 List of useful applications and tools.
 
-```
+```bash
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
 
