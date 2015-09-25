@@ -191,8 +191,12 @@ fi
 # Install latest version of Bash.
 logn "Install latest version of Bash:"
 brew install bash
-sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-chsh -s /usr/local/bin/bash
+if [ -z "$STRAP_CI" ]; then
+  sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+  chsh -s /usr/local/bin/bash
+else
+  echo "Skipping updating shells for CI"
+fi
 logk
 
 # Create Sites directory in user folder.
