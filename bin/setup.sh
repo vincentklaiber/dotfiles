@@ -221,8 +221,12 @@ logn "Installing PHP:"
 brew install homebrew/php/php70
 sed -i".bak" "s/^\;phar.readonly.*$/phar.readonly = Off/g" /usr/local/etc/php/7.0/php.ini
 sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/7.0/php.ini
-brew install homebrew/php/composer
-brew install homebrew/php/php-cs-fixer
+if [ -z "$STRAP_CI" ]; then
+  brew install homebrew/php/composer
+  brew install homebrew/php/php-cs-fixer
+else
+  echo "Skipping installing composer and php-cs-fixer for CI"
+fi
 logk
 
 logn "Installing Mac applications:"
