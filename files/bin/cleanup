@@ -33,3 +33,6 @@ log 'Cleanup Homebrew Cache...'
 brew cleanup --force -s
 rm -rfv /Library/Caches/Homebrew/*
 brew tap --repair
+
+# Revoke sudo access again
+sudo -k

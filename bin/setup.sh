@@ -328,7 +328,7 @@ defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 logk
 
-# Revoke sudo access again.
+# Revoke sudo access again
 sudo -k
 
 log 'Finished! Please reboot! Install additional software with `brew install` and `brew cask install`.'
