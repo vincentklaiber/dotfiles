@@ -251,6 +251,8 @@ cask 'imagealpha'
 cask 'imageoptim'
 cask 'java'
 cask 'phpstorm'
+cask 'qlimagesize'
+cask 'qlstephen'
 cask 'sequel-pro'
 cask 'skype'
 cask 'spectacle'
@@ -274,14 +276,11 @@ logk
 logn "Setup prefered OS X settings:"
 
 # Menu bar: Always show percentage next to the Battery icon
-defaults write com.apple.menuextra.battery ShowPercent -bool true
+defaults write com.apple.menuextra.battery ShowPercent YES
 
 # Set a blazingly fast mouse and scrolling speed
-defaults write -g com.apple.mouse.scaling -int 1
-defaults write -g com.apple.scrollwheel.scaling -float 0.6875
-
-# Turn off mouse acceleration
-defaults write -g com.apple.mouse.scaling -1
+# defaults write .GlobalPreferences com.apple.mouse.scaling -1
+defaults write .GlobalPreferences com.apple.scrollwheel.scaling -float 0.6875
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
@@ -293,9 +292,6 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # New Finder windows shows Home directory
 defaults write com.apple.finder NewWindowTarget -string "PfHm"
 defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/vincent/"
-
-# Finder: allow text selection in Quick Look
-defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
