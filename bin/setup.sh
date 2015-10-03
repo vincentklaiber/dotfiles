@@ -217,6 +217,10 @@ brew bundle --file=/tmp/Brewfile.strap
 rm -f /tmp/Brewfile.strap
 logk
 
+logn "Installing latest version of NPM:"
+npm install -g npm@latest
+logk
+
 logn "Installing PHP:"
 brew install homebrew/php/php70
 sed -i".bak" "s/^\;phar.readonly.*$/phar.readonly = Off/g" /usr/local/etc/php/7.0/php.ini
