@@ -276,9 +276,6 @@ logn "Setup prefered OS X settings:"
 # Menu bar: Always show percentage next to the Battery icon
 defaults write com.apple.menuextra.battery ShowPercent -bool true
 
-# Check for software updates daily, not just once per week
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-
 # Set a blazingly fast mouse and scrolling speed
 defaults write -g com.apple.mouse.scaling -int 1
 defaults write -g com.apple.scrollwheel.scaling -float 0.6875
