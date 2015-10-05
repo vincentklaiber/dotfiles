@@ -42,6 +42,9 @@
 	# Pull in remote changes for the current repository and all its submodules
 	pl = !"git pull; git submodule foreach git pull origin master"
 
+	# Shorthand for pull request
+	pr = pull-request
+
 	# Shorthand for remote
 	r = remote
 
