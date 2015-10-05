@@ -15,15 +15,13 @@ fi
 STDIN_FILE_DESCRIPTOR="0"
 [ -t "$STDIN_FILE_DESCRIPTOR" ] && STRAP_INTERACTIVE="1"
 
-STRAP_GIT_NAME=
-STRAP_GIT_EMAIL=
-STRAP_GITHUB_USER=
-STRAP_GITHUB_TOKEN=
-
 abort() { echo "!!! $@" >&2; exit 1; }
 log()   { echo "--> $@"; }
 logn()  { printf -- "--> $@ "; }
 logk()  { echo "OK"; }
+
+NAME="Vincent Klaiber"
+EMAIL="vincentklaiber@gmail.com"
 
 sw_vers -productVersion | grep $Q -E "^10.(10|11)" || {
   abort "Run Strap on Mac OS X 10.10/11."
@@ -70,32 +68,6 @@ DEVELOPER_DIR=$("xcode-select" -print-path 2>/dev/null || true)
     abort 'Run `sudo xcodebuild -license` to agree to the Xcode license.'
   fi
 }
-
-# Setup Git
-logn "Configuring Git:"
-if [ -n "$STRAP_GIT_NAME" ] && ! git config user.name >/dev/null; then
-  git config --global user.name "$STRAP_GIT_NAME"
-fi
-
-if [ -n "$STRAP_GIT_EMAIL" ] && ! git config user.email >/dev/null; then
-  git config --global user.email "$STRAP_GIT_EMAIL"
-fi
-
-if [ -n "$STRAP_GITHUB_USER" ] && [ -n "$STRAP_GITHUB_TOKEN" ] \
-  && git credential-osxkeychain 2>&1 | grep $Q "git.credential-osxkeychain"
-then
-  if [ "$(git config credential.helper)" != "osxkeychain" ]
-  then
-    git config --global credential.helper osxkeychain
-  fi
-
-  if [ -z "$(printf "protocol=https\nhost=github.com\n" | git credential-osxkeychain get)" ]
-  then
-    printf "protocol=https\nhost=github.com\nusername=$STRAP_GITHUB_USER\npassword=$STRAP_GITHUB_TOKEN\n" \
-      | git credential-osxkeychain store
-  fi
-fi
-logk
 
 # Setup Homebrew directories and permissions.
 logn "Installing Homebrew:"
@@ -147,10 +119,10 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 
-if [ -n "$STRAP_GIT_NAME" ] && [ -n "$STRAP_GIT_EMAIL" ]; then
+if [ -n "$NAME" ] && [ -n "$EMAIL" ]; then
   sudo defaults write /Library/Preferences/com.apple.loginwindow \
     LoginwindowText \
-    "Found this computer? Please contact $STRAP_GIT_NAME at $STRAP_GIT_EMAIL."
+    "Found this computer? Please contact $NAME at $EMAIL."
 fi
 logk
 

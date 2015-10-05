@@ -122,8 +122,23 @@
 	log = true
 
 [push]
-	# Git simple branching method only your current branch will be pushed.
+	# Git simple branching method only your current branch will be pushed
 	default = simple
+
+[user]
+	# Name used in commit messages
+	name = Vincent Klaiber
+
+	# Email used in commit messages
+	email = vincentklaiber@gmail.com
+
+[github]
+	# GitHub username for command-line tools
+	user = vinkla
+
+[credential]
+	# Use OSX Keychain to store HTTP passwords
+	helper = osxkeychain
 
 [url "git@github.com:"]
 	# gh: is a shorthand for git@github.com
