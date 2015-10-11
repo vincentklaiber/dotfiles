@@ -260,6 +260,9 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 # Only show scrollbars when scrolling
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 
+# Don't play user interface sound effects
+defaults write com.apple.systemsound com.apple.sound.uiaudio.enabled -int 0
+
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
