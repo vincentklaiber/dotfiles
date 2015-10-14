@@ -295,6 +295,10 @@ defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
+# Expand print panel by default
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
 
