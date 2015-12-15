@@ -101,7 +101,6 @@ tap 'caskroom/cask'
 tap 'caskroom/versions'
 tap 'homebrew/versions'
 tap 'homebrew/php'
-brew 'caskroom/cask/brew-cask'
 EOF
 brew bundle --file=/tmp/Brewfile.strap
 rm -f /tmp/Brewfile.strap
