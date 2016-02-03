@@ -273,9 +273,6 @@ defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/vince
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# Empty Trash securely by default
-defaults write com.apple.finder EmptyTrashSecurely -bool true
-
 # Hide desktop icons by default
 defaults write com.apple.finder CreateDesktop -bool false
 
