@@ -20,6 +20,9 @@ alias fresh="rm -rf vendor composer.lock; composer install"
 alias phpunit="./vendor/bin/phpunit"
 alias phpspec="./vendor/bin/phpspec"
 
+# Point Vim
+alias vi="vim"
+
 # List all files in long format, including dotfiles
 alias l="ls -Glah"
 
