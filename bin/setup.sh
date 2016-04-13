@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #/ Usage: bin/strap.sh [--debug]
 #/ Install development dependencies on Mac OS X.
 set -e

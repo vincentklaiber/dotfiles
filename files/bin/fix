@@ -2,7 +2,8 @@
 
 url=https://gist.githubusercontent.com/vinkla/033c01f665980dd53d9b/raw/fixers
 
-run() {    
+# Run the php-cs-fixer script.
+run() {
   if [[ -f .php_cs ]]; then
     eval "php-cs-fixer --config-file=\".php_cs\" fix $@"
   else

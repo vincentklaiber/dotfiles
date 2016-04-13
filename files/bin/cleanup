@@ -2,7 +2,7 @@
 
 log() { echo -e "\e[0;33m${1}\e[0m"; }
 
-# Ask for the administrator password upfront
+# Ask for the administrator password upfront.
 sudo -v
 
 log 'Empty the Trash on all mounted volumes and the main HDD...'
@@ -34,5 +34,5 @@ brew cleanup --force -s
 rm -rfv /Library/Caches/Homebrew/*
 brew tap --repair
 
-# Revoke sudo access again
+# Revoke sudo access again.
 sudo -k

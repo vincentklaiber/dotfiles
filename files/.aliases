@@ -1,18 +1,18 @@
-# Easier navigation
+# Easier navigation.
 alias ..="cd .."
 alias ...="cd ../.."
 
-# Better GitHub integration
+# Better GitHub integration.
 alias git="hub"
 
-# Shortcuts
+# Shortcuts.
 alias g="git"
 alias h="history"
 
-# Laravel Artisan CLI
+# Laravel Artisan CLI.
 alias art="php artisan"
 
-# Composer CLI
+# Composer CLI.
 alias dump="composer dump-autoload"
 alias fresh="rm -rf vendor composer.lock; composer install"
 
@@ -20,36 +20,36 @@ alias fresh="rm -rf vendor composer.lock; composer install"
 alias phpunit="./vendor/bin/phpunit"
 alias phpspec="./vendor/bin/phpspec"
 
-# List all files in long format, including dotfiles
+# List all files in long format, including dotfiles.
 alias l="ls -Glah"
 
-# Enable aliases to be sudo’ed
+# Enable aliases to be sudo’ed.
 alias sudo="sudo "
 
-# Always enable colored `grep` output
+# Always enable colored `grep` output.
 alias grep="grep --color=auto"
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com".
 alias localip="ipconfig getifaddr en0"
 
-# Show/hide hidden files in Finder
+# Show/hide hidden files in Finder.
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
-# Create a new directory and enter it
+# Create a new directory and enter it.
 function mkd() {
 	mkdir -p "${@}" && cd "${_}";
 }
 
-# Start a PHP server from a directory, optionally specifying the port
+# Start a PHP server from a directory, optionally specifying the port.
 # (Requires PHP 5.4.0+.)
 function serve() {
 	local port="${1:-4000}";
 	sleep 1 && open "http://localhost:${port}/" & php -S "localhost:${port}";
 }
 
-# `a` with no arguments opens the current directory in Sublime Text, otherwise
+# `a` with no arguments opens the current directory in Sublime Text, otherwise.
 # opens the given location
 function a() {
     if [ $# -eq 0 ]; then
@@ -59,7 +59,7 @@ function a() {
     fi
 }
 
-# `p` with no arguments opens the current directory in PhpStorm, otherwise
+# `p` with no arguments opens the current directory in PhpStorm, otherwise.
 # opens the given location
 function p() {
     if [ $# -eq 0 ]; then
@@ -69,7 +69,7 @@ function p() {
     fi
 }
 
-# `o` with no arguments opens current directory, otherwise opens the given
+# `o` with no arguments opens current directory, otherwise opens the given.
 # location
 function o() {
 	if [ $# -eq 0 ]; then
