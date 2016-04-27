@@ -10,7 +10,7 @@ alias g="git"
 alias h="history"
 
 # Find outdated dependencies.
-alias outdated="composer oudated --oudated; npm outdated"
+alias outdated="composer outdated --outdated; npm outdated"
 
 # Laravel Artisan CLI.
 alias art="php artisan"
