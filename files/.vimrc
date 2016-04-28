@@ -1,6 +1,6 @@
 syntax enable
 
-colorscheme default
+colorscheme atom-dark-256
 
 set backspace=indent,eol,start "Make backspace like every other editor.
 let mapleader = ',' "The default leader is \, but a comma is much better.
