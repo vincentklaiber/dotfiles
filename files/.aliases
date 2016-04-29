@@ -18,6 +18,7 @@ alias art="php artisan"
 # Composer CLI.
 alias dump="composer dump-autoload"
 alias fresh="rm -rf vendor composer.lock; composer install"
+alias optimize="composer update --prefer-dist --no-dev; composer dump-autoload --optimize"
 
 # PHP Testing
 alias phpunit="./vendor/bin/phpunit"
