@@ -58,7 +58,6 @@ if tput setaf 1 &> /dev/null; then
 	tput sgr0; # reset colors
 	bold=$(tput bold);
 	reset=$(tput sgr0);
-	# Solarized colors, taken from http://git.io/solarized-colors.
 	black=$(tput setaf 0);
 	blue=$(tput setaf 33);
 	cyan=$(tput setaf 37);
@@ -99,8 +98,8 @@ fi;
 # Set the terminal title and prompt.
 PS1="\[\033]0;\W\007\]"; # working directory base name
 PS1+="\[${green}\]→ \W";
-PS1+="\$(prompt_git \"\[${white}\] on \[${violet}\]\")";
-PS1+="\[${white}\] \[${reset}\]";
+PS1+="\$(prompt_git \"\[${black}\] on \[${blue}\]\")";
+PS1+="\[${black}\] \[${reset}\]";
 export PS1;
 
 PS2="\[${yellow}\]→ \[${reset}\]";
