@@ -96,9 +96,9 @@ else
 fi;
 
 # Set the terminal title and prompt.
-PS1="\[\033]0;\W\007\]"; # working directory base name
-PS1+="\[${green}\]→ \W";
-PS1+="\$(prompt_git \"\[${black}\] on \[${blue}\]\")";
+PS1="\[\033]0;\w\007\]";
+PS1+="\[${purple}\]→ \[${green}\]\w";
+PS1+="\$(prompt_git \"\[${white}\] on \[${blue}\]\")";
 PS1+="\[${black}\] \[${reset}\]";
 export PS1;
 
