@@ -1,7 +1,5 @@
 syntax enable
 
-colorscheme cobalt2
-
 set backspace=indent,eol,start "Make backspace like every other editor.
 let mapleader = ',' "The default leader is \, but a comma is much better.
 set number "Let's activate line numbers.
