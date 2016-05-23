@@ -4,6 +4,10 @@ export PATH="/usr/local/sbin:${PATH}";
 export PATH=${PATH}:/usr/local/share/npm/bin;
 export PATH=${PATH}:${HOME}/.composer/vendor/bin;
 
+# Export path for nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # Make vim the default editor.
 export EDITOR="vim";
 
