@@ -41,11 +41,6 @@ alias localip="ipconfig getifaddr en0"
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
-# Create a new directory and enter it.
-function mkd() {
-	mkdir -p "${@}" && cd "${_}";
-}
-
 # Start a PHP server from a directory, optionally specifying the port.
 # (Requires PHP 5.4.0+.)
 function serve() {
