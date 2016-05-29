@@ -41,16 +41,6 @@ alias localip="ipconfig getifaddr en0"
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
-# `a` with no arguments opens the current directory in Sublime Text, otherwise.
-# opens the given location
-function a() {
-    if [ $# -eq 0 ]; then
-        atom .;
-    else
-        atom "$@";
-    fi
-}
-
 # `p` with no arguments opens the current directory in PhpStorm, otherwise.
 # opens the given location
 function p() {
