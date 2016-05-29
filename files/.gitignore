@@ -8,7 +8,7 @@ bower_components
 npm-debug.log
 .tags*
 
-# Composer
+# Composer.
 composer.phar
 
 # Compiled python files.

@@ -15,8 +15,7 @@ nmap <Leader>ev :tabedit $MYVIMRC<cr>
 nmap <Leader><space> :nohlsearch<cr>
 
 "Automatically source the .vimrc file on save.
-
 augroup autosourcing
 	autocmd!
 	autocmd BufWritePost .vimrc source %
-augroup END
+augroup ENDs
