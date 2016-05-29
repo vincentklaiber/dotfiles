@@ -33,8 +33,7 @@ This is a checklist of things to do before resetting the disk.
 
 1. Export `Transmit.app`, `Sequel Pro.app` favorites to Dropbox.
 2. Check all GIT repositories for uncommitted changes.
-3. Add latest homestead settings to `dotfiles` repository.
-4. Save latest `Sublime Text.app` and `PhpStorm.app` settings.
+4. Save latest `PhpStorm.app` settings.
 5. Reconsider all applications, binaries and tools in `scripts`.
 
 ## License
