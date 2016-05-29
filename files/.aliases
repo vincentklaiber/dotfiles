@@ -41,13 +41,6 @@ alias localip="ipconfig getifaddr en0"
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
-# Start a PHP server from a directory, optionally specifying the port.
-# (Requires PHP 5.4.0+.)
-function serve() {
-	local port="${1:-4000}";
-	sleep 1 && open "http://localhost:${port}/" & php -S "localhost:${port}";
-}
-
 # `a` with no arguments opens the current directory in Sublime Text, otherwise.
 # opens the given location
 function a() {
