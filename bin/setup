@@ -176,7 +176,7 @@ brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'homebrew/versions/bash-completion2'
 brew 'hub'
-brew 'node'
+brew 'nvm'
 brew 'rename'
 brew 'ssh-copy-id'
 brew 'wget'
