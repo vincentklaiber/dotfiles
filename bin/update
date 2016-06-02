@@ -14,7 +14,7 @@ brew upgrade --all
 
 log 'Cleanup Homebrew Cache...'
 brew cleanup --force -s
-rm -rf /Library/Caches/Homebrew/*
+rm -rfv $(brew --cache)/*
 brew tap --repair
 
 log 'Check if my system is ready to brew...'
