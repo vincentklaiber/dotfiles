@@ -98,7 +98,7 @@ fi;
 # Set the terminal title and prompt.
 PS1="\[\033]0;\w\007\]";
 PS1+="\[${purple}\]→ \[${green}\]\w";
-PS1+="\$(prompt_git \"\[${white}\] on \[${blue}\]\")";
+PS1+="\$(prompt_git \" \[${blue}\]\")";
 PS1+="\[${black}\] \[${reset}\]";
 export PS1;
 
