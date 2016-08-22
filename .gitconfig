@@ -97,9 +97,6 @@
 	untracked = cyan
 
 [core]
-	# Global `.gitattributes`.
-	attributesfile = ~/.gitattributes
-
 	# Default editor for commit messages and other inputs.
 	# Even when EDITOR is set to something else.
 	editor = vim
@@ -142,23 +139,3 @@
 [credential]
 	# Use macOS keychain to store HTTP passwords.
 	helper = osxkeychain
-
-[url "git@github.com:"]
-	# gh: is a shorthand for git@github.com.
-	insteadOf = "gh:"
-	pushInsteadOf = "github:"
-	pushInsteadOf = "git://github.com/"
-
-[url "git://github.com/"]
-	# github: is a shorthand for git://github.com/.
-	insteadOf = "github:"
-
-[url "git@gist.github.com:"]
-	# gst: is a shorthand for git://gist.github.com/.
-	insteadOf = "gst:"
-	pushInsteadOf = "gist:"
-	pushInsteadOf = "git://gist.github.com/"
-
-[url "git://gist.github.com/"]
-	# gist: is a shofthand for git://gist.github.com/.
-	insteadOf = "gist:"
