@@ -13,5 +13,5 @@ script:
   - SETUP_CI=1 SETUP_DEBUG=1 ./script/setup
   - brew install --build-from-source libffi
   - brew cask install flux
-  - brew install shellcheck
-  - shellcheck ./script/setup
+  - brew install checkbashisms
+  - checkbashisms --posix --force --extra ./script/setup
