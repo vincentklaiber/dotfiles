@@ -120,7 +120,7 @@ logk
 log "Installing Homebrew taps and extensions:"
 brew bundle --file=- <<EOF
 tap 'caskroom/cask'
-tap 'caskroom/version'
+tap 'caskroom/versions'
 tap 'homebrew/core'
 tap 'homebrew/php'
 tap 'homebrew/services'
