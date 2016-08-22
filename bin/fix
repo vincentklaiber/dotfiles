@@ -4,19 +4,19 @@ url=https://gist.githubusercontent.com/vinkla/033c01f665980dd53d9b/raw/fixers
 
 # Run the php-cs-fixer script.
 run() {
-  if [[ -f .php_cs ]]; then
-    eval "php-cs-fixer --config-file=\".php_cs\" fix $@"
-  else
-    fixers=$(curl -s ${url})
-    eval "php-cs-fixer ${fixers} fix $@"
-  fi
+	if [[ -f .php_cs ]]; then
+		eval "php-cs-fixer --config-file=\".php_cs\" fix $@"
+	else
+		fixers=$(curl -s ${url})
+		eval "php-cs-fixer ${fixers} fix $@"
+	fi
 }
 
 if [[ -z "$1" ]]; then
-  run .
-  exit 1
+	run .
+	exit 1
 fi
 
 for arg; do
-  run ${arg}
+	run ${arg}
 done

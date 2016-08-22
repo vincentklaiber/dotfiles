@@ -6,25 +6,25 @@ set -e
 [ "$1" = "--debug" ] && STRAP_DEBUG="1"
 
 if [ -n "$STRAP_DEBUG" ]; then
-  set -x
+	set -x
 else
-  STRAP_QUIET_FLAG="-q"
-  Q="$STRAP_QUIET_FLAG"
+	STRAP_QUIET_FLAG="-q"
+	Q="$STRAP_QUIET_FLAG"
 fi
 
 STDIN_FILE_DESCRIPTOR="0"
 [ -t "$STDIN_FILE_DESCRIPTOR" ] && STRAP_INTERACTIVE="1"
 
 abort() { echo "!!! $@" >&2; exit 1; }
-log()   { echo "--> $@"; }
-logn()  { printf -- "--> $@ "; }
-logk()  { echo "OK"; }
+log()	 { echo "--> $@"; }
+logn()	{ printf -- "--> $@ "; }
+logk()	{ echo "OK"; }
 
 NAME="Vincent Klaiber"
 EMAIL="vincentklaiber@gmail.com"
 
 sw_vers -productVersion | grep $Q -E "^10.(10|11)" || {
-  abort "Run Strap on Mac OS X 10.10/11."
+	abort "Run Strap on Mac OS X 10.10/11."
 }
 
 [ "$USER" = "root" ] && abort "Run Strap as yourself, not root."
@@ -47,26 +47,26 @@ logk
 # Install the Xcode Command Line Tools if Xcode isn't installed.
 DEVELOPER_DIR=$("xcode-select" -print-path 2>/dev/null || true)
 [ -z "$DEVELOPER_DIR" ] || ! [ -f "$DEVELOPER_DIR/usr/bin/git" ] && {
-  log "Installing the Xcode Command Line Tools:"
-  CLT_PLACEHOLDER="/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress"
-  sudo touch "$CLT_PLACEHOLDER"
-  CLT_PACKAGE=$(softwareupdate -l | \
-                grep -B 1 -E "Command Line (Developer|Tools)" | \
-                awk -F"*" '/^ +\*/ {print $2}' | sed 's/^ *//' | head -n1)
-  sudo softwareupdate -i "$CLT_PACKAGE"
-  sudo rm -f "$CLT_PLACEHOLDER"
-  logk
+	log "Installing the Xcode Command Line Tools:"
+	CLT_PLACEHOLDER="/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress"
+	sudo touch "$CLT_PLACEHOLDER"
+	CLT_PACKAGE=$(softwareupdate -l | \
+								grep -B 1 -E "Command Line (Developer|Tools)" | \
+								awk -F"*" '/^ +\*/ {print $2}' | sed 's/^ *//' | head -n1)
+	sudo softwareupdate -i "$CLT_PACKAGE"
+	sudo rm -f "$CLT_PLACEHOLDER"
+	logk
 }
 
 # Check if the Xcode license is agreed to and agree if not.
 /usr/bin/xcrun clang 2>&1 | grep $Q license && {
-  if [ -n "$STRAP_INTERACTIVE" ]; then
-    logn "Asking for Xcode license confirmation:"
-    sudo xcodebuild -license
-    logk
-  else
-    abort 'Run `sudo xcodebuild -license` to agree to the Xcode license.'
-  fi
+	if [ -n "$STRAP_INTERACTIVE" ]; then
+		logn "Asking for Xcode license confirmation:"
+		sudo xcodebuild -license
+		logk
+	else
+		abort 'Run `sudo xcodebuild -license` to agree to the Xcode license.'
+	fi
 }
 
 # Setup Homebrew directories and permissions.
@@ -74,8 +74,8 @@ logn "Installing Homebrew:"
 HOMEBREW_PREFIX="/usr/local"
 HOMEBREW_CACHE="/Library/Caches/Homebrew"
 for dir in "$HOMEBREW_PREFIX" "$HOMEBREW_CACHE"; do
-  [ -d "$dir" ] || sudo mkdir -p "$dir"
-  sudo chown -R $USER:admin "$dir"
+	[ -d "$dir" ] || sudo mkdir -p "$dir"
+	sudo chown -R $USER:admin "$dir"
 done
 
 # Download Homebrew.
@@ -84,8 +84,8 @@ git init $Q
 git config remote.origin.url "https://github.com/Homebrew/homebrew"
 git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 git rev-parse --verify --quiet origin/master >/dev/null || {
-  git fetch $Q origin master:refs/remotes/origin/master --no-tags --depth=1
-  git reset $Q --hard origin/master
+	git fetch $Q origin master:refs/remotes/origin/master --no-tags --depth=1
+	git reset $Q --hard origin/master
 }
 sudo chmod g+rwx "$HOMEBREW_PREFIX"/* "$HOMEBREW_PREFIX"/.??*
 unset GIT_DIR GIT_WORK_TREE
@@ -109,63 +109,63 @@ logk
 # Set some basic security settings.
 logn "Configuring security settings:"
 defaults write com.apple.Safari \
-  com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled \
-  -bool false
+	com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled \
+	-bool false
 defaults write com.apple.Safari \
-  com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabledForLocalFiles \
-  -bool false
+	com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabledForLocalFiles \
+	-bool false
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 
 if [ -n "$NAME" ] && [ -n "$EMAIL" ]; then
-  sudo defaults write /Library/Preferences/com.apple.loginwindow \
-    LoginwindowText \
-    "Found this computer? Please contact $NAME at $EMAIL."
+	sudo defaults write /Library/Preferences/com.apple.loginwindow \
+		LoginwindowText \
+		"Found this computer? Please contact $NAME at $EMAIL."
 fi
 logk
 
 # Check and enable full-disk encryption.
 logn "Checking full-disk encryption status:"
 if fdesetup status | grep $Q -E "FileVault is (On|Off, but will be enabled after the next restart)."; then
-  logk
+	logk
 elif [ -n "$STRAP_CI" ]; then
-  echo
-  logn "Skipping full-disk encryption for CI"
+	echo
+	logn "Skipping full-disk encryption for CI"
 elif [ -n "$STRAP_INTERACTIVE" ]; then
-  echo
-  logn "Enabling full-disk encryption on next reboot:"
-  sudo fdesetup enable -user "$USER" \
-    | tee ~/Desktop/"FileVault Recovery Key.txt"
-  logk
+	echo
+	logn "Enabling full-disk encryption on next reboot:"
+	sudo fdesetup enable -user "$USER" \
+		| tee ~/Desktop/"FileVault Recovery Key.txt"
+	logk
 else
-  echo
-  abort 'Run `sudo fdesetup enable -user "$USER"` to enable full-disk encryption.'
+	echo
+	abort 'Run `sudo fdesetup enable -user "$USER"` to enable full-disk encryption.'
 fi
 
 # Check and install any remaining software updates.
 logn "Checking for software updates:"
 if softwareupdate -l 2>&1 | grep $Q "No new software available."; then
-  logk
+	logk
 else
-  echo
-  log "Installing software updates:"
-  if [ -z "$STRAP_CI" ]; then
-    sudo softwareupdate --install --all
-  else
-    echo "Skipping software updates for CI"
-  fi
-  logk
+	echo
+	log "Installing software updates:"
+	if [ -z "$STRAP_CI" ]; then
+		sudo softwareupdate --install --all
+	else
+		echo "Skipping software updates for CI"
+	fi
+	logk
 fi
 
 # Install latest version of Bash.
 logn "Install latest version of Bash:"
 brew install bash
 if [ -z "$STRAP_CI" ]; then
-  sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-  chsh -s /usr/local/bin/bash
+	sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+	chsh -s /usr/local/bin/bash
 else
-  echo "Skipping updating shells for CI"
+	echo "Skipping updating shells for CI"
 fi
 logk
 
@@ -195,10 +195,10 @@ brew install homebrew/php/php70
 sed -i".bak" "s/^\;phar.readonly.*$/phar.readonly = Off/g" /usr/local/etc/php/7.0/php.ini
 sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/7.0/php.ini
 if [ -z "$STRAP_CI" ]; then
-  brew install homebrew/php/composer
-  brew install homebrew/php/php-cs-fixer
+	brew install homebrew/php/composer
+	brew install homebrew/php/php-cs-fixer
 else
-  echo "Skipping installing composer and php-cs-fixer for CI"
+	echo "Skipping installing composer and php-cs-fixer for CI"
 fi
 logk
 

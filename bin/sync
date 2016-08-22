@@ -6,7 +6,8 @@ git pull origin master;
 
 function setup() {
 	rsync --exclude ".DS_Store" --exclude "bin/sync" --exclude "bin/setup" \
-		--exclude "LICENSE" --exclude "README.md" --exclude ".git" -avh . ~;
+		--exclude "LICENSE" --exclude "README.md" --exclude ".git" \
+    --exclude ".editorconfig" -avh . ~;
 	source ~/.bash_profile;
 	chflags hidden ~/bin;
 }
