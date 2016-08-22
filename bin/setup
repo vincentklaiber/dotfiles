@@ -118,11 +118,9 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 
-if [ -n "$NAME" ] && [ -n "$EMAIL" ]; then
-	sudo defaults write /Library/Preferences/com.apple.loginwindow \
-		LoginwindowText \
-		"Found this computer? Please contact $NAME at $EMAIL."
-fi
+# Add login screen message.
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText \
+	"Found this computer? Please contact Vincent Klaiber at vincentklaiber@gmail.com."
 logk
 
 # Check and enable full-disk encryption.
@@ -206,7 +204,6 @@ logn "Installing Mac applications:"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 cat > /tmp/Caskfile.strap <<EOF
 cask '1password'
-cask 'adobe-creative-cloud'
 cask 'appcleaner'
 cask 'atom'
 cask 'couleurs'
@@ -226,10 +223,7 @@ cask 'skype'
 cask 'slack'
 cask 'spectacle'
 cask 'spotify'
-cask 'steam'
 cask 'transmit'
-cask 'vagrant'
-cask 'virtualbox'
 cask 'vlc'
 EOF
 brew bundle --file=/tmp/Caskfile.strap
