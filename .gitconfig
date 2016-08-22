@@ -107,7 +107,7 @@
 	# Global `.gitignore`.
 	excludesfile = ~/.gitignore
 
-	# Make `git rebase` safer on OS X.
+	# Make `git rebase` safer on macOS.
 	trustctime = false
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error.
@@ -140,7 +140,7 @@
 	user = vinkla
 
 [credential]
-	# Use OSX Keychain to store HTTP passwords.
+	# Use macOS keychain to store HTTP passwords.
 	helper = osxkeychain
 
 [url "git@github.com:"]

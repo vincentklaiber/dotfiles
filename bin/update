@@ -5,7 +5,7 @@ log() { echo -e "\e[0;33m${1}\e[0m"; }
 # Ask for the administrator password upfront.
 sudo -v
 
-log 'Install OS X Software Updates...'
+log 'Install macOS Software Updates...'
 sudo softwareupdate -i -a
 
 log 'Update Homebrew...'
