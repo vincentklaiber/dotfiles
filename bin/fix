@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 url=https://gist.githubusercontent.com/vinkla/033c01f665980dd53d9b/raw/fixers
 

@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #/ Usage: bin/strap.sh [--debug]
-#/ Install development dependencies on Mac macOS.
+#/ Install development dependencies on macOS.
 set -e
 
 [ "$1" = "--debug" ] && STRAP_DEBUG="1"

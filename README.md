@@ -13,7 +13,7 @@ This is the installation guide to setup these dotfiles on a new macOS system.
 ```bash
 git clone git@github.com:vinkla/dotfiles.git
 cd dotfiles
-./bin/setup.sh # or ./bin/setup.sh --debug for more debugging output
+./script/setup # or ./script/setup --debug for more debugging output
 ```
 
 Restart the computer and live happily ever after.
@@ -25,7 +25,7 @@ The guide on how to keep your dotfiles in sync and up to date with the latest ch
 ```bash
 cd dotfiles
 git pull
-source bin/update.sh
+source script/sync
 ```
 
 ## Reset
