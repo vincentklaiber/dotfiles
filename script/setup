@@ -13,9 +13,9 @@ if [ "$1" = "--sudo-wait" ]; then
   exit 0
 fi
 
-[ "$1" = "--debug" ] && DEBUG="1"
+[ "$1" = "--debug" ] && SETUP_DEBUG="1"
 
-if [ -n "$DEBUG" ]; then
+if [ -n "$SETUP_DEBUG" ]; then
   set -x
 fi
 
@@ -88,15 +88,6 @@ xcode_license() {
 }
 xcode_license
 
-# Setup Homebrew directories and permissions.
-logn "Installing Homebrew:"
-HOMEBREW_PREFIX="/usr/local"
-HOMEBREW_CACHE="/Library/Caches/Homebrew"
-for dir in "$HOMEBREW_PREFIX" "$HOMEBREW_CACHE"; do
-	[ -d "$dir" ] || sudo mkdir -p "$dir"
-	sudo chown -R $USER:admin "$dir"
-done
-
 # Setup Homebrew directory and permissions.
 logn "Installing Homebrew:"
 HOMEBREW_PREFIX="/usr/local"
@@ -159,7 +150,7 @@ logk
 logn "Checking full-disk encryption status:"
 if fdesetup status | grep $Q -E "FileVault is (On|Off, but will be enabled after the next restart)."; then
   logk
-elif [ -n "$CI" ]; then
+elif [ -n "$SETUP_CI" ]; then
   echo
   logn "Skipping full-disk encryption for CI"
 elif [ -n "$INTERACTIVE" ]; then
@@ -180,7 +171,7 @@ if softwareupdate -l 2>&1 | grep $Q "No new software available."; then
 else
   echo
   log "Installing software updates:"
-  if [ -z "$CI" ]; then
+  if [ -z "$SETUP_CI" ]; then
     sudo softwareupdate --install --all
     xcode_license
   else
@@ -192,7 +183,7 @@ fi
 # Install latest version of Bash.
 logn "Install latest version of Bash:"
 brew install bash
-if [ -z "$CI" ]; then
+if [ -z "$SETUP_CI" ]; then
 	sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 	chsh -s /usr/local/bin/bash
 else
@@ -222,7 +213,7 @@ logn "Installing PHP:"
 brew install homebrew/php/php70
 sed -i".bak" "s/^\;phar.readonly.*$/phar.readonly = Off/g" /usr/local/etc/php/7.0/php.ini
 sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/7.0/php.ini
-if [ -z "$CI" ]; then
+if [ -z "$SETUP_CI" ]; then
 	brew install homebrew/php/composer
 	brew install homebrew/php/php-cs-fixer
 else

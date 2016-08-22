@@ -10,7 +10,7 @@ before_script:
   - sudo pkgutil --forget com.apple.pkg.CLTools_Executables
 
 script:
-  - CI=1 DEBUG=1 ./bin/setup
+  - SETUP_CI=1 SETUP_DEBUG=1 ./bin/setup
   - brew install --build-from-source libffi
   - brew cask install flux
   - brew install shellcheck
