@@ -20,7 +20,7 @@ if [ -n "$SETUP_DEBUG" ]; then
 fi
 
 STDIN_FILE_DESCRIPTOR="0"
-[ -t "$STDIN_FILE_DESCRIPTOR" ] && INTERACTIVE="1"
+[ -t "$STDIN_FILE_DESCRIPTOR" ] && SETUP_INTERACTIVE="1"
 
 abort() { echo "!!! $@" >&2; exit 1; }
 log()	 { echo "--> $@"; }
@@ -62,7 +62,7 @@ DEVELOPER_DIR=$("xcode-select" -print-path 2>/dev/null || true)
   sudo softwareupdate -i "$CLT_PACKAGE"
   sudo rm -f "$CLT_PLACEHOLDER"
   if ! [ -f "/usr/include/iconv.h" ]; then
-    if [ -n "$INTERACTIVE" ]; then
+    if [ -n "$SETUP_INTERACTIVE" ]; then
       echo
       logn "Requesting user install of Xcode Command Line Tools:"
       xcode-select --install
@@ -77,7 +77,7 @@ DEVELOPER_DIR=$("xcode-select" -print-path 2>/dev/null || true)
 # Check if the Xcode license is agreed to and agree if not.
 xcode_license() {
   if /usr/bin/xcrun clang 2>&1 | grep $Q license; then
-    if [ -n "$INTERACTIVE" ]; then
+    if [ -n "$SETUP_INTERACTIVE" ]; then
       logn "Asking for Xcode license confirmation:"
       sudo xcodebuild -license
       logk
@@ -153,7 +153,7 @@ if fdesetup status | grep $Q -E "FileVault is (On|Off, but will be enabled after
 elif [ -n "$SETUP_CI" ]; then
   echo
   logn "Skipping full-disk encryption for CI"
-elif [ -n "$INTERACTIVE" ]; then
+elif [ -n "$SETUP_INTERACTIVE" ]; then
   echo
   log "Enabling full-disk encryption on next reboot:"
   sudo fdesetup enable -user "$USER" \
