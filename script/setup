@@ -260,6 +260,15 @@ logn "Setup prefered macOS settings:"
 # Menu bar: Always show percentage next to the Battery icon
 defaults write com.apple.menuextra.battery ShowPercent YES
 
+# Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Hide files and directories on the desktop
+defaults write com.apple.finder CreateDesktop -bool false
+
+# Save screenshots to the downloads directory
+defaults write com.apple.screencapture location -string "${HOME}/Downloads"
+
 # Enable Secure Keyboard Entry in Terminal.app
 # See: https://security.stackexchange.com/a/47786/8918
 defaults write com.apple.terminal SecureKeyboardEntry -bool true
