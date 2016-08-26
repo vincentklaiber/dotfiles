@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #/ Usage: script/setup [--debug]
 #/ Install development dependencies on macOS.
 set -e
