@@ -291,6 +291,10 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Minimize windows into application icon.
 defaults write com.apple.dock minimize-to-application -bool true
 
+# Hide scrollbars
+defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
+# Possible values: `WhenScrolling`, `Automatic` and `Always`
+
 # Set the icon size of Dock items to 50 pixels
 defaults write com.apple.dock tilesize -int 50
 
