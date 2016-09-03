@@ -125,6 +125,9 @@
 	# Git simple branching method only your current branch will be pushed.
 	default = simple
 
+  # Make `git push` push relevant annotated tags when pushing branches out.
+	followTags = true
+
 [user]
 	# Name used in commit messages.
 	name = Vincent Klaiber
