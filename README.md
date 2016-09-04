@@ -21,21 +21,12 @@ Restart the computer and live happily ever after.
 
 ## Sync
 
-The guide on how to keep your dotfiles in sync and up to date with the latest changes.
+Keep your dotfiles in sync and up to date with the latest changes.
 
 ```bash
 cd dotfiles
-git pull
 source script/sync
 ```
-
-## Reset
-This is a checklist of things to do before resetting the disk.
-
-1. Export `Transmit.app`, `Sequel Pro.app` favorites to Dropbox.
-2. Check all GIT repositories for uncommitted changes.
-4. Save latest `PhpStorm.app` settings.
-5. Reconsider all applications, binaries and tools in `scripts`.
 
 ## License
 
