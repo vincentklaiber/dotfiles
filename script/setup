@@ -199,6 +199,7 @@ brew 'gnu-sed', args: ['with-default-names']
 brew 'homebrew/versions/bash-completion2'
 brew 'hub'
 brew 'node'
+brew 'vim'
 brew 'wget'
 brew 'z'
 EOF
