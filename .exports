@@ -22,8 +22,7 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
 export LANG="en_US.UTF-8";
 export LC_ALL="en_US.UTF-8";
 
-# Highlight section titles in manual pages.
-export LESS_TERMCAP_md="${yellow}";
+# Highlight manual pages.
 export LESS_TERMCAP_mb=$'\E[01;31m';
 export LESS_TERMCAP_md=$'\E[01;38;5;74m';
 export LESS_TERMCAP_me=$'\E[0m';
