@@ -226,27 +226,27 @@ logk
 logn "Installing Mac applications:"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 cat > /tmp/Caskfile <<EOF
-cask '1password'
-cask 'appcleaner'
-cask 'atom'
-cask 'couleurs'
-cask 'dropbox'
-cask 'flux'
-cask 'github-desktop'
-cask 'google-chrome'
-cask 'imagealpha'
-cask 'imageoptim'
-cask 'jumpshare'
-cask 'qlimagesize'
-cask 'qlstephen'
-cask 'sequel-pro'
-cask 'sketch'
-cask 'skype'
-cask 'slack'
-cask 'spectacle'
-cask 'spotify'
-cask 'transmit'
-cask 'vlc'
+  cask '1password'
+  cask 'appcleaner'
+  cask 'atom'
+  cask 'couleurs'
+  cask 'dropbox'
+  cask 'flux'
+  cask 'github-desktop'
+  cask 'google-chrome'
+  cask 'imagealpha'
+  cask 'imageoptim'
+  cask 'jumpshare'
+  cask 'qlimagesize'
+  cask 'qlstephen'
+  cask 'sequel-pro'
+  cask 'sketch'
+  cask 'skype'
+  cask 'slack'
+  cask 'spectacle'
+  cask 'spotify'
+  cask 'transmit'
+  cask 'vlc'
 EOF
 brew bundle --file=/tmp/Caskfile
 rm -f /tmp/Caskfile
@@ -277,7 +277,7 @@ defaults write com.apple.screencapture location -string "${HOME}/Downloads"
 defaults write com.apple.terminal SecureKeyboardEntry -bool true
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -float 0.000000000001
+defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Disable auto-correct
