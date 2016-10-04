@@ -10,7 +10,7 @@ sudo softwareupdate -i -a
 
 log 'Update Homebrew...'
 brew update
-brew upgrade --all
+brew upgrade
 
 log 'Cleanup Homebrew Cache...'
 brew cleanup --force -s
