@@ -51,8 +51,9 @@ logk
 
 # Install the Xcode Command Line Tools if Xcode isn't installed.
 DEVELOPER_DIR=$("xcode-select" -print-path 2>/dev/null || true)
-[ -z "$DEVELOPER_DIR" ] || ! [ -f "$DEVELOPER_DIR/usr/bin/git" ] \
-                        || ! [ -f "/usr/include/iconv.h" ] && {
+if [ -z "$DEVELOPER_DIR" ] || ! [ -f "$DEVELOPER_DIR/usr/bin/git" ] \
+                        || ! [ -f "/usr/include/iconv.h" ]
+then
   log "Installing the Xcode Command Line Tools:"
   CLT_PLACEHOLDER="/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress"
   sudo touch "$CLT_PLACEHOLDER"
@@ -72,7 +73,7 @@ DEVELOPER_DIR=$("xcode-select" -print-path 2>/dev/null || true)
     fi
   fi
   logk
-}
+fi
 
 # Check if the Xcode license is agreed to and agree if not.
 xcode_license() {
