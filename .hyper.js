@@ -7,19 +7,19 @@ module.exports = {
     fontFamily: 'Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: '#999999',
+    cursorColor: 'rgba(248,28,229,0.75)',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
     cursorShape: 'BEAM',
 
     // color of the text
-    foregroundColor: '#f8f8f2',
+    foregroundColor: '#fff',
 
     // terminal background color
-    backgroundColor: '#233846',
+    backgroundColor: '#000',
 
     // border color (window, tabs)
-    borderColor: '#44475a',
+    borderColor: '#333',
 
     // custom css to embed in the main window
     css: '',
@@ -34,29 +34,45 @@ module.exports = {
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
     colors: {
-      black: '#233846',
-      red: '#ff5555',
-      green: '#50fa7b',
-      yellow: '#f1fa8c',
-      blue: '#55CBFF',
-      magenta: '#ff79c6',
-      cyan: '#8be9fd',
-      white: '#666666',
-      lightBlack: '#233846',
-      lightRed: '#ff5555',
-      lightGreen: '#50fa7b',
-      lightYellow: '#f1fa8c',
-      lightBlue: '#55CBFF',
-      lightMagenta: '#ff79c6',
-      lightCyan: '#8be9fd',
+      black: '#000000',
+      red: '#ff0000',
+      green: '#33ff00',
+      yellow: '#ffff00',
+      blue: '#0066ff',
+      magenta: '#cc00ff',
+      cyan: '#00ffff',
+      white: '#d0d0d0',
+      lightBlack: '#808080',
+      lightRed: '#ff0000',
+      lightGreen: '#33ff00',
+      lightYellow: '#ffff00',
+      lightBlue: '#0066ff',
+      lightMagenta: '#cc00ff',
+      lightCyan: '#00ffff',
       lightWhite: '#ffffff'
     },
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
     // if left empty, your system's login shell will be used by default
-    shell: ''
+    shell: '',
 
-    // for advanced config flags please refer to https://hyperterm.org/#cfg
+    // for setting shell arguments (i.e. for using interactive shellArgs: ['-i'])
+    // by default ['--login'] will be used
+    shellArgs: ['--login'],
+
+    // for environment variables
+    env: {},
+
+    // set to false for no bell
+    bell: false,
+
+    // if true, selected text will automatically be copied to the clipboard
+    copyOnSelect: false
+
+    // URL to custom bell
+    // bellSoundURL: 'http://example.com/bell.mp3',
+
+    // for advanced config flags please refer to https://hyper.is/#cfg
   },
 
   // a list of plugins to fetch and install from npm
@@ -66,15 +82,15 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-     'hypercwd',
-     'hyperfull',
-     'hyperterm-native',
-     'hyperterm-paste',
-     'hyperterm-snazzy'
+    'hypercwd',
+    'hyperfull',
+    'hyperterm-native',
+    'hyperterm-paste',
+    'hyperterm-snazzy'
   ],
 
   // in development, you can create a directory under
-  // `~/.hyperterm_plugins/local/` and include it here
+  // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
   localPlugins: []
 };
