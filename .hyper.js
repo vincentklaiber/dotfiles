@@ -84,6 +84,7 @@ module.exports = {
   plugins: [
     'hypercwd',
     'hyperfull',
+    'hyperterm-danish-keyboard',
     'hyperterm-native',
     'hyperterm-paste',
     'hyperterm-snazzy'
