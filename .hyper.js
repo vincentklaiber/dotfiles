@@ -82,12 +82,12 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
+    'hyper-native',
+    'hyper-snazzy',
     'hypercwd',
     'hyperfull',
     'hyperterm-danish-keyboard',
-    'hyperterm-native',
-    'hyperterm-paste',
-    'hyperterm-snazzy'
+    'hyperterm-paste'
   ],
 
   // in development, you can create a directory under
