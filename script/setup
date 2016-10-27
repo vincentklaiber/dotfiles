@@ -22,9 +22,9 @@ fi
 STDIN_FILE_DESCRIPTOR="0"
 [ -t "$STDIN_FILE_DESCRIPTOR" ] && SETUP_INTERACTIVE="1"
 
-abort() { echo "!!! $@" >&2; exit 1; }
-log()	 { echo "--> $@"; }
-logn()	{ printf -- "--> $@ "; }
+abort() { echo "!!! $*" >&2; exit 1; }
+log()	 { echo "--> $*"; }
+logn()	{ printf -- "--> $* "; }
 logk()	{ echo "OK"; }
 
 sw_vers -productVersion | grep $Q -E "^10.(11|12)" || {
