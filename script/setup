@@ -213,6 +213,7 @@ brew 'hub'
 brew 'node'
 brew 'vim'
 brew 'wget'
+brew 'yarn'
 brew 'z'
 EOF
 brew bundle --file=/tmp/Brewfile
