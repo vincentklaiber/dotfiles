@@ -6,8 +6,8 @@ osx_image: xcode8
 rvm: 2.3.1
 
 before_script:
+  - sudo rm -rf /Library/Developer/CommandLineTools
   - brew update
-  - brew upgrade
 
 script:
   - TRAVIS=1 ./script/setup
