@@ -11,9 +11,6 @@ set -e
 # Print commands and their arguments as they are executed.
 set -x
 
-# Ask for the administrator password upfront.
-sudo -v
-
 # Run the script as yourself, not root.
 [ "$USER" = "root" ] && abort "Run the script as yourself, not root."
 groups | grep $Q admin || abort "Add $USER to the admin group."
@@ -40,7 +37,11 @@ logk
 
 # Installing Homebrew.
 logn "Installing Homebrew:"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if [ -n "$TRAVIS" ]; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+  logn "Skipping installing Homebrew for CI"
+fi
 logk
 
 # Install Homebrew Bundle, Cask, Services and Versions tap.
