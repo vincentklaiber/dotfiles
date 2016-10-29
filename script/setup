@@ -40,9 +40,7 @@ logk
 
 # Installing Homebrew.
 logn "Installing Homebrew:"
-if test ! $(which brew); then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 logk
 
 # Install Homebrew Bundle, Cask, Services and Versions tap.
