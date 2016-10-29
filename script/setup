@@ -1,35 +1,18 @@
 #!/usr/bin/env bash
-#/ Usage: script/setup [--debug]
-#/ Install development dependencies on macOS.
-set -e
-
-# Keep sudo timestamp updated while the script is running.
-if [ "$1" = "--sudo-wait" ]; then
-  while true; do
-    mkdir -p "/var/db/sudo/$SUDO_USER"
-    touch "/var/db/sudo/$SUDO_USER"
-    sleep 1
-  done
-  exit 0
-fi
-
-[ "$1" = "--debug" ] && SETUP_DEBUG="1"
-
-if [ -n "$SETUP_DEBUG" ]; then
-  set -x
-fi
-
-STDIN_FILE_DESCRIPTOR="0"
-[ -t "$STDIN_FILE_DESCRIPTOR" ] && SETUP_INTERACTIVE="1"
 
 abort() { echo "!!! $*" >&2; exit 1; }
 log()	 { echo "--> $*"; }
 logn()	{ printf -- "--> $* "; }
 logk()	{ echo "OK"; }
 
-sw_vers -productVersion | grep $Q -E "^10.(11|12)" || {
-	abort "Run the script on macOS 10.11/12."
-}
+# Exit immediately if a command exits with a non-zero status.
+set -e
+
+# Print commands and their arguments as they are executed.
+set -x
+
+# Ask for the administrator password upfront.
+sudo -v
 
 # Run the script as yourself, not root.
 [ "$USER" = "root" ] && abort "Run the script as yourself, not root."
@@ -50,82 +33,16 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 logk
 
 # Install the Xcode Command Line Tools if Xcode isn't installed.
-DEVELOPER_DIR=$("xcode-select" -print-path 2>/dev/null || true)
-if [ -z "$DEVELOPER_DIR" ] || ! [ -f "$DEVELOPER_DIR/usr/bin/git" ] \
-                        || ! [ -f "/usr/include/iconv.h" ]
-then
-  log "Installing the Xcode Command Line Tools:"
-  CLT_PLACEHOLDER="/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress"
-  sudo touch "$CLT_PLACEHOLDER"
-  CLT_PACKAGE=$(softwareupdate -l | \
-                grep -B 1 -E "Command Line (Developer|Tools)" | \
-                awk -F"*" '/^ +\*/ {print $2}' | sed 's/^ *//' | head -n1)
-  sudo softwareupdate -i "$CLT_PACKAGE"
-  sudo rm -f "$CLT_PLACEHOLDER"
-  if ! [ -f "/usr/include/iconv.h" ]; then
-    if [ -n "$SETUP_INTERACTIVE" ]; then
-      echo
-      logn "Requesting user install of Xcode Command Line Tools:"
-      xcode-select --install
-    else
-      echo
-      abort "Run 'xcode-select --install' to install the Xcode Command Line Tools."
-    fi
-  fi
-  logk
-fi
-
-# Check if the Xcode license is agreed to and agree if not.
-xcode_license() {
-  if /usr/bin/xcrun clang 2>&1 | grep $Q license; then
-    if [ -n "$SETUP_INTERACTIVE" ]; then
-      logn "Asking for Xcode license confirmation:"
-      sudo xcodebuild -license
-      logk
-    else
-      abort "Run 'sudo xcodebuild -license' to agree to the Xcode license."
-    fi
-  fi
-}
-xcode_license
-
-# Setup Homebrew directory and permissions.
-logn "Installing Homebrew:"
-HOMEBREW_PREFIX="$(brew --prefix 2>/dev/null || true)"
-[ -n "$HOMEBREW_PREFIX" ] || HOMEBREW_PREFIX="/usr/local"
-[ -d "$HOMEBREW_PREFIX" ] || sudo mkdir -p "$HOMEBREW_PREFIX"
-sudo chown "root:wheel" "$HOMEBREW_PREFIX"
-
-HOMEBREW_REPOSITORY="$(brew --repository 2>/dev/null || true)"
-[ -n "$HOMEBREW_REPOSITORY" ] || HOMEBREW_REPOSITORY="/usr/local/Homebrew"
-[ -d "$HOMEBREW_REPOSITORY" ] || sudo mkdir -p "$HOMEBREW_REPOSITORY"
-sudo chown -R "$USER:admin" "$HOMEBREW_REPOSITORY"
-
-if [ $HOMEBREW_PREFIX != $HOMEBREW_REPOSITORY ]
-then
-  ln -sf "$HOMEBREW_REPOSITORY/bin/brew" "$HOMEBREW_PREFIX/bin/brew"
-fi
-
-# Download Homebrew.
-export GIT_DIR="$HOMEBREW_REPOSITORY/.git" GIT_WORK_TREE="$HOMEBREW_REPOSITORY"
-[ -d "$GIT_DIR" ] && HOMEBREW_EXISTING="1"
-git init $Q
-git config remote.origin.url "https://github.com/Homebrew/brew"
-git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
-if [ -n "$HOMEBREW_EXISTING" ]
-then
-  git fetch $Q
-else
-  git fetch $Q --no-tags --depth=1 --force --update-shallow
-fi
-git reset $Q --hard origin/master
-unset GIT_DIR GIT_WORK_TREE HOMEBREW_EXISTING
+logn "Install the Xcode Command Line Tools:"
+xcode-select --install
+sudo xcodebuild -license
 logk
 
-# Update Homebrew.
-export PATH="$HOMEBREW_PREFIX/bin:$PATH"
-log "Updating Homebrew:"
-brew update
+# Installing Homebrew.
+logn "Installing Homebrew:"
+if test ! $(which brew); then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 logk
 
 # Install Homebrew Bundle, Cask, Services and Versions tap.
@@ -162,18 +79,15 @@ logk
 logn "Checking full-disk encryption status:"
 if fdesetup status | grep $Q -E "FileVault is (On|Off, but will be enabled after the next restart)."; then
   logk
-elif [ -n "$SETUP_CI" ]; then
+elif [ -n "$TRAVIS" ]; then
   echo
   logn "Skipping full-disk encryption for CI"
-elif [ -n "$SETUP_INTERACTIVE" ]; then
+else
   echo
   log "Enabling full-disk encryption on next reboot:"
   sudo fdesetup enable -user "$USER" \
     | tee ~/Desktop/"FileVault Recovery Key.txt"
   logk
-else
-  echo
-  abort "Run 'sudo fdesetup enable -user \"$USER\"' to enable full-disk encryption."
 fi
 
 # Check and install any remaining software updates.
@@ -183,7 +97,7 @@ if softwareupdate -l 2>&1 | grep $Q "No new software available."; then
 else
   echo
   log "Installing software updates:"
-  if [ -z "$SETUP_CI" ]; then
+  if [ -z "$TRAVIS" ]; then
     sudo softwareupdate --install --all
     xcode_license
   else
@@ -192,17 +106,18 @@ else
   logk
 fi
 
-# Install latest version of Bash.
+# Install the latest version of Bash.
 logn "Install latest version of Bash:"
 brew install bash
-if [ -z "$SETUP_CI" ]; then
+if [ -z "$TRAVIS" ]; then
 	sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 	chsh -s /usr/local/bin/bash
 else
-	echo "Skipping updating shells for CI"
+	echo "Skipping installaing the latest verison of Bash."
 fi
 logk
 
+# Install binaries with Brew.
 logn "Installing binaries:"
 cat > /tmp/Brewfile <<EOF
 brew 'aria2'
@@ -220,23 +135,26 @@ brew bundle --file=/tmp/Brewfile
 rm -f /tmp/Brewfile
 logk
 
-logn "Installing latest version of NPM:"
+# Install latest version of npm:
+logn "Installing latest version of npm:"
 npm install -g npm@latest
 logk
 
+# Install PHP and update php.ini config file.
 logn "Installing PHP:"
 brew install homebrew/php/php71
 sed -i".bak" "s/^\;phar.readonly.*$/phar.readonly = Off/g" /usr/local/etc/php/7.1/php.ini
 sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/7.1/php.ini
-if [ -z "$SETUP_CI" ]; then
+if [ -z "$TRAVIS" ]; then
 	brew install homebrew/php/composer
 	brew install homebrew/php/php-cs-fixer
 else
-	echo "Skipping installing composer and php-cs-fixer for CI"
+	echo "Skipping installing composer and php-cs-fixer for CI."
 fi
 logk
 
-logn "Installing Mac applications:"
+# Install macOS applications with Brew Cask.
+logn "Installing macOS applications:"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 cat > /tmp/Caskfile <<EOF
   cask '1password'
