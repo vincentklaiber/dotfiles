@@ -122,9 +122,12 @@ cat > /tmp/Brewfile <<EOF
 brew 'aria2'
 brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
+brew 'gnupg'
+brew 'gpg-agent'
 brew 'homebrew/versions/bash-completion2'
 brew 'hub'
 brew 'node'
+brew 'pinentry-mac'
 brew 'vim'
 brew 'wget'
 brew 'yarn'
