@@ -86,8 +86,7 @@ module.exports = {
     'hyper-snazzy',
     'hypercwd',
     'hyperfull',
-    'hyperterm-danish-keyboard',
-    'hyperterm-paste'
+    'hyperterm-danish-keyboard'
   ],
 
   // in development, you can create a directory under
