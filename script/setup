@@ -62,7 +62,7 @@ xcode_license
 
 # Installing Homebrew.
 logn "Installing Homebrew:"
-if [ -n "$TRAVIS" ]; then
+if [ -z "$TRAVIS" ]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
   logn "Skipping installing Homebrew for CI"
