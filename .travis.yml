@@ -14,4 +14,4 @@ script:
   - brew install --build-from-source libffi
   - brew cask install flux
   - brew install shellcheck
-  - shellcheck ./script/setup
+#  - shellcheck ./script/setup
