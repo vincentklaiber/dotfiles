@@ -215,7 +215,11 @@ cat > /tmp/Caskfile <<EOF
   cask 'transmit'
   cask 'vlc'
 EOF
-brew bundle --file=/tmp/Caskfile
+if [ -z "$TRAVIS" ]; then
+  brew bundle --file=/tmp/Caskfile
+else
+  echo "Skipping installing macOS applications for CI."
+fi
 rm -f /tmp/Caskfile
 logk
 
