@@ -140,7 +140,7 @@
 	email = vincentklaiber@gmail.com
 
 	# Public GPG signing key id.
-	signingkey = A83D7BA4879E89C3
+	signingkey = 66C8C908EAE057A4
 
 [github]
 	# GitHub username for command-line tools.
