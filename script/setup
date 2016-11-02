@@ -6,16 +6,6 @@ log()	 { echo "--> $*"; }
 logn()	{ printf -- "--> $* "; }
 logk()	{ echo "OK"; }
 
-# Keep sudo timestamp updated while the script is running.
-if [ "$1" = "--sudo-wait" ]; then
-  while true; do
-    mkdir -p "/var/db/sudo/$SUDO_USER"
-    touch "/var/db/sudo/$SUDO_USER"
-    sleep 1
-  done
-  exit 0
-fi
-
 # Print commands and their arguments as they are executed.
 set -x
 
