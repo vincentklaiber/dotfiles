@@ -1,12 +1,20 @@
 #!/usr/bin/env bash
+set -e
 
 abort() { echo "!!! $*" >&2; exit 1; }
 log()	 { echo "--> $*"; }
 logn()	{ printf -- "--> $* "; }
 logk()	{ echo "OK"; }
 
-# Exit immediately if a command exits with a non-zero status.
-set -e
+# Keep sudo timestamp updated while the script is running.
+if [ "$1" = "--sudo-wait" ]; then
+  while true; do
+    mkdir -p "/var/db/sudo/$SUDO_USER"
+    touch "/var/db/sudo/$SUDO_USER"
+    sleep 1
+  done
+  exit 0
+fi
 
 # Print commands and their arguments as they are executed.
 set -x
