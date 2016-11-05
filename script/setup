@@ -202,6 +202,7 @@ cat > /tmp/Caskfile <<EOF
   cask 'slack-beta'
   cask 'spectacle'
   cask 'spotify'
+  cask 'stand'
   cask 'transmit'
   cask 'vlc'
 EOF
