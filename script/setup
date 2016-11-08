@@ -143,6 +143,7 @@ logk
 logn "Installing binaries:"
 cat > /tmp/Brewfile <<EOF
 brew 'aria2'
+brew 'exiftool'
 brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gpg-agent'

@@ -105,8 +105,9 @@
 	# Even when EDITOR is set to something else.
 	editor = vim
 
-	# Global `.gitignore`.
+	# Global `.gitignore` and `.gitattributes`.
 	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
 
 	# Make `git rebase` safer on macOS.
 	trustctime = false
@@ -120,6 +121,10 @@
 
 	# Diff will detect both renames and copies.
 	renames = copies
+
+[diff "exif"]
+	# Better diff for images.
+	textconv = exiftool
 
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages.
