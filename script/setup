@@ -195,7 +195,6 @@ cat > /tmp/Caskfile <<EOF
   cask 'hyper'
   cask 'imagealpha'
   cask 'imageoptim'
-  cask 'jumpshare'
   cask 'qlimagesize'
   cask 'qlstephen'
   cask 'sequel-pro'
@@ -219,7 +218,9 @@ logk
 # Install macOS applications from the Mac App Store.
 logn "Installing macOS applications with MAS:"
 if [ -z "$TRAVIS" ]; then
-  mas install 1091189122
+  mas install 1091189122 # Bear
+  mas install 407963104 # Pixelmator
+  mas install 889922906 # Jumpshare
 else
   echo "Skipping installing macOS applications with MAS for CI."
 fi
