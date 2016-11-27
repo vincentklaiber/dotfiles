@@ -189,7 +189,6 @@ cat > /tmp/Caskfile <<EOF
   cask 'atom-beta'
   cask 'couleurs'
   cask 'dropbox'
-  cask 'flux'
   cask 'github-desktop'
   cask 'google-chrome-canary'
   cask 'hyper'
