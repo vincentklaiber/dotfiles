@@ -122,6 +122,9 @@
 	# Diff will detect both renames and copies.
 	renames = copies
 
+	# Experimental heuristics that shift diff hunk boundaries to make patches easier to read.
+	indentHeuristic = true
+
 [diff "exif"]
 	# Better diff for images.
 	textconv = exiftool
