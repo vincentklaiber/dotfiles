@@ -5,29 +5,25 @@ log() { echo -e "\e[0;33m${1}\e[0m"; }
 # Ask for the administrator password upfront.
 sudo -v
 
-log 'Install macOS software updates...'
+log 'Update macOS software...'
 sudo softwareupdate -i -a
 
-log 'Update Homebrew...'
+log 'Update Homebrew binaries...'
 brew update
 brew upgrade
-
-log 'Cleanup Homebrew cache...'
 brew cleanup --force -s
 rm -rfv $(brew --cache)/*
 brew tap --repair
-
-log 'Check if my system is ready to brew...'
 brew doctor
 
-log 'Update outdated apps from the Mac App Store...'
+log 'Update Mac App Store applications...'
 mas upgrade
 
-log 'Update Composer and dependencies...'
+log 'Update Composer...'
 composer self-update
 composer global update --no-dev --prefer-dist
 
-log 'Update NPM and dependencies...'
+log 'Update npm...'
 npm install --global --quiet npm@latest
 
 # Revoke sudo access again.

@@ -7,8 +7,8 @@ run() {
 	if [[ -f .php_cs ]]; then
 		eval "php-cs-fixer --config=\".php_cs\" --allow-risky fix $*"
 	else
-		fixers=$(curl -s ${url})
-		eval "php-cs-fixer ${fixers} fix $*"
+		rules=$(curl -s ${url})
+		eval "php-cs-fixer --allow-risky ${rules} fix $*"
 	fi
 }
 
