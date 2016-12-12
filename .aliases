@@ -12,10 +12,6 @@ alias g="git"
 alias h="history"
 alias vi="vim"
 
-# Atom Editor.
-alias atom="atom-beta"
-alias apm="apm-beta"
-
 # Find outdated dependencies.
 alias outdated="composer outdated --outdated; npm outdated"
 
