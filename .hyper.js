@@ -85,8 +85,7 @@ module.exports = {
     'hyper-native',
     'hyper-snazzy',
     'hypercwd',
-    'hyperfull',
-    'hyperterm-danish-keyboard'
+    'hyperfull'
   ],
 
   // in development, you can create a directory under
