@@ -186,7 +186,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 cat > /tmp/Caskfile <<EOF
   cask '1password'
   cask 'appcleaner'
-  cask 'atom-beta'
+  cask 'atom'
   cask 'couleurs'
   cask 'dropbox'
   cask 'github-desktop'
