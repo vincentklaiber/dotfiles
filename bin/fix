@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 
-url=https://gist.githubusercontent.com/vinkla/033c01f665980dd53d9b/raw/fixers
-
-# Run the php-cs-fixer script.
 run() {
 	if [[ -f .php_cs ]]; then
-		eval "php-cs-fixer --config=\".php_cs\" --allow-risky fix $*"
+		eval "php-cs-fixer fix $* --config=\"$(pwd)/.php_cs\""
 	else
-		rules=$(curl -s ${url})
-		eval "php-cs-fixer --allow-risky ${rules} fix $*"
+		eval "php-cs-fixer fix $* --config=\"${HOME}/.php_cs\""
 	fi
 }
 
