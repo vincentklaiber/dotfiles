@@ -125,10 +125,6 @@
 	# Experimental heuristics that shift diff hunk boundaries to make patches easier to read.
 	indentHeuristic = true
 
-[diff "exif"]
-	# Better diff for images.
-	textconv = exiftool
-
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages.
 	log = true
