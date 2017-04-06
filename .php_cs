@@ -32,6 +32,7 @@ $rules = [
     'hash_to_slash_comment' => true,
     'include' => true,
     'lowercase_cast' => true,
+    'magic_constant_casing' => true,
     'new_with_braces' => true,
     'no_alias_functions' => true,
     'no_blank_lines_after_class_opening' => true,
