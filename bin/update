@@ -14,6 +14,7 @@ brew upgrade
 brew cleanup --force -s
 rm -rfv $(brew --cache)/*
 brew tap --repair
+brew prune
 brew doctor
 
 log 'Update Mac App Store applications...'
