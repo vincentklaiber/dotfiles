@@ -165,14 +165,15 @@ logn "Installing latest version of npm:"
 npm install -g npm@next
 logk
 
-# Install PHP and update php.ini config file.
+# Install PHP, global packages and update php.ini config file.
 logn "Installing PHP:"
 brew install homebrew/php/php71
 sed -i".bak" "s/^\;phar.readonly.*$/phar.readonly = Off/g" /usr/local/etc/php/7.1/php.ini
 sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/7.1/php.ini
 if [ -z "$TRAVIS" ]; then
-	brew install homebrew/php/composer
-	brew install homebrew/php/php-cs-fixer
+  brew install homebrew/php/composer
+  brew install homebrew/php/php-cs-fixer
+  composer global install
 else
 	echo "Skipping installing composer and php-cs-fixer for CI."
 fi
