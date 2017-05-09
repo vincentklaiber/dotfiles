@@ -9,7 +9,7 @@ run() {
 }
 
 if [[ -z "$1" ]]; then
-	run .
+	run
 	exit 1
 fi
 
