@@ -11,10 +11,10 @@
 
 This is the installation guide to setup these dotfiles on a new macOS system.
 
-```bash
+```sh
 git clone git@github.com:vinkla/dotfiles.git
 cd dotfiles
-./script/setup # or ./script/setup --debug for more debugging output
+./script/setup
 ```
 
 Restart the computer and live happily ever after.
@@ -23,11 +23,11 @@ Restart the computer and live happily ever after.
 
 Keep your dotfiles in sync and up to date with the latest changes.
 
-```bash
+```sh
 cd dotfiles
 source script/sync
 ```
 
 ## License
 
-The dotfiles repository is licensed under [The MIT License (MIT)](LICENSE).
+[MIT](LICENSE) © [Vincent Klaiber](https://vinkla.com)
