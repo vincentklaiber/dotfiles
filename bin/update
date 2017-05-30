@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
+set -e
+
 log() { echo -e "\e[0;33m${1}\e[0m"; }
 
 # Ask for the administrator password upfront.
 sudo -v
 
-log 'Update macOS software...'
+log 'Update macOS...'
 sudo softwareupdate -i -a
 
-log 'Update Homebrew binaries...'
+log 'Update Homebrew...'
 brew update
 brew upgrade
 brew cleanup --force -s
@@ -17,7 +19,7 @@ brew tap --repair
 brew prune
 brew doctor
 
-log 'Update Mac App Store applications...'
+log 'Update Mac App Store...'
 mas upgrade
 
 log 'Update Composer...'
@@ -25,7 +27,11 @@ composer self-update
 composer global update --no-dev --prefer-dist
 
 log 'Update npm...'
-npm install --global --quiet npm@latest npm-check-updates@latest vtop@latest
+npm install --global --quiet npm@next
+for package in $(npm -g outdated --parseable --depth=0 | cut -d: -f2)
+do
+    npm --global install --quiet "${package}"
+done
 
 # Revoke sudo access again.
 sudo -k
