@@ -23,7 +23,6 @@ alias dump="composer dump-autoload"
 alias fresh="rm -rf vendor composer.lock; composer install"
 alias optimize="composer update --prefer-dist --no-dev; composer dump-autoload --optimize"
 alias phpunit="./vendor/bin/phpunit"
-alias wp="./vendor/bin/wp"
 
 # List all files in long format, including dotfiles.
 alias l="ls -Glah"
