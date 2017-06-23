@@ -2,6 +2,7 @@
     "require": {
         "friendsofphp/php-cs-fixer": "^2.3",
         "graham-campbell/packagist-stats": "^2.0",
-        "laravel/valet": "^2.0"
+        "laravel/valet": "^2.0",
+        "wp-cli/wp-cli": "^1.2"
     }
 }
