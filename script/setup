@@ -197,7 +197,7 @@ cat > /tmp/Caskfile <<EOF
   cask 'qlimagesize'
   cask 'qlstephen'
   cask 'sequel-pro'
-  cask 'sketch-beta'
+  cask 'sketch'
   cask 'skype'
   cask 'slack-beta'
   cask 'spectacle'
