@@ -162,7 +162,7 @@ logk
 
 # Install latest version of npm:
 logn "Installing latest version of npm:"
-npm install -g npm@next
+npm install -g npm@latest
 logk
 
 # Install PHP, global packages and update php.ini config file.
