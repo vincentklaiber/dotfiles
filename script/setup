@@ -3,7 +3,7 @@ set -e
 
 abort() { echo "!!! $*" >&2; exit 1; }
 log()	 { echo "--> $*"; }
-logn()	{ printf -- "--> $* "; }
+logn()  { printf -- "--> %s " "$*"; }
 logk()	{ echo "OK"; }
 
 # Print commands and their arguments as they are executed.
