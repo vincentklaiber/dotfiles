@@ -60,7 +60,7 @@ xcode_license
 
 # Installing Homebrew.
 logn "Installing Homebrew:"
-if [ -z "$TRAVIS" ]; then
+if [ -z "$CI" ]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
   logn "Skipping installing Homebrew for CI"
@@ -100,7 +100,7 @@ logk
 logn "Checking full-disk encryption status:"
 if fdesetup status | grep $Q -E "FileVault is (On|Off, but will be enabled after the next restart)."; then
   logk
-elif [ -n "$TRAVIS" ]; then
+elif [ -n "$CI" ]; then
   echo
   logn "Skipping full-disk encryption for CI"
 else
@@ -118,7 +118,7 @@ if softwareupdate -l 2>&1 | grep $Q "No new software available."; then
 else
   echo
   log "Installing software updates:"
-  if [ -z "$TRAVIS" ]; then
+  if [ -z "$CI" ]; then
     sudo softwareupdate --install --all
     xcode_license
   else
@@ -130,7 +130,7 @@ fi
 # Install the latest version of Bash.
 logn "Install latest version of Bash:"
 brew install bash
-if [ -z "$TRAVIS" ]; then
+if [ -z "$CI" ]; then
 	sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 	chsh -s /usr/local/bin/bash
 else
@@ -170,7 +170,7 @@ logn "Installing PHP:"
 brew install homebrew/php/php72
 sed -i".bak" "s/^\;phar.readonly.*$/phar.readonly = Off/g" /usr/local/etc/php/7.2/php.ini
 sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/7.2/php.ini
-if [ -z "$TRAVIS" ]; then
+if [ -z "$CI" ]; then
   brew install homebrew/php/composer
   brew install homebrew/php/php-cs-fixer
   composer global install
@@ -205,7 +205,7 @@ cat > /tmp/Caskfile <<EOF
   cask 'transmit'
   cask 'vlc'
 EOF
-if [ -z "$TRAVIS" ]; then
+if [ -z "$CI" ]; then
   brew bundle --file=/tmp/Caskfile
 else
   echo "Skipping installing macOS applications for CI."
@@ -215,7 +215,7 @@ logk
 
 # Install macOS applications from the Mac App Store.
 logn "Installing macOS applications with MAS:"
-if [ -z "$TRAVIS" ]; then
+if [ -z "$CI" ]; then
   mas install 1091189122 # Bear
   mas install 407963104 # Pixelmator
   mas install 889922906 # Jumpshare
