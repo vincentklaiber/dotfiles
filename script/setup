@@ -146,7 +146,7 @@ brew 'exiftool'
 brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gpg-agent'
-brew 'bash-completion'
+brew 'bash-completion@2'
 brew 'hub'
 brew 'mas'
 brew 'node'
