@@ -151,7 +151,7 @@ brew 'hub'
 brew 'mas'
 brew 'node'
 brew 'pinentry-mac'
-brew 'vim', args: ['with-override-system-vi']
+brew 'vim'
 brew 'wget'
 brew 'yarn'
 brew 'z'

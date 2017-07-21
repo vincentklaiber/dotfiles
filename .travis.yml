@@ -8,6 +8,6 @@ before_script:
 script:
   - CI=1 ./script/setup
   - brew install --build-from-source libffi
-  - brew cask install appcleaner
+  - brew cask install couleurs
   - brew install shellcheck
 #  - shellcheck ./script/setup
