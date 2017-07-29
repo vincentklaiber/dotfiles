@@ -217,6 +217,7 @@ logk
 logn "Installing macOS applications with MAS:"
 if [ -z "$CI" ]; then
   mas install 1091189122 # Bear
+  mas install 1263070803 # Lungo
   mas install 407963104 # Pixelmator
   mas install 889922906 # Jumpshare
 else
