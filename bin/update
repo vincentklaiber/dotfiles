@@ -30,7 +30,7 @@ log 'Update npm...'
 npm install --global --quiet npm@latest
 for package in $(npm -g outdated --parseable --depth=0 | cut -d: -f2)
 do
-    npm --global install --quiet "${package}"
+    npm install --global --quiet "${package}"
 done
 
 # Revoke sudo access again.
