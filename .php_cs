@@ -28,6 +28,8 @@ $rules = [
     'blank_line_before_return' => true,
     'cast_spaces' => true,
     'concat_space' => ['spacing' => 'none'],
+    'declare_equal_normalize' => true,
+    'function_to_constant' => true,
     'function_typehint_space' => true,
     'hash_to_slash_comment' => true,
     'include' => true,
@@ -41,6 +43,7 @@ $rules = [
     'no_empty_statement' => true,
     'no_empty_statement' => true,
     'no_extra_consecutive_blank_lines' => ['use'],
+    'no_extra_consecutive_blank_lines' => true,
     'no_extra_consecutive_blank_lines' => true,
     'no_leading_import_slash' => true,
     'no_leading_namespace_whitespace' => true,
@@ -57,6 +60,7 @@ $rules = [
     'phpdoc_no_access' => true,
     'phpdoc_no_alias_tag' => ['type' => 'var'],
     'phpdoc_no_package' => true,
+    'phpdoc_return_self_reference' => true,
     'phpdoc_scalar' => true,
     'phpdoc_separation' => true,
     'phpdoc_summary' => true,
@@ -77,16 +81,23 @@ $rules = [
     'whitespace_after_comma_in_array' => true,
 
     // Contrib
+    'align_multiline_comment' => true,
     'array_syntax' => ['syntax' => 'short'],
     'linebreak_after_opening_tag' => true,
+    'list_syntax' => true,
     'no_multiline_whitespace_before_semicolons' => true,
+    'no_null_property_initialization' => true,
     'no_short_echo_tag' => true,
     'no_useless_else' => true,
     'no_useless_return' => true,
     'ordered_imports' => true,
     'php_unit_construct' => true,
     'php_unit_dedicate_assert' => true,
+    'phpdoc_no_useless_inheritdoc' => true,
     'phpdoc_order' => true,
+    'phpdoc_types_order' => true,
+    'single_line_comment_style' => true,
+    'ternary_to_null_coalescing' => true,
 ];
 
 $finder = PhpCsFixer\Finder::create();
