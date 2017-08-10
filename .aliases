@@ -12,13 +12,8 @@ alias g="git"
 alias h="history"
 alias vi="vim"
 
-# Find outdated dependencies.
-alias outdated="composer outdated --outdated; npm outdated"
-
-# Laravel Artisan.
+# PHP aliases.
 alias art="php artisan"
-
-# PHP Composer.
 alias dump="composer dump-autoload"
 alias fresh="rm -rf vendor composer.lock; composer install"
 alias optimize="composer update --prefer-dist --no-dev; composer dump-autoload --optimize"
@@ -26,9 +21,6 @@ alias phpunit="./vendor/bin/phpunit"
 
 # List all files in long format, including dotfiles.
 alias l="ls -Glah"
-
-# Enable aliases to be sudo’ed.
-alias sudo="sudo "
 
 # Always enable colored `grep` output.
 alias grep="grep --color=auto"
