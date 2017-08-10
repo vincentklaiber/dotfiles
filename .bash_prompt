@@ -19,6 +19,7 @@ branch() {
       branch="$(git rev-parse --abbrev-ref HEAD)";
 
       status=$(git status --porcelain | cut -d' ' -f2);
+
       [ ! -z "$status" ] && branch="${branch} [!]";
     fi
 
