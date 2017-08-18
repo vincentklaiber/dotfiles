@@ -156,6 +156,7 @@ logk
 logn "Installing macOS applications:"
 cat > /tmp/Caskfile <<EOF
   cask '1password'
+  cask 'alfred'
   cask 'appcleaner'
   cask 'atom'
   cask 'couleurs'
