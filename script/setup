@@ -195,7 +195,7 @@ cat > /tmp/Caskfile <<EOF
   cask 'qlstephen'
   cask 'sequel-pro'
   cask 'sketch'
-  cask 'skype'
+  cask 'skype-preview'
   cask 'slack-beta'
   cask 'spectacle'
   cask 'spotify'
