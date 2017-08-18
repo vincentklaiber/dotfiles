@@ -28,10 +28,35 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 logk
 
 # Install the Xcode Command Line Tools.
-xcode-select --install
+DEVELOPER_DIR=$("xcode-select" -print-path 2>/dev/null || true)
+if [ -z "$DEVELOPER_DIR" ] || ! [ -f "$DEVELOPER_DIR/usr/bin/git" ] \
+                           || ! [ -f "/usr/include/iconv.h" ]
+then
+  log "Installing the Xcode Command Line Tools:"
+  CLT_PLACEHOLDER="/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress"
+  sudo touch "$CLT_PLACEHOLDER"
+  CLT_PACKAGE=$(softwareupdate -l | \
+                grep -B 1 -E "Command Line (Developer|Tools)" | \
+                awk -F"*" '/^ +\*/ {print $2}' | sed 's/^ *//' | head -n1)
+  sudo softwareupdate -i "$CLT_PACKAGE"
+  sudo rm -f "$CLT_PLACEHOLDER"
+  if ! [ -f "/usr/include/iconv.h" ]; then
+    echo
+    logn "Requesting user install of Xcode Command Line Tools:"
+    xcode-select --install
+  fi
+  logk
+fi
 
 # Check if the Xcode license is agreed to and agree if not.
-sudo xcodebuild -license
+xcode_license() {
+  if /usr/bin/xcrun clang 2>&1 | grep $Q license; then
+    logn "Asking for Xcode license confirmation:"
+    sudo xcodebuild -license
+    logk
+  fi
+}
+xcode_license
 
 # Installing Homebrew.
 logn "Installing Homebrew:"
@@ -154,6 +179,7 @@ logk
 
 # Install macOS applications with Brew Cask.
 logn "Installing macOS applications:"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 cat > /tmp/Caskfile <<EOF
   cask '1password'
   cask 'alfred'
