@@ -194,6 +194,7 @@ cat > /tmp/Caskfile <<EOF
   cask 'hyper'
   cask 'imagealpha'
   cask 'imageoptim'
+  cask 'keybase'
   cask 'qlstephen'
   cask 'sequel-pro'
   cask 'sketch'
