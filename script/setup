@@ -20,43 +20,18 @@ sudo /usr/bin/true
 logk
 
 # Set computer name (as done via System Preferences → Sharing)
-logn "Set computer name to Bifrost:"
-sudo scutil --set ComputerName "Bifrost"
-sudo scutil --set HostName "Bifrost"
-sudo scutil --set LocalHostName "Bifrost"
+logn "Set computer name to Baldur:"
+sudo scutil --set ComputerName "Baldur"
+sudo scutil --set HostName "Baldur"
+sudo scutil --set LocalHostName "Baldur"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Bifrost"
 logk
 
 # Install the Xcode Command Line Tools.
-DEVELOPER_DIR=$("xcode-select" -print-path 2>/dev/null || true)
-if [ -z "$DEVELOPER_DIR" ] || ! [ -f "$DEVELOPER_DIR/usr/bin/git" ] \
-                           || ! [ -f "/usr/include/iconv.h" ]
-then
-  log "Installing the Xcode Command Line Tools:"
-  CLT_PLACEHOLDER="/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress"
-  sudo touch "$CLT_PLACEHOLDER"
-  CLT_PACKAGE=$(softwareupdate -l | \
-                grep -B 1 -E "Command Line (Developer|Tools)" | \
-                awk -F"*" '/^ +\*/ {print $2}' | sed 's/^ *//' | head -n1)
-  sudo softwareupdate -i "$CLT_PACKAGE"
-  sudo rm -f "$CLT_PLACEHOLDER"
-  if ! [ -f "/usr/include/iconv.h" ]; then
-    echo
-    logn "Requesting user install of Xcode Command Line Tools:"
-    xcode-select --install
-  fi
-  logk
-fi
+xcode-select --install
 
 # Check if the Xcode license is agreed to and agree if not.
-xcode_license() {
-  if /usr/bin/xcrun clang 2>&1 | grep $Q license; then
-    logn "Asking for Xcode license confirmation:"
-    sudo xcodebuild -license
-    logk
-  fi
-}
-xcode_license
+sudo xcodebuild -license
 
 # Installing Homebrew.
 logn "Installing Homebrew:"
@@ -142,7 +117,6 @@ logk
 logn "Installing binaries:"
 cat > /tmp/Brewfile <<EOF
 brew 'aria2'
-brew 'exiftool'
 brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gpg-agent'
@@ -153,7 +127,6 @@ brew 'node'
 brew 'pinentry-mac'
 brew 'vim'
 brew 'wget'
-brew 'yarn'
 brew 'z'
 EOF
 brew bundle --file=/tmp/Brewfile
@@ -181,7 +154,6 @@ logk
 
 # Install macOS applications with Brew Cask.
 logn "Installing macOS applications:"
-export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 cat > /tmp/Caskfile <<EOF
   cask '1password'
   cask 'appcleaner'
@@ -193,8 +165,6 @@ cat > /tmp/Caskfile <<EOF
   cask 'hyper'
   cask 'imagealpha'
   cask 'imageoptim'
-  cask 'keybase'
-  cask 'qlimagesize'
   cask 'qlstephen'
   cask 'sequel-pro'
   cask 'sketch'
@@ -236,9 +206,6 @@ logn "Setup prefered macOS settings:"
 # Menu bar: Always show percentage next to the Battery icon
 defaults write com.apple.menuextra.battery ShowPercent YES
 
-# Avoid creating .DS_Store files on network volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
 # Hide files and directories on the desktop
 defaults write com.apple.finder CreateDesktop -bool false
 
@@ -258,7 +225,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # New Finder windows shows Home directory
 defaults write com.apple.finder NewWindowTarget -string "PfHm"
-defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/Vincent/"
+defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/vincent/"
 
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
