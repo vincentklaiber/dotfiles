@@ -175,8 +175,6 @@ sed -i".bak" "s/^\;phar.readonly.*$/phar.readonly = Off/g" /usr/local/etc/php/7.
 sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/7.1/php.ini
 if [ -z "$CI" ]; then
   brew install homebrew/php/composer
-  brew install homebrew/php/php-cs-fixer
-  composer global install
 else
 	echo "Skipping installing composer and php-cs-fixer for CI."
 fi
@@ -184,7 +182,6 @@ logk
 
 # Install macOS applications with Brew Cask.
 logn "Installing macOS applications:"
-export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 cat > /tmp/Caskfile <<EOF
   cask '1password'
   cask 'alfred'
@@ -220,7 +217,6 @@ logn "Installing macOS applications with MAS:"
 if [ -z "$CI" ]; then
   mas install 1091189122 # Bear
   mas install 1263070803 # Lungo
-  mas install 407963104 # Pixelmator
   mas install 889922906 # Jumpshare
 else
   echo "Skipping installing macOS applications with MAS for CI."
