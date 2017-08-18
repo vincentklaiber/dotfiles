@@ -9,6 +9,11 @@ logk()	{ echo "OK"; }
 # Print commands and their arguments as they are executed.
 set -x
 
+# Check if Xcode.app has been installed.
+if [ ! -f "/Applications/Xcode.app" ]; then
+  abort "Install Xcode.app from the App Store."
+fi
+
 # Run the script as yourself, not root.
 [ "$USER" = "root" ] && abort "Run the script as yourself, not root."
 groups | grep $Q admin || abort "Add $USER to the admin group."
