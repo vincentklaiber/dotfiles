@@ -12,21 +12,23 @@
 This is the installation guide to setup these dotfiles on a new macOS system.
 
 ```sh
-git clone git@github.com:vinkla/dotfiles.git
-cd dotfiles
-./script/setup
+curl -O https://raw.githubusercontent.com/vinkla/dotfiles/master/script/setup
+./setup
 ```
 
-Restart the computer and live happily ever after.
-
-## Sync
-
-Keep your dotfiles in sync and up to date with the latest changes.
-
-```sh
-cd dotfiles
-source script/sync
-```
+- Generate new SSH keys and upload to GitHub.
+- Install the dotfiles into the home directory.
+- Download an import private GPG key from Keybase.
+- Setup 1Password and sync passwords.
+- Setup Dropbox and sync dotfiles and Alfred.
+- Setup Alfred and sync with Dropbox.
+  - Remove Spotlight keyboard shortcut.
+  - Update Alfred keyboard shortcut.
+  - Install `alfred-macos` appearance.
+  - Install `alfred-npms` workflow.
+  - Install `alfred-packagist` workflow.
+- Install global Composer packages and install Valet.
+- Update keyboard shortcut for next application window.
 
 ## License
 
