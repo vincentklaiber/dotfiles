@@ -16,7 +16,7 @@ curl -O https://raw.githubusercontent.com/vinkla/dotfiles/master/script/setup
 ./setup
 ```
 
-- Generate new SSH keys and upload to GitHub.
+- Generate new SSH key, add to ssh-agent and upload to GitHub.
 - Install the dotfiles into the home directory.
 - Download an import private GPG key from Keybase.
 - Setup 1Password and sync passwords.
