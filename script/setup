@@ -9,11 +9,6 @@ logk()	{ echo "OK"; }
 # Print commands and their arguments as they are executed.
 set -x
 
-# Check if Xcode.app has been installed.
-if [ ! -f "/Applications/Xcode.app" ]; then
-  abort "Install Xcode.app from the App Store."
-fi
-
 # Run the script as yourself, not root.
 [ "$USER" = "root" ] && abort "Run the script as yourself, not root."
 groups | grep $Q admin || abort "Add $USER to the admin group."
@@ -149,6 +144,7 @@ cat > /tmp/Brewfile <<EOF
 brew 'aria2'
 brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
+brew 'gnupg'
 brew 'gpg-agent'
 brew 'bash-completion@2'
 brew 'hub'
@@ -161,11 +157,6 @@ brew 'z'
 EOF
 brew bundle --file=/tmp/Brewfile
 rm -f /tmp/Brewfile
-logk
-
-# Install latest version of npm:
-logn "Installing latest version of npm:"
-npm install -g npm@latest
 logk
 
 # Install PHP, global packages and update php.ini config file.
@@ -222,6 +213,11 @@ if [ -z "$CI" ]; then
 else
   echo "Skipping installing macOS applications with MAS for CI."
 fi
+logk
+
+# Install latest version of npm:
+logn "Installing latest version of npm:"
+npm install -g npm@latest
 logk
 
 # Create Sites directory in user folder.
