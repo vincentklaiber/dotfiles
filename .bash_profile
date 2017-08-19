@@ -27,14 +27,6 @@ if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completio
   complete -o default -o nospace -F _git g;
 fi;
 
-# Setup gpg-agent automatically for every shell.
-if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
-    source ~/.gnupg/.gpg-agent-info
-    export GPG_AGENT_INFO
-else
-    eval $(gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
-fi
-
 # Add tab completion for `defaults read|write NSGlobalDomain`.
 # You could just use `-g` instead, but I like being explicit.
 complete -W "NSGlobalDomain" defaults;
