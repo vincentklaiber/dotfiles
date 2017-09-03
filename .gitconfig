@@ -1,4 +1,7 @@
 [alias]
+	# List aliases
+	aliases = config --get-regexp alias
+
 	# Amend the currently staged files to the latest commit.
 	amend = commit --amend --reuse-message=HEAD
 
@@ -6,7 +9,7 @@
 	b = branch
 
 	# Show verbose output about branches.
-	branches = branch -va
+	branches = branch -a
 
 	# Clone a repository including all submodules.
 	c = clone --recursive
@@ -101,9 +104,12 @@
 	gpgsign = true
 
 [core]
-	# Default editor for commit messages and other inputs.
-	# Even when EDITOR is set to something else.
+	# Default editor for commit messages and other inputs. Even when EDITOR is set
+	# to something else.
 	editor = vim
+
+	# Don't ignore case sensitive on filenames.
+	ignoreCase = false
 
 	# Global `.gitignore` and `.gitattributes`.
 	excludesfile = ~/.gitignore
