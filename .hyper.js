@@ -2,8 +2,7 @@ module.exports = {
   config: {
     bell: false,
     cursorShape: 'BEAM',
-    fontSize: 14,
-    updateChannel: 'canary'
+    fontSize: 14
   },
   plugins: [
     'hyper-native',
