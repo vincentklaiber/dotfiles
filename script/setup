@@ -20,11 +20,11 @@ sudo /usr/bin/true
 logk
 
 # Set computer name (as done via System Preferences → Sharing)
-logn "Set computer name to Baldur:"
-sudo scutil --set ComputerName "Baldur"
-sudo scutil --set HostName "Baldur"
-sudo scutil --set LocalHostName "Baldur"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Bifrost"
+logn "Set computer name to Njord:"
+sudo scutil --set ComputerName "Njord"
+sudo scutil --set HostName "Njord"
+sudo scutil --set LocalHostName "Njord"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Njord"
 logk
 
 # Install the Xcode Command Line Tools.
