@@ -261,6 +261,10 @@ defaults write com.apple.dock minimize-to-application -bool true
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
+# Turn of Siri and hide it in the menu bar
+defaults write com.apple.siri StatusMenuVisible -bool false
+defaults write com.apple.siri UserHasDeclinedEnable -bool true
+
 # Hide scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
