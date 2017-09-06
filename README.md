@@ -18,7 +18,7 @@ curl -O https://raw.githubusercontent.com/vinkla/dotfiles/master/script/setup
 
 - Generate new SSH key, add to ssh-agent and upload to GitHub.
 - Install the dotfiles into the home directory.
-- Download an import private GPG key from Keybase.
+- Download an [import private GPG key](https://www.keybits.net/post/import-keybase-private-key) from Keybase.
 - Setup 1Password and sync passwords.
 - Setup Dropbox and sync dotfiles and Alfred.
 - Setup Atom and sync settings with Gist.
