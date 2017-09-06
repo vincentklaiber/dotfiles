@@ -21,6 +21,7 @@ curl -O https://raw.githubusercontent.com/vinkla/dotfiles/master/script/setup
 - Download an import private GPG key from Keybase.
 - Setup 1Password and sync passwords.
 - Setup Dropbox and sync dotfiles and Alfred.
+- Setup Atom and sync settings with Gist.
 - Setup Alfred and sync with Dropbox.
   - Remove Spotlight keyboard shortcut.
   - Update Alfred keyboard shortcut.
