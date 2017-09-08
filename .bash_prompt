@@ -29,6 +29,5 @@ branch() {
   fi
 }
 
-PS1="\[\033]0;\w\007\]";
-PS1+="\[${purple}\]❯ \[${blue}\]\w \[\$(branch)\]\[${reset}\]";
+PS1="\[\033]0;\w\007\]\[${purple}\]❯ \[${blue}\]\w \[\$(branch)\]\[${reset}\]";
 export PS1;
