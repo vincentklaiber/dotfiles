@@ -10,6 +10,9 @@ sudo -v
 log 'Update macOS...'
 sudo softwareupdate -i -a
 
+log 'Update Mac App Store...'
+mas upgrade
+
 log 'Update Homebrew...'
 brew update
 brew upgrade
@@ -18,9 +21,6 @@ rm -rfv $(brew --cache)/*
 brew tap --repair
 brew prune
 brew doctor
-
-log 'Update Mac App Store...'
-mas upgrade
 
 log 'Update Composer...'
 composer self-update
