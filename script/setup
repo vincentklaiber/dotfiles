@@ -144,7 +144,6 @@ cat > /tmp/Brewfile <<EOF
 brew 'aria2'
 brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
-brew 'gnupg'
 brew 'gpg-agent'
 brew 'bash-completion@2'
 brew 'hub'
@@ -157,6 +156,15 @@ brew 'z'
 EOF
 brew bundle --file=/tmp/Brewfile
 rm -f /tmp/Brewfile
+logk
+
+# Install gnupg with Brew.
+logn "Installing gnupg:"
+if [ -z "$CI" ]; then
+  brew install gnupg
+else
+	echo "Skipping installing gnupg for CI."
+fi
 logk
 
 # Install PHP, global packages and update php.ini config file.
