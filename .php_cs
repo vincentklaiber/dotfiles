@@ -26,9 +26,11 @@ $rules = [
     'binary_operator_spaces' => ['align_double_arrow' => false, 'align_equals' => false],
     'blank_line_after_opening_tag' => true,
     'blank_line_before_return' => true,
+    'blank_line_before_statement' => true,
     'cast_spaces' => true,
     'concat_space' => ['spacing' => 'none'],
     'declare_equal_normalize' => true,
+    'dir_constant' => true,
     'function_to_constant' => true,
     'function_typehint_space' => true,
     'hash_to_slash_comment' => true,
@@ -83,11 +85,17 @@ $rules = [
     // Contrib
     'align_multiline_comment' => true,
     'array_syntax' => ['syntax' => 'short'],
+    'combine_consecutive_issets' => true,
+    'combine_consecutive_unsets' => true,
     'linebreak_after_opening_tag' => true,
     'list_syntax' => true,
+    'no_homoglyph_names' => true,
     'no_multiline_whitespace_before_semicolons' => true,
     'no_null_property_initialization' => true,
     'no_short_echo_tag' => true,
+    'no_superfluous_elseif' => true,
+    'no_unneeded_curly_braces' => true,
+    'no_unneeded_final_method' => true,
     'no_useless_else' => true,
     'no_useless_return' => true,
     'ordered_imports' => true,
@@ -100,9 +108,6 @@ $rules = [
     'ternary_to_null_coalescing' => true,
 ];
 
-$finder = PhpCsFixer\Finder::create();
-
 return PhpCsFixer\Config::create()
     ->setRiskyAllowed(true)
-    ->setRules($rules)
-    ->setFinder($finder);
+    ->setRules($rules);
