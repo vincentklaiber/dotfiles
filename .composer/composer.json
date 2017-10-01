@@ -1,6 +1,6 @@
 {
     "require": {
-        "friendsofphp/php-cs-fixer": "^2.4",
+        "friendsofphp/php-cs-fixer": "^2.7",
         "graham-campbell/packagist-stats": "^3.0",
         "laravel/valet": "^2.0"
     }
