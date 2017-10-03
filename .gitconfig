@@ -11,8 +11,8 @@
 	# Show verbose output about branches.
 	branches = branch -a
 
-	# Clone a repository including all submodules.
-	c = clone --recursive
+	# Shorthand for clone.
+	c = clone
 
 	# Commit all changes.
 	ca = !git add --all && git commit --all --verbose
