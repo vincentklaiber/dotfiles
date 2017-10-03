@@ -104,10 +104,6 @@
 	gpgsign = true
 
 [core]
-	# Default editor for commit messages and other inputs. Even when EDITOR is set
-	# to something else.
-	editor = vim
-
 	# Don't ignore case sensitive on filenames.
 	ignoreCase = false
 
@@ -120,6 +116,10 @@
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error.
 	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+
+  # Speed up commands involving untracked files such as `git status`.
+	# https://git-scm.com/docs/git-update-index#_untracked_cache
+	untrackedCache = true
 
 [diff]
 	# Use more time to create better diffs.
