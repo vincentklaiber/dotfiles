@@ -2,6 +2,5 @@
 .php_cs.cache
 .sass-cache
 .tags*
-bower_components
 node_modules
 npm-debug.log
