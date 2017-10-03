@@ -4,11 +4,8 @@
 alias ..="cd .."
 alias ...="cd ../.."
 
-# Better GitHub integration.
-alias git="hub"
-
 # Shortcuts.
-alias g="git"
+alias g="hub"
 alias h="history"
 alias vi="vim"
 
