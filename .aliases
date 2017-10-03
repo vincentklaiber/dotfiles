@@ -14,17 +14,10 @@ alias vi="vim"
 
 # PHP aliases.
 alias art="php artisan"
-alias dump="composer dump-autoload"
-alias fresh="rm -rf vendor composer.lock; composer install"
-alias optimize="composer update --prefer-dist --no-dev; composer dump-autoload --optimize"
-alias phpunit="./vendor/bin/phpunit"
+alias phpunit="vendor/bin/phpunit"
 
 # List all files in long format, including dotfiles.
 alias l="ls -Glah"
 
 # Always enable colored `grep` output.
 alias grep="grep --color=auto"
-
-# IP addresses.
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com".
-alias localip="ipconfig getifaddr en0"
