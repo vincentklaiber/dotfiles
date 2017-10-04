@@ -16,7 +16,7 @@ branch() {
     if [ "$(git rev-parse --is-inside-git-dir 2> /dev/null)" == 'false' ]; then
       git update-index --really-refresh -q &>/dev/null;
 
-      branch="$(git rev-parse --abbrev-ref HEAD)";
+      branch="$(git symbolic-ref --quiet --short HEAD 2> /dev/null)";
 
       status=$(git status --porcelain | cut -d' ' -f2);
 
