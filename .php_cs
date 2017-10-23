@@ -103,7 +103,7 @@ $rules = [
     'php_unit_dedicate_assert' => true,
     'phpdoc_no_useless_inheritdoc' => true,
     'phpdoc_order' => true,
-    'phpdoc_types_order' => true,
+    'phpdoc_types_order' => ['null_adjustment' => 'always_last'],
     'single_line_comment_style' => true,
     'ternary_to_null_coalescing' => true,
 ];
