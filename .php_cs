@@ -87,6 +87,7 @@ $rules = [
     'array_syntax' => ['syntax' => 'short'],
     'combine_consecutive_issets' => true,
     'combine_consecutive_unsets' => true,
+    'compact_nullable_typehint' => true,
     'linebreak_after_opening_tag' => true,
     'list_syntax' => true,
     'no_homoglyph_names' => true,
