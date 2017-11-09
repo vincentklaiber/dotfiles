@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-reset="\e[0m";
-blue="\e[0;34m";
-green="\e[0;32m";
-purple="\e[0;35m";
-
 branch() {
   if [ ! -d ".git" ]; then
     return;
@@ -23,11 +18,23 @@ branch() {
       [ ! -z "$status" ] && branch="${branch} [!]";
     fi
 
-    echo -e "${green}${branch} ";
+    echo -e "${1}${branch} ";
   else
     return;
   fi
 }
 
-PS1="\[\033]0;\w\007\]\[${purple}\]❯ \[${blue}\]\w \[\$(branch)\]\[${reset}\]";
+if tput setaf 1 &> /dev/null; then
+  reset=$(tput sgr0);
+  blue=$(tput setaf 12);
+  green=$(tput setaf 120);
+  hotpink=$(tput setaf 205);
+else
+  reset="\e[0m";
+  blue="\e[0;34m";
+  green="\e[0;32m";
+  hotpink="\e[0;35m";
+fi;
+
+PS1="\[\033]0;\w\007\]\[${hotpink}\]❯ \[${blue}\]\w \$(branch \"\[${green}\]\")\[${reset}\]";
 export PS1;
