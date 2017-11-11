@@ -27,8 +27,8 @@ branch() {
 if tput setaf 1 &> /dev/null; then
   reset=$(tput sgr0);
   blue=$(tput setaf 12);
-  green=$(tput setaf 120);
-  hotpink=$(tput setaf 205);
+  green=$(tput setaf 10);
+  hotpink=$(tput setaf 13);
 else
   reset="\e[0m";
   blue="\e[0;34m";
