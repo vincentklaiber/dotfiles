@@ -91,6 +91,7 @@ $rules = [
     'linebreak_after_opening_tag' => true,
     'list_syntax' => true,
     'no_homoglyph_names' => true,
+    'method_chaining_indentation' => true,
     'no_multiline_whitespace_before_semicolons' => true,
     'no_null_property_initialization' => true,
     'no_short_echo_tag' => true,
