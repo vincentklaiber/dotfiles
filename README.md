@@ -23,13 +23,13 @@ curl -O https://raw.githubusercontent.com/vinkla/dotfiles/master/script/setup
 1. Setup Dropbox and sync dotfiles and Alfred.
 1. Setup Atom and sync settings with Gist.
 1. Setup Alfred and sync with Dropbox.
-  - Remove Spotlight keyboard shortcut.
-  - Update Alfred keyboard shortcut.
-  - Install the macOS Alfred appearance.
-  - Install Alfred workflows:
-    ```sh
-    $ npm i -g alfred-{npms,packagist,kaomoji,emoj}
-    ```
+   - Remove Spotlight keyboard shortcut.
+   - Update Alfred keyboard shortcut.
+   - Install the macOS Alfred appearance.
+   - Install Alfred workflows:
+      ```sh
+      $ npm i -g alfred-{npms,packagist,kaomoji,emoj}
+      ```
 1. Install global Composer packages and install Valet.
 1. Update keyboard shortcut for next application window.
 
