@@ -1,6 +1,6 @@
 # dotfiles
 
-![dotfiles](https://user-images.githubusercontent.com/499192/35093811-ba083476-fc43-11e7-9e67-5887c926ac57.png)
+![dotfiles](https://user-images.githubusercontent.com/499192/35094095-9943d7da-fc44-11e7-9dc5-a89b0938eeed.png)
 
 .files, sensible hacker defaults for macOS. If you're curious how to setup your own dotfiles, please visit [Mathias Bynens's dotfiles](https://github.com/mathiasbynens/dotfiles) and [Mike McQuaid's strap project](https://github.com/mikemcquaid/strap) to learn more.
 
