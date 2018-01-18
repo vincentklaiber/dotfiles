@@ -1,6 +1,6 @@
 # dotfiles
 
-![dotfiles](https://cloud.githubusercontent.com/assets/499192/8982779/ab19893e-36c4-11e5-975b-86be2af72d86.png)
+![dotfiles](https://user-images.githubusercontent.com/499192/35093811-ba083476-fc43-11e7-9e67-5887c926ac57.png)
 
 .files, sensible hacker defaults for macOS. If you're curious how to setup your own dotfiles, please visit [Mathias Bynens's dotfiles](https://github.com/mathiasbynens/dotfiles) and [Mike McQuaid's strap project](https://github.com/mikemcquaid/strap) to learn more.
 
@@ -16,20 +16,22 @@ curl -O https://raw.githubusercontent.com/vinkla/dotfiles/master/script/setup
 ./setup
 ```
 
-- Generate new SSH key, add to ssh-agent and upload to GitHub.
-- Install the dotfiles into the home directory.
-- Download an [import private GPG key](https://www.keybits.net/post/import-keybase-private-key) from Keybase.
-- Setup 1Password and sync passwords.
-- Setup Dropbox and sync dotfiles and Alfred.
-- Setup Atom and sync settings with Gist.
-- Setup Alfred and sync with Dropbox.
+1. Generate new SSH key, add to ssh-agent and upload to GitHub.
+1. Install the dotfiles into the home directory.
+1. Download an [import private GPG key](https://www.keybits.net/post/import-keybase-private-key) from Keybase.
+1. Setup 1Password and sync passwords.
+1. Setup Dropbox and sync dotfiles and Alfred.
+1. Setup Atom and sync settings with Gist.
+1. Setup Alfred and sync with Dropbox.
   - Remove Spotlight keyboard shortcut.
   - Update Alfred keyboard shortcut.
-  - Install `alfred-macos` appearance.
-  - Install `alfred-npms` workflow.
-  - Install `alfred-packagist` workflow.
-- Install global Composer packages and install Valet.
-- Update keyboard shortcut for next application window.
+  - Install the macOS Alfred appearance.
+  - Install Alfred workflows:
+    ```sh
+    $ npm i -g alfred-{npms,packagist,kaomoji,emoj}
+    ```
+1. Install global Composer packages and install Valet.
+1. Update keyboard shortcut for next application window.
 
 ## License
 
