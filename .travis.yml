@@ -1,5 +1,5 @@
 os: osx
-osx_image: xcode8.1
+osx_image: xcode9.2
 
 before_script:
   - sudo rm -rf /Library/Developer/CommandLineTools
@@ -9,5 +9,3 @@ script:
   - CI=1 ./script/setup
   - brew install --build-from-source libffi
   - brew cask install couleurs
-  - brew install shellcheck
-#  - shellcheck ./script/setup
