@@ -229,8 +229,9 @@ logn "Installing latest version of npm:"
 npm install -g npm@latest
 logk
 
-# Create Sites directory in user folder.
-logn "Create Sites directory in user folder:"
+# Create Code and Sites directories in the user folder.
+logn "Create Code and Sites directories in the user folder:"
+mkdir ~/Code
 mkdir ~/Sites
 logk
 
