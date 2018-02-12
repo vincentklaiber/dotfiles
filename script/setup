@@ -219,6 +219,7 @@ if [ -z "$CI" ]; then
   mas install 1091189122 # Bear
   mas install 1263070803 # Lungo
   mas install 889922906 # Jumpshare
+  mas install 904280696 # Things
 else
   echo "Skipping installing macOS applications with MAS for CI."
 fi
