@@ -27,11 +27,7 @@ composer self-update
 composer global update --no-dev --prefer-dist
 
 log 'Update npm...'
-npm install --global --quiet npm@latest
-for package in $(npm -g outdated --parseable --depth=0 | cut -d: -f2)
-do
-    npm install --global --quiet "${package}"
-done
+npm update --global
 
 # Revoke sudo access again.
 sudo -k
