@@ -2,6 +2,7 @@ module.exports = {
   config: {
     bell: false,
     cursorShape: 'BEAM',
+    fontFamily: 'SFMono-Regular, Menlo',
     fontSize: 14,
     fontWeightBold: 'normal',
     termCSS: '',
