@@ -27,6 +27,7 @@ composer self-update
 composer global update --no-dev --prefer-dist
 
 log 'Update npm...'
+npm install --global npm@latest
 npm update --global
 
 # Revoke sudo access again.
