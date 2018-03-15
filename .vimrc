@@ -2,8 +2,8 @@ syntax enable
 
 colorscheme dim
 
-set backspace=indent,eol,start "Make backspace like every other editor.
-set number "Let's activate line numbers.
+set backspace=indent,eol,start "Make backspace work like every other editor.
+set number "Activate line numbers.
 
 "Highlight search
 set hlsearch
