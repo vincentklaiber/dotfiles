@@ -3,7 +3,7 @@ osx_image: xcode9.2
 
 before_script:
   - brew update
+  - brew install shellcheck
 
 script:
-  - brew install shellcheck
-  - shellcheck script/setup
+  - shellcheck script/setup script/sync
