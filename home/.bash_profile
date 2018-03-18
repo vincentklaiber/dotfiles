@@ -18,7 +18,9 @@ shopt -s histappend;
 shopt -s cdspell;
 
 # Enable tab completion for many Bash commands.
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+  . /usr/local/share/bash-completion/bash_completion
+fi
 
 # Enable tab completion for `g` by marking it as an alias for `git`.
 if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then

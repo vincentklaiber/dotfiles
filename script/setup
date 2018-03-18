@@ -75,14 +75,14 @@ logk
 logn "Installing binaries with Homebrew:"
 brew bundle --file=- <<EOF
 brew 'aria2'
+brew 'bash-completion@2'
 brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
+brew 'gnupg'
 brew 'gpg-agent'
-brew 'bash-completion@2'
 brew 'hub'
 brew 'mas'
 brew 'node'
-brew 'gnupg'
 brew 'p7zip'
 brew 'pinentry-mac'
 brew 'vim'
