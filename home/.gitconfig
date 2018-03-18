@@ -73,6 +73,12 @@
 	# Detect whitespace errors when applying a patch.
 	whitespace = fix
 
+  # Make `git rebase` safer on macOS.
+	trustctime = false
+
+  # Speed up commands involving untracked files such as `git status`.
+  untrackedCache = true
+
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal.
 	ui = auto

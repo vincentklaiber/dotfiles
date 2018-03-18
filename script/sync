@@ -5,9 +5,7 @@ cd "$(dirname "${BASH_SOURCE}")"/..;
 git pull origin master;
 
 function setup() {
-	rsync --exclude ".DS_Store" --exclude "script" --exclude "LICENSE" \
-		--exclude "README.md" --exclude ".git" --exclude ".editorconfig" \
-    --exclude ".travis.yml" -avh . ~;
+	rsync -avh ./home/ ~;
 	source ~/.bash_profile;
 	chflags hidden ~/bin;
 }
