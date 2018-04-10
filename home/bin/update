@@ -15,8 +15,7 @@ mas upgrade
 
 log 'Update Homebrew...'
 brew update
-brew upgrade
-brew cleanup --force -s
+brew upgrade --cleanup
 rm -rfv $(brew --cache)/*
 brew tap --repair
 brew prune
