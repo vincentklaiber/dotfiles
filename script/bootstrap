@@ -204,6 +204,9 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Minimize windows into application icon.
 defaults write com.apple.dock minimize-to-application -bool true
 
+# Hide recent applications in the dock.
+defaults write com.apple.dock show-recents -bool false
+
 # Keep folders on top when sorting by name.
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
