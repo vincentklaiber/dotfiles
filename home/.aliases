@@ -21,5 +21,5 @@ alias grep="grep --color=auto"
 
 # Start a PHP server from current directory.
 function serve() {
-  open "http://localhost:8888/" & php -S "localhost:8888";
+  open "http://localhost:8000/" & php -S "localhost:8000";
 }
