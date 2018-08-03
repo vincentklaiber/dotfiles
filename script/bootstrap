@@ -139,6 +139,7 @@ alfred-emoj \
 alfred-kaomoji \
 alfred-npms \
 alfred-packagist \
+empty-trash-cli \
 fast-cli \
 internal-ip-cli \
 npm-check-updates \
