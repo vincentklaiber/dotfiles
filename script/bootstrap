@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 set -e
 
 abort() { echo "!!! $*" >&2; exit 1; }
@@ -11,6 +11,7 @@ set -x
 
 # Run the script as yourself, not root.
 [ "$USER" = "root" ] && abort "Run the script as yourself, not root."
+# shellcheck disable=SC2086
 groups | grep $Q admin || abort "Add $USER to the admin group."
 
 # Initialise sudo now to save prompting later.
@@ -50,6 +51,7 @@ logk
 
 # Check and enable full-disk encryption.
 logn "Checking full-disk encryption status:"
+# shellcheck disable=SC2086
 if fdesetup status | grep $Q -E "FileVault is (On|Off, but will be enabled after the next restart)."; then
   logk
 else
