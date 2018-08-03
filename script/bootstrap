@@ -100,6 +100,13 @@ sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/7.2/php.ini
 brew install homebrew/php/composer
 logk
 
+# Install PHP packages with Composer.
+logn "Installing Composer packages:"
+composer global require friendsofphp/php-cs-fixer \
+graham-campbell/packagist-stats \
+laravel/valet
+logk
+
 # Install macOS applications with Brew Cask.
 logn "Installing macOS applications:"
 brew bundle --file=- <<EOF
