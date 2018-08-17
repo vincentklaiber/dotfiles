@@ -9,8 +9,8 @@
 This is the installation guide to setup these dotfiles on a new macOS system.
 
 ```sh
-curl -O https://raw.githubusercontent.com/vinkla/dotfiles/master/script/setup
-./setup
+curl -O https://raw.githubusercontent.com/vinkla/dotfiles/master/script/bootstrap
+./bootstrap
 ```
 
 1. Generate new SSH key, add to ssh-agent and upload to GitHub.
