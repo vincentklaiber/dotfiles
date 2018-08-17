@@ -1,4 +1,4 @@
-# dotfiles [![Build Status](https://img.shields.io/travis/vinkla/dotfiles/master.svg?style=flat)](https://travis-ci.org/vinkla/dotfiles)
+# dotfiles [![Build Status](https://badgen.net/travis/vinkla/dotfiles/master)](https://travis-ci.org/vinkla/dotfiles)
 
 ![dotfiles](https://user-images.githubusercontent.com/499192/40283443-96d526d0-5c7e-11e8-80a1-8843d778a922.png)
 
