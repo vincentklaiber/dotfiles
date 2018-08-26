@@ -89,7 +89,6 @@ brew 'node'
 brew 'p7zip'
 brew 'pinentry-mac'
 brew 'vim'
-brew 'wget'
 brew 'z'
 EOF
 logk
