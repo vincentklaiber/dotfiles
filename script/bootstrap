@@ -78,6 +78,7 @@ logn "Installing binaries with Homebrew:"
 brew bundle --file=- <<EOF
 brew 'aria2'
 brew 'bash-completion@2'
+brew 'fd'
 brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gnupg'
