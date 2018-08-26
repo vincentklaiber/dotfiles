@@ -8,27 +8,60 @@
 
 This is the installation guide to setup these dotfiles on a new macOS system.
 
-```sh
-curl -O https://raw.githubusercontent.com/vinkla/dotfiles/master/script/bootstrap
-./bootstrap
-```
+1. Download the repository and run the setup script:
 
-1. Generate new SSH key, add to ssh-agent and upload to GitHub.
-1. Install the dotfiles into the home directory.
-1. Download an [import private GPG key](https://www.keybits.net/post/import-keybase-private-key) from Keybase.
-1. Setup 1Password and sync passwords.
-1. Setup Dropbox and sync dotfiles and Alfred.
-1. Setup Atom and sync settings with Gist.
-1. Setup Alfred and sync with Dropbox.
-   - Remove Spotlight keyboard shortcut.
-   - Update Alfred keyboard shortcut.
-   - Install the macOS Alfred appearance.
-   - Install Alfred workflows:
-      ```sh
-      $ npm i -g alfred-{npms,packagist,kaomoji,emoj}
-      ```
-1. Install global Composer packages and install Valet.
-1. Update keyboard shortcut for next application window.
+  ```sh
+  curl -O https://raw.githubusercontent.com/vinkla/dotfiles/master/script/setup
+  ./setup
+  ```
+
+2. Install Xcode command line tools:
+
+  ```sh
+  xcode-select --install
+  ```
+
+3. Install Homebrew and dependencies:
+
+  ```sh
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ```
+  
+  Then install dependencies with Homebrew bundle:
+  
+  ```sh
+  brew bundle
+  ```
+
+4. Install any remaining software updates:
+  
+  ```sh
+  sudo softwareupdate --install --all
+  ```
+  
+5. Bootstrap macOS defaults and setup FileVault:
+  
+  ```sh
+  ./script/macos
+  ```
+
+6. Generate new SSH key, add to ssh-agent and upload to GitHub.
+
+7. Install the dotfiles into the home directory.
+
+8. Download an [import private GPG key](https://www.keybits.net/post/import-keybase-private-key) from Keybase.
+
+9. Setup 1Password and sync passwords.
+
+10. Setup Atom and sync settings with Gist.
+
+11. Update keyboard shortcut for next application window <kbd>Cmd+<</kbd>.
+
+12. Install third-party libraries with Npm and Composer:
+
+  ```sh
+  ./script/composer && ./script/npm
+  ```
 
 ## License
 

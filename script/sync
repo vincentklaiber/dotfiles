@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -ex
+
 git pull origin master;
 
 # shellcheck disable=SC2162

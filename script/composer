@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+composer global require \
+  friendsofphp/php-cs-fixer \
+  graham-campbell/packagist-stats \
+  laravel/valet

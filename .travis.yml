@@ -6,4 +6,4 @@ before_script:
   - brew install shellcheck
 
 script:
-  - shellcheck script/bootstrap script/sync
+  - shellcheck script/*

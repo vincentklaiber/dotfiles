@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-set -e
+#!/usr/bin/env bash -ex
 
 log() { echo -e "\e[0;33m${1}\e[0m"; }
 
@@ -8,7 +6,7 @@ log() { echo -e "\e[0;33m${1}\e[0m"; }
 sudo -v
 
 log 'Update macOS...'
-sudo softwareupdate -i -a
+sudo softwareupdate --install --all
 
 log 'Update Mac App Store...'
 mas upgrade
