@@ -10,40 +10,40 @@ This is the installation guide to setup these dotfiles on a new macOS system.
 
 1. Download the repository and run the setup script:
 
-  ```sh
-  curl -O https://raw.githubusercontent.com/vinkla/dotfiles/master/script/setup
-  ./setup
-  ```
+    ```sh
+    curl -O https://raw.githubusercontent.com/vinkla/dotfiles/master/script/setup
+    ./setup
+    ```
 
 2. Install Xcode command line tools:
 
-  ```sh
-  xcode-select --install
-  ```
+    ```sh
+    xcode-select --install
+    ```
 
 3. Install Homebrew and dependencies:
 
-  ```sh
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  ```
+    ```sh
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ```
   
-  Then install dependencies with Homebrew bundle:
-  
-  ```sh
-  brew bundle
-  ```
+    Then install dependencies with Homebrew bundle:
+    
+    ```sh
+    brew bundle
+    ```
 
 4. Install any remaining software updates:
   
-  ```sh
-  sudo softwareupdate --install --all
-  ```
+    ```sh
+    sudo softwareupdate --install --all
+    ```
   
 5. Bootstrap macOS defaults and setup FileVault:
   
-  ```sh
-  ./script/macos
-  ```
+    ```sh
+    ./script/macos
+    ```
 
 6. Generate new SSH key, add to ssh-agent and upload to GitHub.
 
@@ -59,9 +59,9 @@ This is the installation guide to setup these dotfiles on a new macOS system.
 
 12. Install third-party libraries with Npm and Composer:
 
-  ```sh
-  ./script/composer && ./script/npm
-  ```
+    ```sh
+    ./script/composer && ./script/npm
+    ```
 
 ## License
 

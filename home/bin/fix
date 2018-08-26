@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -ex
+#!/usr/bin/env bash -e
 
 run() {
 	if [[ -f .php_cs ]]; then
