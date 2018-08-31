@@ -5,6 +5,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 # Shortcuts.
+alias cat="bat"
 alias g="hub"
 alias h="history"
 alias vi="vim"
