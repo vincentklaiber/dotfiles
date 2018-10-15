@@ -36,7 +36,7 @@ $rules = [
     'implode_call' => true,
     'include' => true,
     'linebreak_after_opening_tag' => true,
-    'list_syntax' => true,
+    'list_syntax' => ['syntax' => 'short'],
     'logical_operators' => true,
     'lowercase_cast' => true,
     'lowercase_static_reference' => true,
