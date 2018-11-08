@@ -2,27 +2,27 @@
 
 set -ex
 
-# Ask for the administrator password upfront.
+# Ask for the administrator password upfront
 sudo -v
 
-# Check and enable full-disk encryption.
+# Check and enable full-disk encryption
 # shellcheck disable=SC2086
 if fdesetup status | grep $Q -E "FileVault is (Off, but will be enabled after the next restart)."; then
   echo
   sudo fdesetup enable -user "$USER" | tee ~/Desktop/"FileVault Recovery Key.txt"
 fi
 
-# Set computer name (as done via System Preferences -> Sharing).
+# Set computer name (as done via System Preferences -> Sharing)
 sudo scutil --set ComputerName "Njord"
 sudo scutil --set HostName "Njord"
 sudo scutil --set LocalHostName "Njord"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Njord"
 
-# Create new directories in the user folder.
+# Create new directories in the user folder
 mkdir -p ~/Code
 mkdir -p ~/Sites
 
-# Configure basic security settings.
+# Configure basic security settings
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool false
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabledForLocalFiles -bool false
 defaults write com.apple.screensaver askForPassword -int 1
@@ -30,10 +30,10 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 sudo launchctl load /System/Library/LaunchDaemons/com.apple.alf.agent.plist 2>/dev/null
 
-# Set 1.1.1.1 as default DNS servers.
+# Set 1.1.1.1 as default DNS servers
 networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
 
-# Add login screen message.
+# Add login screen message
 sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Found this computer? Please contact Vincent Klaiber at vincentklaiber@gmail.com."
 
 # Menu bar: Always show percentage next to the Battery icon
@@ -78,39 +78,39 @@ defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/vince
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# Minimize windows into application icon.
+# Minimize windows into application icon
 defaults write com.apple.dock minimize-to-application -bool true
 
-# Hide recent applications in the dock.
+# Hide recent applications in the dock
 defaults write com.apple.dock show-recents -bool false
 
-# Keep folders on top when sorting by name.
+# Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
-# Turn of Siri and hide it in the menu bar.
+# Turn of Siri and hide it in the menu bar
 defaults write com.apple.siri StatusMenuVisible -bool false
 defaults write com.apple.siri UserHasDeclinedEnable -bool true
 
-# Disable the dashboard feature.
+# Disable the dashboard feature
 defaults write com.apple.dashboard mcx-disabled -bool true
 
-# Hide scrollbars.
+# Hide scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 
-# Set the icon size of Dock items to 50 pixels.
+# Set the icon size of Dock items to 50 pixels
 defaults write com.apple.dock tilesize -int 50
 
-# Enable full keyboard access.
+# Enable full keyboard access
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
 
-# Automatically hide and show the Dock.
+# Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
-# Set the latest version of Bash as default shell.
+# Set the latest version of Bash as default shell
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 chsh -s /usr/local/bin/bash
 
-# Update php.ini configuration file.
+# Update php.ini configuration file
 sed -i".bak" 's/^\;phar.readonly.*$/phar.readonly = Off/g' /usr/local/etc/php/7.2/php.ini
 sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/7.2/php.ini
 
