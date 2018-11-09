@@ -5,10 +5,11 @@ export EDITOR="vim";
 
 # Add-ons to the `${PATH}`.
 export PATH="${HOME}/bin:${PATH}";
-export PATH="/usr/local/sbin:${PATH}";
-export PATH=${PATH}:/usr/local/share/npm/bin;
-export PATH=${PATH}:${HOME}/.composer/vendor/bin;
-export PATH="/usr/local/opt/mysql@5.7/bin:${PATH}";
+export PATH="${PATH}:/usr/local/sbin";
+export PATH="${PATH}:/usr/local/share/npm/bin";
+export PATH="${PATH}:${HOME}/.composer/vendor/bin";
+export PATH="${PATH}:${HOME}/.gem/ruby/2.5.0/bin";
+export PATH="${PATH}:/usr/local/opt/mysql@5.7/bin";
 
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 export HISTSIZE="32768";
