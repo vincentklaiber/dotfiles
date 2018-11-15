@@ -10,6 +10,10 @@ alias g="hub"
 alias h="history"
 alias vi="vim"
 
+# Git shortcuts.
+alias wip="git add . && git commit -m 'wip' && git push"
+alias nah="git reset --hard && git clean -df"
+
 # PHP aliases.
 alias art="php artisan"
 alias phpunit="vendor/bin/phpunit"
