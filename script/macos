@@ -111,8 +111,8 @@ sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 chsh -s /usr/local/bin/bash
 
 # Update php.ini configuration file
-sed -i".bak" 's/^\;phar.readonly.*$/phar.readonly = Off/g' /usr/local/etc/php/7.3/php.ini
-sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/7.3/php.ini
+sed -i".bak" 's/^\;phar.readonly.*$/phar.readonly = Off/g' /usr/local/etc/php/7.2/php.ini
+sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/7.2/php.ini
 
 # Revoke sudo access again.
 sudo -k
