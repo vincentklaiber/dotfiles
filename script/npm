@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
 npm install --global \
-  npm \
   alfred-emoj \
   alfred-kaomoji \
   alfred-npms \
   alfred-packagist \
+  alfred-updater \
+  autogit \
+  browser-sync \
   empty-trash-cli \
   fast-cli \
   internal-ip-cli \
