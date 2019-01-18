@@ -16,7 +16,7 @@ module.exports = {
     fontSize: 14,
     fontWeightBold: 'normal',
     lineHeight: 1.25,
-    updateChannel: 'stable'
+    updateChannel: 'canary'
   },
   plugins: [
     'hyper-snazzy',
