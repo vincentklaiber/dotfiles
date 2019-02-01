@@ -21,7 +21,6 @@ module.exports = {
   plugins: [
     'hyper-snazzy',
     'hypercwd',
-    'hyperfull',
-    'hyperlinks'
+    'hyperfull'
   ],
 };
