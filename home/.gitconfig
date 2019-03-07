@@ -156,3 +156,6 @@
 [credential]
 	# Use macOS keychain to store HTTP passwords.
 	helper = osxkeychain
+
+[protocol]
+	version = 2
