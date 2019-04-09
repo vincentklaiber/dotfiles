@@ -27,11 +27,6 @@ if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completio
   complete -o default -o nospace -F _git g;
 fi;
 
-# Add nvm with bash_completion.
-export NVM_DIR="${HOME}/.nvm";
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh";
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion";
-
 # Add tab completion for `defaults read|write NSGlobalDomain`.
 # You could just use `-g` instead, but I like being explicit.
 complete -W "NSGlobalDomain" defaults;

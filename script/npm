@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-nvm install stable
-nvm alias default node
-
 npm install --global \
   alfred-emoj \
   alfred-kaomoji \
