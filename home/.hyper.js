@@ -13,7 +13,7 @@ module.exports = {
     `,
     cursorShape: 'BEAM',
     fontFamily: 'SFMono-Regular, Menlo',
-    fontSize: 14,
+    fontSize: 13,
     fontWeightBold: 'normal',
     lineHeight: 1.25,
     updateChannel: 'canary'
