@@ -1,6 +1,2 @@
 .DS_Store
 .php_cs.cache
-.sass-cache
-.tags*
-node_modules
-npm-debug.log
