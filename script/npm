@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 npm install --global \
-  alfred-emoj \
+  @vinkla/alfred-emoji \
   alfred-kaomoji \
   alfred-npms \
   alfred-packagist \
