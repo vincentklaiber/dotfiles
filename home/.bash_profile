@@ -23,8 +23,43 @@ alias l="ls -Glah"
 # Always enable colored `grep` output.
 alias grep="grep --color=auto"
 
+# Simple log function with pretty colors.
+log() { echo -e "\e[0;33m${1}\e[0m"; }
+
+# One updating function to rule them all.
+update() {
+  # Ask for the administrator password upfront.
+  sudo -v
+
+  log 'Update macOS...'
+  sudo softwareupdate --install --all
+
+  log 'Update Mac App Store...'
+  mas upgrade
+
+  log 'Update Homebrew...'
+  brew update
+  brew upgrade
+
+  log 'Update Composer...'
+  composer self-update
+  composer global update --no-dev --prefer-dist
+
+  log 'Update npm...'
+  npm install --global npm@latest
+  npm update --global
+
+  log 'Removing caches...'
+  rm -rfv $(brew --cache)/*
+  brew tap --repair
+  brew cleanup
+
+  # Revoke sudo access again.
+  sudo -k
+}
+
 # Start a PHP server from current directory.
-function serve() {
+serve() {
   open "http://localhost:${1:-8000}/" & php -S "localhost:${1:-8000}"
 }
 
