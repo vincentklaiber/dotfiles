@@ -104,17 +104,5 @@ branch() {
   fi
 }
 
-if tput setaf 1 &> /dev/null; then
-  reset=$(tput sgr0);
-  blue=$(tput setaf 12);
-  green=$(tput setaf 10);
-  hotpink=$(tput setaf 13);
-else
-  reset="\e[0m";
-  blue="\e[0;34m";
-  green="\e[0;32m";
-  hotpink="\e[0;35m";
-fi;
-
-PS1="\[\033]0;\w\007\]\[${hotpink}\]❯ \[${blue}\]\w \$(branch \"\[${green}\]\")\[${reset}\]";
+PS1="\[\033]0;\w\007\]\[\e[0;35m\]❯ \[\e[0;34m\]\w \$(branch \"\[\e[0;32m\]\")\[\e[0m\]";
 export PS1;
