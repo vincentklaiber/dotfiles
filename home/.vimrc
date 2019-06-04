@@ -1,6 +1,6 @@
 "Add custom color scheme
 syntax enable
-colorscheme dim
+colorscheme elflord
 
 "Make backspace work like every other editor
 set backspace=indent,eol,start
