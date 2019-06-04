@@ -2,8 +2,6 @@
 
 set -e
 
-git pull origin master;
-
 # shellcheck disable=SC2162
 read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
 echo
@@ -11,5 +9,4 @@ if [[ ${REPLY} =~ ^[Yy]$ ]]; then
   rsync -avh ./home/ "$HOME";
   # shellcheck source=/dev/null
 	source "$HOME/.bash_profile";
-	chflags hidden "$HOME/bin";
 fi;
