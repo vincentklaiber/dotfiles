@@ -25,56 +25,56 @@ alias grep="grep --color=auto"
 
 # Start a PHP server from current directory.
 function serve() {
-  open "http://localhost:${1:-8000}/" & php -S "localhost:${1:-8000}";
+  open "http://localhost:${1:-8000}/" & php -S "localhost:${1:-8000}"
 }
 
 # Make vim the default editor.
-export EDITOR="vim";
+export EDITOR="vim"
 
 # Add-ons to the `${PATH}`.
-export PATH="${HOME}/bin:${PATH}";
-export PATH="${PATH}:/usr/local/sbin";
-export PATH="${PATH}:/usr/local/share/npm/bin";
-export PATH="${PATH}:${HOME}/.composer/vendor/bin";
-export PATH="${PATH}:${HOME}/.gem/ruby/2.5.0/bin";
-export PATH="${PATH}:/usr/local/opt/mysql@5.7/bin";
+export PATH="${HOME}/bin:${PATH}"
+export PATH="${PATH}:/usr/local/sbin"
+export PATH="${PATH}:/usr/local/share/npm/bin"
+export PATH="${PATH}:${HOME}/.composer/vendor/bin"
+export PATH="${PATH}:/usr/local/opt/mysql@5.7/bin"
 
 # Increase Bash history size. Allow 32³ entries; the default is 500.
-export HISTSIZE="32768";
-export HISTFILESIZE="${HISTSIZE}";
+export HISTSIZE="32768"
+export HISTFILESIZE="${HISTSIZE}"
+
 # Omit duplicates and commands that begin with a space from history.
-export HISTCONTROL="ignoreboth";
+export HISTCONTROL="ignoreboth"
 
 # Make some commands not show up in history.
-export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
 
 # Prefer US English and use UTF-8.
-export LANG="en_US.UTF-8";
-export LC_ALL="en_US.UTF-8";
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 
 # Highlight manual pages.
-export LESS_TERMCAP_mb=$'\E[01;31m';
-export LESS_TERMCAP_md=$'\E[01;38;5;74m';
-export LESS_TERMCAP_me=$'\E[0m';
-export LESS_TERMCAP_se=$'\E[0m';
-export LESS_TERMCAP_so=$'\E[38;5;246m';
-export LESS_TERMCAP_ue=$'\E[0m';
-export LESS_TERMCAP_us=$'\E[04;38;5;146m';
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[38;5;246m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[04;38;5;146m'
 
 # Don’t clear the screen after quitting a manual page.
-export MANPAGER='less -X';
+export MANPAGER='less -X'
 
 # Load the z binary.
-. `brew --prefix`/etc/profile.d/z.sh;
+. `brew --prefix`/etc/profile.d/z.sh
 
 # Case-insensitive globbing (used in pathname expansion).
-shopt -s nocaseglob;
+shopt -s nocaseglob
 
 # Append to the Bash history file, rather than overwriting it.
-shopt -s histappend;
+shopt -s histappend
 
 # Autocorrect typos in path names when using `cd`.
-shopt -s cdspell;
+shopt -s cdspell
 
 # Enable tab completion for many Bash commands.
 if [ -f /usr/local/share/bash-completion/bash_completion ]; then
