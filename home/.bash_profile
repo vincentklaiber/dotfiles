@@ -52,7 +52,7 @@ update() {
   npm update --global
 
   log 'Removing caches...'
-  rm -rfv $(brew --cache)/*
+  rm -rfv "$(brew --cache)/*"
   brew tap --repair
   brew cleanup
 
@@ -76,7 +76,7 @@ fix() {
   fi
 
   for arg; do
-  	run ${arg}
+  	run "${arg}"
   done
 }
 
@@ -122,7 +122,7 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m'
 export MANPAGER='less -X'
 
 # Load the z binary.
-. `brew --prefix`/etc/profile.d/z.sh
+. "$(brew --prefix)/etc/profile.d/z.sh"
 
 # Case-insensitive globbing (used in pathname expansion).
 shopt -s nocaseglob
@@ -149,10 +149,9 @@ branch() {
       git update-index --really-refresh -q &>/dev/null;
 
       branch="$(git symbolic-ref --quiet --short HEAD 2> /dev/null)";
-
       status=$(git status --porcelain | cut -d' ' -f2);
 
-      [ ! -z "$status" ] && branch="${branch} [!]";
+      [ -n "$status" ] && branch="${branch} [!]";
     fi
 
     echo -e "${1}${branch} ";
