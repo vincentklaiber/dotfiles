@@ -24,7 +24,9 @@ alias l="ls -Glah"
 alias grep="grep --color=auto"
 
 # Simple log function with pretty colors.
-log() { echo -e "\e[0;33m${1}\e[0m"; }
+log() {
+  echo -e "\e[0;33m${1}\e[0m";
+}
 
 # One updating function to rule them all.
 update() {
@@ -56,6 +58,26 @@ update() {
 
   # Revoke sudo access again.
   sudo -k
+}
+
+# PHP-CS-Fixer helper function.
+fix() {
+  run() {
+  	if [[ -f .php_cs ]]; then
+  		eval "php-cs-fixer fix $* --config=\"$(pwd)/.php_cs\""
+  	else
+  		eval "php-cs-fixer fix $* --config=\"${HOME}/.php_cs\""
+  	fi
+  }
+
+  if [[ -z "$1" ]]; then
+  	run
+  	exit 1
+  fi
+
+  for arg; do
+  	run ${arg}
+  done
 }
 
 # Start a PHP server from current directory.
