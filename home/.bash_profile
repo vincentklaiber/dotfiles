@@ -79,10 +79,6 @@ shopt -s cdspell
 # Enable tab completion for many Bash commands.
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
-# Add tab completion for `defaults read|write NSGlobalDomain`.
-# You could just use `-g` instead, but I like being explicit.
-complete -W "NSGlobalDomain" defaults;
-
 # Add custom bash prompt with Git support.
 branch() {
   if [ ! -d ".git" ]; then
