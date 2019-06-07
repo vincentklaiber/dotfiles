@@ -60,11 +60,6 @@ update() {
   sudo -k
 }
 
-# Start a PHP server from current directory.
-serve() {
-  open "http://localhost:${1:-8000}/" & php -S "localhost:${1:-8000}"
-}
-
 # Make vim the default editor.
 export EDITOR="vim"
 
