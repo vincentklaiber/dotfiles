@@ -60,26 +60,6 @@ update() {
   sudo -k
 }
 
-# PHP-CS-Fixer helper function.
-fix() {
-  run() {
-  	if [[ -f .php_cs ]]; then
-  		eval "php-cs-fixer fix $* --config=\"$(pwd)/.php_cs\""
-  	else
-  		eval "php-cs-fixer fix $* --config=\"${HOME}/.php_cs\""
-  	fi
-  }
-
-  if [[ -z "$1" ]]; then
-  	run
-  	exit 1
-  fi
-
-  for arg; do
-  	run "${arg}"
-  done
-}
-
 # Start a PHP server from current directory.
 serve() {
   open "http://localhost:${1:-8000}/" & php -S "localhost:${1:-8000}"
