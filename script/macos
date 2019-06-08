@@ -106,9 +106,9 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
-# Set the latest version of Bash as default shell
-sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-chsh -s /usr/local/bin/bash
+# Set the latest version of fish as default shell
+sudo bash -c 'echo /usr/local/bin/fish >> /etc/shells'
+chsh -s /usr/local/bin/fish
 
 # Update php.ini configuration file
 sed -i".bak" 's/^\;phar.readonly.*$/phar.readonly = Off/g' /usr/local/etc/php/7.3/php.ini
