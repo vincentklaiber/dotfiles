@@ -8,20 +8,13 @@
 
 This is the installation guide to setup these dotfiles on a new macOS system.
 
-1. Download the repository and run the setup script:
-
-    ```sh
-    curl -O https://raw.githubusercontent.com/vinkla/dotfiles/master/script/setup
-    ./setup
-    ```
-
-2. Install Xcode command line tools:
+1. Install Xcode command line tools:
 
     ```sh
     xcode-select --install
     ```
 
-3. Install Homebrew and dependencies:
+1. Install Homebrew and dependencies:
 
     ```sh
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -33,31 +26,31 @@ This is the installation guide to setup these dotfiles on a new macOS system.
     brew bundle
     ```
 
-4. Install any remaining software updates:
+1. Install any remaining software updates:
   
     ```sh
     sudo softwareupdate --install --all
     ```
   
-5. Bootstrap macOS defaults and setup FileVault:
+1. Bootstrap macOS defaults and setup FileVault:
   
     ```sh
     ./script/macos
     ```
 
-6. Generate new SSH key, add to ssh-agent and upload to GitHub.
+1. Generate new SSH key, add to ssh-agent and upload to GitHub.
 
-7. Install the dotfiles into the home directory.
+1. Install the dotfiles into the home directory.
 
-8. Download an [import private GPG key](https://www.keybits.net/post/import-keybase-private-key) from Keybase.
+1. Download an [import private GPG key](https://www.keybits.net/post/import-keybase-private-key) from Keybase.
 
-9. Setup 1Password and sync passwords.
+1. Setup 1Password and sync passwords.
 
-10. Setup Atom and sync settings with Gist.
+1. Setup Atom and sync settings with Gist.
 
-11. Update keyboard shortcut for next application window <kbd>Cmd+<</kbd>.
+1. Update keyboard shortcut for next application window <kbd>Cmd+<</kbd>.
 
-12. Install third-party libraries with Npm and Composer:
+1. Install third-party libraries with npm and Composer:
 
     ```sh
     ./script/composer && ./script/npm
