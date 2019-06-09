@@ -144,7 +144,7 @@
 	name = Vincent Klaiber
 
 	# Email used in commit messages.
-	email = vincentklaiber@gmail.com
+	email = git@doubledip.se
 
 	# Public GPG signing key id.
 	signingkey = 66C8C908EAE057A4
