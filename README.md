@@ -23,7 +23,7 @@ This is the installation guide to setup these dotfiles on a new macOS system.
     Then install dependencies with Homebrew bundle:
     
     ```sh
-    brew bundle
+    ./script/brew
     ```
 
 1. Install any remaining software updates:

@@ -1,3 +1,6 @@
+#!/bin/bash
+
+brew bundle --file=- <<RUBY
 tap 'homebrew/cask'
 tap 'homebrew/core'
 tap 'homebrew/services'
@@ -41,3 +44,4 @@ cask 'transmit'
 cask 'vlc'
 mas 'Lungo', id: 1263070803
 mas 'Things', id: 904280696
+RUBY
