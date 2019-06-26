@@ -18,9 +18,8 @@ sudo scutil --set HostName "Njord"
 sudo scutil --set LocalHostName "Njord"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Njord"
 
-# Create new directories in the user folder
+# Create GitHub directory in the user folder
 mkdir -p ~/GitHub
-mkdir -p ~/Sites
 
 # Configure basic security settings
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool false
