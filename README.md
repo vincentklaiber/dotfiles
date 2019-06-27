@@ -65,6 +65,8 @@ This is the installation guide to setup these dotfiles on a new macOS system.
   App Shortcuts | Zoom | <kbd>⌃⌥F</kbd>
   Keyboard | Move focus to next window | <kbd>⌘<</kbd>
 
+1. Disable load remote content in messages in mail application.
+
 ## License
 
 [MIT](LICENSE) © [Vincent Klaiber](https://doubledip.se)
