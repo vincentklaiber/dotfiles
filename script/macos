@@ -83,6 +83,9 @@ defaults write com.apple.dock minimize-to-application -bool true
 # Hide recent applications in the dock
 defaults write com.apple.dock show-recents -bool false
 
+# Disable zoom and move window animation
+defaults write -g NSWindowResizeTime -float 0.001
+
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
