@@ -56,6 +56,15 @@ This is the installation guide to setup these dotfiles on a new macOS system.
     ./script/composer && ./script/npm
     ```
 
+1. Add macOS keyboard shortcuts:
+
+  Type | Name | Keys
+  ---- | ---- | ----
+  App Shortcuts | Move Window to Left Side of Screen | <kbd>⌃⌥←</kbd>
+  App Shortcuts | Move Window to Left Right of Screen | <kbd>⌃⌥→</kbd>
+  App Shortcuts | Zoom | <kbd>⌃⌥F</kbd>
+  Keyboard | Move focus to next window | <kbd>⌘<</kbd>
+
 ## License
 
 [MIT](LICENSE) © [Vincent Klaiber](https://doubledip.se)
