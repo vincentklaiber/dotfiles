@@ -67,6 +67,8 @@ This is the installation guide to setup these dotfiles on a new macOS system.
 
 1. Disable load remote content in messages in mail application.
 
+1. Disable "Shake mouse pointer to locate" in accessibility settings
+
 ## License
 
 [MIT](LICENSE) © [Vincent Klaiber](https://doubledip.se)
