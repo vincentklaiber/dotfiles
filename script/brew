@@ -24,6 +24,7 @@ cask '1password'
 cask 'alfred'
 cask 'appcleaner'
 cask 'atom'
+cask 'beamer'
 cask 'brave-browser'
 cask 'couleurs'
 cask 'flume'
@@ -40,7 +41,6 @@ cask 'skype'
 cask 'slack'
 cask 'spotify'
 cask 'transmit'
-cask 'vlc'
 mas 'Lungo', id: 1263070803
 mas 'Things', id: 904280696
 RUBY
