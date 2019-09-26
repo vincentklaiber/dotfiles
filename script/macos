@@ -102,6 +102,9 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 # Set the icon size of Dock items to 50 pixels
 defaults write com.apple.dock tilesize -int 50
 
+# Delete messages after 30 days
+defaults write com.apple.iChat KeepMessageForDays -int 30
+
 # Enable full keyboard access
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
 
