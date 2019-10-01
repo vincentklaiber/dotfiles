@@ -41,6 +41,8 @@ cask 'skype'
 cask 'slack'
 cask 'spotify'
 cask 'transmit'
+mas 'Dato', id: 1470584107
 mas 'Lungo', id: 1263070803
+mas 'Pixelmator Pro', id: 1289583905
 mas 'Things', id: 904280696
 RUBY
