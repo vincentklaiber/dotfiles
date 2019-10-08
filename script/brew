@@ -23,7 +23,6 @@ brew 'vim'
 cask '1password'
 cask 'alfred'
 cask 'appcleaner'
-cask 'atom'
 cask 'beamer'
 cask 'brave-browser'
 cask 'couleurs'
@@ -42,6 +41,7 @@ cask 'skype'
 cask 'slack'
 cask 'spotify'
 cask 'transmit'
+cask 'visual-studio-code'
 mas 'Dato', id: 1470584107
 mas 'Lungo', id: 1263070803
 mas 'Pixelmator Pro', id: 1289583905
