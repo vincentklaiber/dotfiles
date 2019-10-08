@@ -46,24 +46,13 @@ This is the installation guide to setup these dotfiles on a new macOS system.
 
 1. Setup 1Password and sync passwords.
 
-1. Setup Atom and sync settings with Gist.
-
-1. Update keyboard shortcut for next application window <kbd>Cmd+<</kbd>.
+1. Setup Visual Studio Code and sync settings with Gist.
 
 1. Install third-party libraries with npm and Composer:
 
     ```sh
     ./script/composer && ./script/npm
     ```
-
-1. Add macOS keyboard shortcuts:
-
-    Type | Name | Keys
-    ---- | ---- | ----
-    App Shortcuts | Move Window to Left Side of Screen | <kbd>⌃⌥←</kbd>
-    App Shortcuts | Move Window to Left Right of Screen | <kbd>⌃⌥→</kbd>
-    App Shortcuts | Zoom | <kbd>⌃⌥F</kbd>
-    Keyboard | Move focus to next window | <kbd>⌘<</kbd>
 
 1. Disable load remote content in messages in mail application.
 
