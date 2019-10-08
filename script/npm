@@ -5,8 +5,6 @@ npm install --global \
   alfred-npms \
   alfred-packagist \
   alfred-updater \
-  autogit \
-  browser-sync \
   empty-trash-cli \
   fast-cli \
   internal-ip-cli \
