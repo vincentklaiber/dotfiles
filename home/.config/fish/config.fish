@@ -44,15 +44,3 @@ set -g __fish_git_prompt_color_stagedstate yellow
 set -g __fish_git_prompt_color_invalidstate red
 set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
 set -g __fish_git_prompt_color_cleanstate green
-
-function fish_title
-	if [ $_ = 'fish' ]
-        echo (prompt_pwd)
-    else
-        echo $_
-    end
-end
-
-function fish_prompt
-    echo -n -s (set_color magenta) '❯ ' (set_color blue) (prompt_pwd) (set_color normal) (__fish_git_prompt) (set_color normal) ' '
-end
