@@ -1,9 +1,6 @@
 function update --description 'update everything'
   sudo -v
 
-  echo -s (set_color yellow) 'Updating macOS...' (set_color normal)
-  sudo softwareupdate --install --all
-
   echo -s (set_color yellow) 'Updating Mac App Store...' (set_color normal)
   mas upgrade
 
