@@ -13,7 +13,6 @@ function update --description 'update everything'
   composer global update --no-dev --prefer-dist
 
   echo -s (set_color yellow) 'Updating npm...' (set_color normal)
-  npm install --global npm@latest
   npm update --global
 
   echo -s (set_color yellow) 'Removing caches...' (set_color normal)
