@@ -6,7 +6,7 @@ alias git="hub"
 alias h="history"
 alias l="ls -1a"
 
-alias nah="git reset --hard && git clean -df"
+alias nah="git restore . && git clean -df"
 alias wip="git add --all && git commit --all -m 'wip' && git push"
 
 alias art="php artisan"
