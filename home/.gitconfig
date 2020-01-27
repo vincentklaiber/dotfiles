@@ -11,6 +11,9 @@
 	# Shorthand for clone.
 	c = clone
 
+	# Show the diff between the latest commit and the current state.
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat ':(exclude)*lock*'"
+
 	# Fetch everything all remotes.
 	f = fetch --all
 
