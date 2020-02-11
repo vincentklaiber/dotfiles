@@ -2,5 +2,4 @@
 
 composer global require \
   ergebnis/composer-normalize \
-  friendsofphp/php-cs-fixer \
-  graham-campbell/packagist-stats
+  friendsofphp/php-cs-fixer
