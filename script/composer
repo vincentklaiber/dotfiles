@@ -1,5 +1,0 @@
-#!/bin/bash
-
-composer global require \
-  ergebnis/composer-normalize \
-  friendsofphp/php-cs-fixer
