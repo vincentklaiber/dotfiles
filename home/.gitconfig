@@ -88,9 +88,8 @@
 	# Don't ignore case sensitive on filenames.
 	ignoreCase = false
 
-	# Global `.gitignore` and `.gitattributes`.
+	# Global `.gitignore`.
 	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
 
 	# Make `git rebase` safer on macOS.
 	trustctime = false
