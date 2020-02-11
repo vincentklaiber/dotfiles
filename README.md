@@ -48,10 +48,10 @@ This is the installation guide to setup these dotfiles on a new macOS system.
 
 1. Setup Visual Studio Code and sync settings with Gist.
 
-1. Install third-party libraries with npm and Composer:
+1. Install third-party libraries with npm:
 
     ```sh
-    ./script/composer && ./script/npm
+    ./script/npm
     ```
 
 1. Disable load remote content in messages in mail application.
