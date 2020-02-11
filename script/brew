@@ -12,7 +12,6 @@ brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gnupg'
 brew 'gpg-agent'
-brew 'hub'
 brew 'mas'
 brew 'mysql@5.7'
 brew 'node'

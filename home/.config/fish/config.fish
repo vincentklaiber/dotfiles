@@ -1,8 +1,7 @@
 alias ...="cd ../.."
 
 alias cat="bat"
-alias g="hub"
-alias git="hub"
+alias g="git"
 alias h="history"
 alias l="ls -1a"
 
