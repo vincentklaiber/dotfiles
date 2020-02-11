@@ -8,9 +8,7 @@ alias l="ls -1a"
 alias nah="git restore . && git clean -df"
 alias wip="git add --all && git commit --all -m 'wip' && git push"
 
-alias art="php artisan"
 alias phpunit="vendor/bin/phpunit"
-alias wp="vendor/bin/wp"
 
 alias grep="grep --color=auto"
 
