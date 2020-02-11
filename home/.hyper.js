@@ -19,9 +19,5 @@ module.exports = {
     shell: '/usr/local/bin/fish',
     updateChannel: 'canary'
   },
-  plugins: [
-    'hyper-snazzy',
-    'hypercwd',
-    'hyperfull'
-  ],
+  plugins: ['hyper-snazzy', 'hypercwd', 'hyperfull']
 };
