@@ -1,6 +1,7 @@
 #!/bin/bash
 
 brew bundle --file=- <<RUBY
+tap 'homebrew/cask-fonts'
 tap 'homebrew/cask'
 tap 'homebrew/core'
 tap 'homebrew/services'
@@ -26,6 +27,7 @@ cask 'beamer'
 cask 'brave-browser'
 cask 'couleurs'
 cask 'flume'
+cask 'font-jetbrains-mono'
 cask 'github-desktop'
 cask 'hyper'
 cask 'imagealpha'
