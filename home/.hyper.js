@@ -12,7 +12,7 @@ module.exports = {
       .tabs_title { display: block !important; }
     `,
     cursorShape: 'BEAM',
-    fontFamily: 'SFMono-Regular, Menlo',
+    fontFamily: 'JetBrains Mono, Menlo',
     fontSize: 13,
     fontWeightBold: 'normal',
     lineHeight: 1.25,
