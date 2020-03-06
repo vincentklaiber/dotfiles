@@ -9,6 +9,7 @@ brew 'aria2'
 brew 'bat'
 brew 'composer'
 brew 'fish'
+brew 'gh'
 brew 'git'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gnupg'
