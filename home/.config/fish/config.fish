@@ -5,8 +5,8 @@ alias h="history"
 alias l="ls -1a"
 
 alias nah="git restore . && git clean -df"
-alias now="git commit -am (date "+%y.%m.%d.%H%S") && git push"
-alias wip="git commit -am 'wip' && git push"
+alias now="git add . && git commit -m (date "+%y.%m.%d.%H%S") && git push"
+alias wip="git add . && git commit -m 'wip' && git push"
 
 alias phpunit="vendor/bin/phpunit"
 
