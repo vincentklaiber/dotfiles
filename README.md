@@ -56,7 +56,9 @@ This is the installation guide to setup these dotfiles on a new macOS system.
 
 1. Disable load remote content in messages in mail application.
 
-1. Disable "Shake mouse pointer to locate" in accessibility settings
+1. Disable "Shake mouse pointer to locate" in accessibility settings.
+
+1. Disable "Allow Handoff between this Mac and your iCloud devices" in general settings.
 
 ## License
 
