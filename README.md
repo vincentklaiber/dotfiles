@@ -58,7 +58,7 @@ This is the installation guide to setup these dotfiles on a new macOS system.
 
 1. Disable "Shake mouse pointer to locate" in accessibility settings.
 
-1. Disable "Allow Handoff between this Mac and your iCloud devices" in general settings.
+1. Disable "Allow Handoff between this Mac and your iCloud devices" and set "Recent items" to "None" in general settings.
 
 ## License
 
