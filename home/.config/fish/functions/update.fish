@@ -9,7 +9,7 @@ function update --description 'update everything'
 
   echo -s (set_color yellow) 'Updating Composer...' (set_color normal)
   composer self-update
-  composer global update --no-dev --prefer-dist
+  composer global update
 
   echo -s (set_color yellow) 'Updating npm...' (set_color normal)
   npm install --global --force npm@latest
