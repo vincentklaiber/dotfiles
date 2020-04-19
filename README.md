@@ -62,4 +62,4 @@ This is the installation guide to setup these dotfiles on a new macOS system.
 
 ## License
 
-[MIT](LICENSE) © [Vincent Klaiber](https://doubledip.se)
+[MIT](LICENSE) © [Vincent Klaiber](https://vinkla.dev/)
