@@ -12,12 +12,12 @@ module.exports = {
       .tabs_title { display: block !important; }
     `,
     cursorShape: 'BEAM',
-    fontFamily: 'JetBrains Mono, Menlo',
+    fontFamily: 'JetBrains Mono',
     fontSize: 13,
     fontWeightBold: 'normal',
     lineHeight: 1.25,
     shell: '/usr/local/bin/fish',
     updateChannel: 'canary'
   },
-  plugins: ['hyper-snazzy', 'hypercwd', 'hyperfull']
+  plugins: ['hyper-snazzy', 'hypercwd']
 };

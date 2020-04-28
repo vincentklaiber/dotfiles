@@ -6,7 +6,6 @@ set -ex
 sudo -v
 
 # Check and enable full-disk encryption
-# shellcheck disable=SC2086
 if fdesetup status | grep $Q -E "FileVault is (Off, but will be enabled after the next restart)."; then
   echo
   sudo fdesetup enable -user "$USER" | tee ~/Desktop/"FileVault Recovery Key.txt"
@@ -33,7 +32,7 @@ sudo launchctl load /System/Library/LaunchDaemons/com.apple.alf.agent.plist 2>/d
 networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
 
 # Add login screen message
-sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Found this computer? Please contact Vincent Klaiber at hello@doubledip.se."
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Found this computer? Please contact Vincent at vincent@doubledip.se."
 
 # Menu bar: Always show percentage next to the Battery icon
 defaults write com.apple.menuextra.battery ShowPercent YES
@@ -116,8 +115,8 @@ sudo bash -c 'echo /usr/local/bin/fish >> /etc/shells'
 chsh -s /usr/local/bin/fish
 
 # Update php.ini configuration file
-sed -i".bak" 's/^\;phar.readonly.*$/phar.readonly = Off/g' /usr/local/etc/php/7.3/php.ini
-sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/7.3/php.ini
+sed -i".bak" 's/^\;phar.readonly.*$/phar.readonly = Off/g' /usr/local/etc/php/7.4/php.ini
+sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/7.4/php.ini
 
 # Revoke sudo access again.
 sudo -k

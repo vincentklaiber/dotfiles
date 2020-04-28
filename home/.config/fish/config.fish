@@ -8,6 +8,7 @@ alias nah="git restore . && git clean -df"
 alias now="git add . && git commit -m (date "+%y.%m.%d.%H%S") && git push"
 alias wip="git add . && git commit -m 'wip' && git push"
 
+alias art="php artisan"
 alias phpunit="vendor/bin/phpunit"
 
 alias grep="grep --color=auto"
