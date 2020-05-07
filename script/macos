@@ -5,12 +5,6 @@ set -ex
 # Ask for the administrator password upfront
 sudo -v
 
-# Check and enable full-disk encryption
-if fdesetup status | grep $Q -E "FileVault is (Off, but will be enabled after the next restart)."; then
-  echo
-  sudo fdesetup enable -user "$USER" | tee ~/Desktop/"FileVault Recovery Key.txt"
-fi
-
 # Set computer name (as done via System Preferences -> Sharing)
 sudo scutil --set ComputerName "Njord"
 sudo scutil --set HostName "Njord"

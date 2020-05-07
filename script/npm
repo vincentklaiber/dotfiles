@@ -9,6 +9,4 @@ npm install --global \
   fast-cli \
   internal-ip-cli \
   npm-check-updates \
-  public-ip-cli \
-  title \
   trash-cli

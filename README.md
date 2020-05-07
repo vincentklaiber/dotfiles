@@ -1,6 +1,4 @@
-# dotfiles [![Build Status](https://badgen.net/travis/vinkla/dotfiles/master)](https://travis-ci.org/vinkla/dotfiles)
-
-![dotfiles](https://user-images.githubusercontent.com/499192/40283443-96d526d0-5c7e-11e8-80a1-8843d778a922.png)
+# dotfiles
 
 > .files, sensible hacker defaults for macOS. If you're curious how to setup your own dotfiles, please visit [Mathias Bynens's dotfiles](https://github.com/mathiasbynens/dotfiles) and [Mike McQuaid's strap project](https://github.com/mikemcquaid/strap) to learn more.
 
@@ -32,13 +30,15 @@ This is the installation guide to setup these dotfiles on a new macOS system.
     sudo softwareupdate --install --all
     ```
   
-1. Bootstrap macOS defaults and setup FileVault:
+1. [Setup FileVault to encrypt the startup disk.](https://support.apple.com/en-us/HT204837)
+  
+1. Bootstrap macOS defaults. Remember to first change the computer name.
   
     ```sh
     ./script/macos
     ```
 
-1. Generate new SSH key, add to ssh-agent and upload to GitHub.
+1. [Generate new SSH key, add to ssh-agent and upload to GitHub.](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 1. Install the dotfiles into the home directory.
 
