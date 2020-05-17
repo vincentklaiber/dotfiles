@@ -33,7 +33,6 @@ cask 'github-desktop'
 cask 'hyper'
 cask 'imagealpha'
 cask 'imageoptim'
-cask 'qlstephen'
 cask 'rectangle'
 cask 'shifty'
 cask 'signal'
@@ -44,6 +43,7 @@ cask 'tableplus'
 cask 'transmit'
 cask 'visual-studio-code'
 mas 'Dato', id: 1470584107
+mas 'Glance', id: 1513574319
 mas 'Lungo', id: 1263070803
 mas 'Pixelmator Pro', id: 1289583905
 RUBY
