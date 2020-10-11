@@ -88,6 +88,11 @@
 	# Sign all commits with GPG.
 	gpgsign = true
 
+[pull]
+  # This only performs the pull if the local branch can be fast-forwarded. If
+  # not, it simply aborts with an error message (and does not create any commits).
+  ff = only
+
 [core]
 	# Don't ignore case sensitive on filenames.
 	ignoreCase = false
