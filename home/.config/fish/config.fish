@@ -17,10 +17,11 @@ set fish_greeting
 
 set -x EDITOR "vim"
 
+set -x PATH "/usr/local/opt/mysql@5.7/bin" $PATH
+set -x PATH "/usr/local/opt/php@7.4/bin" $PATH
 set -x PATH "/usr/local/sbin" $PATH
 set -x PATH "/usr/local/share/npm/bin" $PATH
 set -x PATH "$HOME/.composer/vendor/bin" $PATH
-set -x PATH "usr/local/opt/mysql@5.7/bin" $PATH
 
 set -x LC_ALL en_US.UTF-8
 set -x LC_CTYPE en_US.UTF-8
