@@ -109,8 +109,8 @@ sudo bash -c 'echo /usr/local/bin/fish >> /etc/shells'
 chsh -s /usr/local/bin/fish
 
 # Update php.ini configuration file
-sed -i".bak" 's/^\;phar.readonly.*$/phar.readonly = Off/g' /usr/local/etc/php/7.4/php.ini
-sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/7.4/php.ini
+sed -i".bak" 's/^\;phar.readonly.*$/phar.readonly = Off/g' /usr/local/etc/php/8.0/php.ini
+sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/8.0/php.ini
 
 # Revoke sudo access again.
 sudo -k
