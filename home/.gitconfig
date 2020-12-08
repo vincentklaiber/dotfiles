@@ -2,6 +2,9 @@
 	# List aliases.
 	aliases = config --get-regexp alias
 
+	# Add everything and commit with message.
+	ac = !git add . && git commit -m
+
 	# Shorthand for branch.
 	b = branch
 
@@ -87,11 +90,6 @@
 [commit]
 	# Sign all commits with GPG.
 	gpgsign = true
-
-[pull]
-  # This only performs the pull if the local branch can be fast-forwarded. If
-  # not, it simply aborts with an error message (and does not create any commits).
-  ff = only
 
 [core]
 	# Don't ignore case sensitive on filenames.
