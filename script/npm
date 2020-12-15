@@ -6,7 +6,6 @@ npm install --global \
   alfred-packagist \
   alfred-updater \
   empty-trash-cli \
-  fast-cli \
   internal-ip-cli \
   npm-check-updates \
   trash-cli
