@@ -86,11 +86,8 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 defaults write com.apple.siri StatusMenuVisible -bool false
 defaults write com.apple.siri UserHasDeclinedEnable -bool true
 
-# Disable the dashboard feature
-defaults write com.apple.dashboard mcx-disabled -bool true
-
-# Hide scrollbars
-defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
+# Always show scrollbars
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
 # Set the icon size of Dock items to 50 pixels
 defaults write com.apple.dock tilesize -int 50
