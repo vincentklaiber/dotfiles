@@ -1,56 +1,21 @@
 [alias]
-	# List aliases.
 	aliases = config --get-regexp alias
-
-	# Add everything and commit with message.
 	ac = !git add . && git commit -m
-
-	# Shorthand for branch.
 	b = branch
-
-	# Show verbose output about branches.
 	branches = branch --all
-
-	# Shorthand for clone.
 	c = clone
-
-	# Show the diff between the latest commit and the current state.
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat ':(exclude)*lock*'"
-
-	# Fetch everything all remotes.
 	f = fetch --all
-
-  # Switch to a branch, creating it if necessary.
 	go = "!f() { git switch -c $1 2> /dev/null || git switch $1; }; f"
-
-	# View the SHA, description, and history graph of the latest 20 commits.
 	l = log --format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --no-merges -n 30
-
-	# Shorthand for merge.
 	m = merge
-
-	# Shorthand for push.
 	p = push
-
-	# Pull in remote changes for the current repository and all its submodules.
 	pl = pull
-
-	# Shorthand for remote.
 	r = remote
-
-	# Interactive rebase with the given number of latest commits.
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
-
-	# Show verbose output about remotes.
 	remotes = remote --verbose
-
-	# View the current working tree status using the short format.
 	s = status --short --branch
-
-	# List contributors with number of commits.
 	sl = shortlog --summary --numbered
-
-	# Show verbose output about tags.
 	tags = tag --list
 
 [apply]
@@ -72,7 +37,7 @@
 	remote = green
 
 [color "diff"]
-	# Yellow meta; Magenta line info; Red for deleltions; Green for additions.
+	# Yellow meta; Magenta line info; Red for deletions; Green for additions.
 	frag = magenta
 	meta = yellow
 	new = green
