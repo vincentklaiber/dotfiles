@@ -105,9 +105,5 @@ defaults write com.apple.dock autohide -bool true
 sudo bash -c 'echo /usr/local/bin/fish >> /etc/shells'
 chsh -s /usr/local/bin/fish
 
-# Update php.ini configuration file
-sed -i".bak" 's/^\;phar.readonly.*$/phar.readonly = Off/g' /usr/local/etc/php/8.0/php.ini
-sed -i "s/memory_limit = .*/memory_limit = -1/" /usr/local/etc/php/8.0/php.ini
-
 # Revoke sudo access again.
 sudo -k
