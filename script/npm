@@ -1,11 +1,9 @@
 #!/bin/bash
 
 npm install --global \
-  alfred-kaomoji \
   alfred-npms \
   alfred-packagist \
   alfred-updater \
   empty-trash-cli \
-  internal-ip-cli \
   npm-check-updates \
   trash-cli
