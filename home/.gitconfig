@@ -9,6 +9,7 @@
 	go = "!f() { git switch -c $1 2> /dev/null || git switch $1; }; f"
 	l = log --format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --no-merges -n 30
 	m = merge
+  nah = "!n() { git restore . && git clean -df; }; n"
 	p = push
 	pl = pull
 	r = remote
@@ -17,6 +18,7 @@
 	s = status --short --branch
 	sl = shortlog --summary --numbered
 	tags = tag --list
+  wip = "!w() { git add . && git commit -m 'wip' && git push; }; w"
 
 [apply]
 	# Detect whitespace errors when applying a patch.

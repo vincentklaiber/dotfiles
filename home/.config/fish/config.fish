@@ -4,10 +4,6 @@ alias g="git"
 alias h="history"
 alias l="ls -1a"
 
-alias nah="git restore . && git clean -df"
-alias now="git add . && git commit -m (date "+%y.%m.%d.%H%S") && git push"
-alias wip="git add . && git commit -m 'wip' && git push"
-
 alias art="php artisan"
 alias phpunit="vendor/bin/phpunit"
 
