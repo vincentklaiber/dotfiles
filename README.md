@@ -49,11 +49,9 @@ This is the installation guide to setup these dotfiles on a new macOS system.
 
 1. Install the dotfiles into the home directory.
 
-1. Download an [import private GPG key](https://www.keybits.net/post/import-keybase-private-key) from Keybase.
-
 1. Setup 1Password and sync passwords.
 
-1. Setup Visual Studio Code and sync settings with Gist.
+1. Setup settings sync in Visual Studio Code.
 
 1. Install third-party libraries with npm:
 
@@ -62,8 +60,6 @@ This is the installation guide to setup these dotfiles on a new macOS system.
     ```
 
 1. Disable load remote content in messages in mail application.
-
-1. Disable "Shake mouse pointer to locate" in accessibility settings.
 
 1. Disable "Allow Handoff between this Mac and your iCloud devices" and set "Recent items" to "None" in general settings.
 
