@@ -26,6 +26,8 @@ set -x PATH "$HOME/.composer/vendor/bin" $PATH
 set -x LC_ALL en_US.UTF-8
 set -x LC_CTYPE en_US.UTF-8
 
+set -x HOMEBREW_NO_ANALYTICS 1
+
 set -gx LESS_TERMCAP_mb (set_color -o blue)
 set -gx LESS_TERMCAP_md (set_color -o blue)
 set -gx LESS_TERMCAP_me (set_color normal)
