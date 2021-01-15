@@ -24,6 +24,13 @@ This is the installation guide to setup these dotfiles on a new macOS system.
     ./script/brew
     ```
 
+1. Set fish as the default shell in Terminal.app:
+
+  ```sh
+  sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
+  chsh -s /opt/homebrew/bin/fish
+  ```
+
 1. Install any remaining software updates:
   
     ```sh

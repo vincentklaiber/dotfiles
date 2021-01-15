@@ -101,9 +101,5 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
-# Set the latest version of fish as default shell
-sudo bash -c 'echo /usr/local/bin/fish >> /etc/shells'
-chsh -s /usr/local/bin/fish
-
 # Revoke sudo access again.
 sudo -k
