@@ -29,6 +29,8 @@ This is the installation guide to setup these dotfiles on a new macOS system.
   ```sh
   sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
   chsh -s /opt/homebrew/bin/fish
+  curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+  fisher install jethrokuan/z
   ```
 
 1. Install any remaining software updates:
