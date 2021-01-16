@@ -22,6 +22,7 @@ cask 'beamer'
 cask 'brave-browser'
 cask 'couleurs'
 cask 'discord'
+cask 'focusrite-control'
 cask 'font-jetbrains-mono'
 cask 'github-desktop'
 cask 'imagealpha'
@@ -35,4 +36,5 @@ cask 'transmit'
 cask 'visual-studio-code'
 mas 'Lungo', id: 1263070803
 mas 'Pixelmator Pro', id: 1289583905
+mas 'Shareful', id: 1522267256
 RUBY

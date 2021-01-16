@@ -4,7 +4,15 @@
 
 ## Installation
 
-This is the installation guide to setup these dotfiles on a new macOS system.
+1. Before setting up a new computer, check the old one:
+
+  - Export Terminal.app profile.
+
+  - Export Transmit.app server.
+
+  - Reevaluate the `brew` file.
+  
+  - Double check that all repositories are synced.
 
 1. Install Xcode command line tools:
 
@@ -12,13 +20,7 @@ This is the installation guide to setup these dotfiles on a new macOS system.
     xcode-select --install
     ```
 
-1. Install Homebrew and dependencies:
-
-    ```sh
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    ```
-  
-    Then install dependencies with Homebrew bundle:
+1. Install [Homebrew](https://brew.sh/) and dependencies and then install dependencies with `homebrew-bundle`:
     
     ```sh
     ./script/brew
@@ -32,20 +34,14 @@ This is the installation guide to setup these dotfiles on a new macOS system.
   curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
   fisher install jethrokuan/z
   ```
-
-1. Install any remaining software updates:
   
-    ```sh
-    sudo softwareupdate --install --all
-    ```
-  
-1. [Setup FileVault to encrypt the startup disk.](https://support.apple.com/en-us/HT204837)
-  
-1. Bootstrap macOS defaults. Remember to first change the computer name.
+1. Bootstrap macOS defaults.
   
     ```sh
     ./script/macos
     ```
+    
+1. [Setup FileVault to encrypt the startup disk.](https://support.apple.com/en-us/HT204837) Remember to first change the computer name.
 
 1. [Generate new SSH key, add to ssh-agent and upload to GitHub.](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
@@ -64,6 +60,14 @@ This is the installation guide to setup these dotfiles on a new macOS system.
 1. Disable load remote content in messages in mail application.
 
 1. Disable "Allow Handoff between this Mac and your iCloud devices" and set "Recent items" to "None" in general settings.
+
+1. Delete message after 30 days in Message.app preferences.
+
+1. Install any remaining software updates:
+  
+    ```sh
+    sudo softwareupdate --install --all
+    ```
 
 ## License
 
