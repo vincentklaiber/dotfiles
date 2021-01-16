@@ -69,6 +69,10 @@
     sudo softwareupdate --install --all
     ```
 
+1. Setup Internet Accounts.
+
+1. Sync Brave Browser settings.
+
 ## License
 
 [MIT](LICENSE) © [Vincent Klaiber](https://vinkla.dev/)
