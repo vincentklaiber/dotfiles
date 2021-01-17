@@ -4,6 +4,5 @@ npm install --global \
   alfred-npms \
   alfred-packagist \
   alfred-updater \
-  empty-trash-cli \
   npm-check-updates \
   trash-cli
