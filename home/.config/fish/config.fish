@@ -5,6 +5,7 @@ alias l="ls -1a"
 alias art="php artisan"
 alias phpunit="vendor/bin/phpunit"
 alias grep="grep --color=auto"
+alias update="brew upgrade; brew cleanup; npm update --global; composer global update"
 
 set fish_greeting
 
@@ -35,4 +36,5 @@ set -gx LESS_TERMCAP_us (set_color -o green)
 
 set -x PATH "/usr/local/sbin" $PATH
 set -x PATH "/opt/homebrew/bin" $PATH
+set -x PATH "/opt/homebrew/sbin" $PATH
 set -x PATH "/usr/local/share/npm/bin" $PATH
