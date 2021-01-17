@@ -6,10 +6,10 @@ set -ex
 sudo -v
 
 # Set computer name (as done via System Preferences -> Sharing)
-sudo scutil --set ComputerName "Njord"
-sudo scutil --set HostName "Njord"
-sudo scutil --set LocalHostName "Njord"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Njord"
+sudo scutil --set ComputerName "Saga"
+sudo scutil --set HostName "Saga"
+sudo scutil --set LocalHostName "Saga"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Saga"
 
 # Create Developer directory in the user folder
 mkdir -p ~/Developer
