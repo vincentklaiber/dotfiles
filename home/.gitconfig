@@ -18,7 +18,7 @@
 	s = status --short --branch
 	sl = shortlog --summary --numbered
 	tags = tag --list
-  wip = "!w() { git add . && git commit -m 'wip' && git push; }; w"
+	wip = "!w() { git add . && git commit -m 'wip' && git push; }; w"
 
 [apply]
 	whitespace = fix
