@@ -63,6 +63,8 @@
 
 1. Delete message after 30 days in Message.app preferences.
 
+1. Enable ask for password immediately after sleep or screen saver beings in secury and privacy settings.
+
 1. Install any remaining software updates:
   
     ```sh
