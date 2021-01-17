@@ -2,6 +2,7 @@
 
 brew bundle --file=- <<RUBY
 tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-drivers'
 brew 'aria2'
 brew 'bat'
 brew 'composer'
