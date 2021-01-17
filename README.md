@@ -73,6 +73,11 @@
 
 1. Sync Brave Browser settings.
 
+1. Install the following apps from the App Store:
+
+  Lungo
+  Pixelmator Pro
+
 ## License
 
 [MIT](LICENSE) © [Vincent Klaiber](https://vinkla.dev/)

@@ -10,7 +10,6 @@ brew 'fd'
 brew 'fish'
 brew 'gh'
 brew 'git'
-brew 'mas'
 brew 'mysql'
 brew 'node'
 brew 'php'
@@ -27,14 +26,10 @@ cask 'font-jetbrains-mono'
 cask 'github-desktop'
 cask 'imagealpha'
 cask 'imageoptim'
-cask 'karabiner-elements'
 cask 'rectangle'
 cask 'signal'
 cask 'spotify'
 cask 'tableplus'
 cask 'transmit'
 cask 'visual-studio-code'
-mas 'Lungo', id: 1263070803
-mas 'Pixelmator Pro', id: 1289583905
-mas 'Shareful', id: 1522267256
 RUBY
