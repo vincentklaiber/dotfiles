@@ -28,12 +28,12 @@
 
 1. Set fish as the default shell in Terminal.app:
 
-  ```sh
-  sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
-  chsh -s /opt/homebrew/bin/fish
-  curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-  fisher install jethrokuan/z
-  ```
+    ```sh
+    sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
+    chsh -s /opt/homebrew/bin/fish
+    curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+    fisher install jethrokuan/z
+    ```
   
 1. Bootstrap macOS defaults.
   
@@ -77,8 +77,8 @@
 
 1. Install the following apps from the App Store:
 
-  Lungo
-  Pixelmator Pro
+  - Lungo
+  - Pixelmator Pro
 
 ## License
 
