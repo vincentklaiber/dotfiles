@@ -70,5 +70,8 @@ defaults write com.apple.dock show-recents -bool false
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
+# Show week numbers in Calendar.app
+defaults write com.apple.iCal "Show Week Numbers" -bool true
+
 # Revoke sudo access again.
 sudo -k
