@@ -76,7 +76,3 @@
 
   - Lungo
   - Pixelmator Pro
-
-## License
-
-[MIT](LICENSE) © [Vincent Klaiber](https://vinkla.dev/)
