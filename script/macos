@@ -73,5 +73,8 @@ defaults write com.apple.dock autohide -bool true
 # Show week numbers in Calendar.app
 defaults write com.apple.iCal "Show Week Numbers" -bool true
 
+# Don't open Spotify at login
+defaults write com.spotify.client AutoStartSettingIsHidden -bool false
+
 # Revoke sudo access again.
 sudo -k
