@@ -5,7 +5,7 @@ alias l="ls -1a"
 alias art="php artisan"
 alias phpunit="vendor/bin/phpunit"
 alias grep="grep --color=auto"
-alias update="brew upgrade; brew cleanup; composer global update"
+alias update="brew upgrade; brew cleanup; composer global update; npm i -g npm-check-updates"
 
 set fish_greeting
 
