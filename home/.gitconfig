@@ -58,9 +58,6 @@
 [github]
 	user = vinkla
 
-[init]
-	defaultBranch = main
-
 [merge]
 	log = true
 
