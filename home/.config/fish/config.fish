@@ -41,3 +41,5 @@ set -x PATH "/opt/homebrew/bin" $PATH
 set -x PATH "/opt/homebrew/sbin" $PATH
 set -x PATH "/usr/local/share/npm/bin" $PATH
 set -x PATH "/Users/vincent/.composer/vendor/bin" $PATH
+
+zoxide init fish | source

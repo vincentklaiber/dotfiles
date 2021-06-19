@@ -28,8 +28,6 @@
     ```sh
     sudo bash -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
     chsh -s /opt/homebrew/bin/fish
-    curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-    fisher install jethrokuan/z
     ```
   
 1. Bootstrap macOS defaults.
@@ -60,7 +58,7 @@
 
 1. Delete message after 30 days in Message.app preferences.
 
-1. Enable ask for password immediately after sleep or screen saver beings in secury and privacy settings.
+1. Enable ask for password immediately after sleep or screen saver beings in security and privacy settings.
 
 1. Install any remaining software updates:
   
@@ -74,5 +72,7 @@
 
 1. Install the following apps from the App Store:
 
+  - Dato
   - Lungo
   - Pixelmator Pro
+  - System Color Picker
